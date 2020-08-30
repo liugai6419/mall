@@ -1,0 +1,147 @@
+<form class="layui-form layui-form-pane" action="">
+	<div class="layui-form-item">
+    	<label class="layui-form-label">站点名称</label>
+		<div class="layui-input-inline">
+			<input type="text" name="site_name" value="{$data.site_name}" lay-verify="required" placeholder="请填站点名称" autocomplete="off" class="layui-input">
+		</div>
+    	<div class="layui-form-mid layui-word-aux">必须填写</div>
+	</div>
+
+	<div class="layui-form-item image">
+		<label class="layui-form-label">电脑端logo</label>
+		<div class="layui-input-inline">
+			<div class="layui-upload-drag" id="computer_logo">
+				<div class="icon" style="display:{$data.computer_logo ? 'none' : 'block'}">
+					<i class="layui-icon"></i>
+					<p>点击上传，或将文件拖拽到此处</p>
+				</div>
+				<div class="{$data.computer_logo ? '' : 'layui-hide'}" id="uploadDemoView">
+					<img src="{$data.computer_logo}" alt="上传成功后渲染" style="max-width: 196px">
+				</div>
+			</div>
+		</div>
+		<div class="layui-form-mid layui-word-aux">请上传jpg、png、gif格式图片</div>
+	</div>
+
+	<div class="layui-form-item image">
+		<label class="layui-form-label">手机端logo</label>
+		<div class="layui-input-inline">
+			<div class="layui-upload-drag" id="phone_logo">
+				<div class="icon" style="display:{$data.phone_logo ? 'none' : 'block'}">
+					<i class="layui-icon"></i>
+					<p>点击上传，或将文件拖拽到此处</p>
+				</div>
+				<div class="{$data.phone_logo ? '' : 'layui-hide'}" id="uploadDemoView">
+					<img src="{$data.phone_logo}" alt="上传成功后渲染" style="max-width: 196px">
+				</div>
+			</div>
+		</div>
+		<div class="layui-form-mid layui-word-aux">请上传jpg、png、gif格式图片</div>
+	</div>
+
+	<div class="layui-form-item image">
+		<label class="layui-form-label">桌面图标</label>
+		<div class="layui-input-inline">
+			<div class="layui-upload-drag" id="dest_icon">
+				<div class="icon" style="display:{$data.dest_icon ? 'none' : 'block'}">
+					<i class="layui-icon"></i>
+					<p>点击上传，或将文件拖拽到此处</p>
+				</div>
+				<div class="{$data.dest_icon ? '' : 'layui-hide'}" id="uploadDemoView">
+					<img src="{$data.dest_icon}" alt="上传成功后渲染" style="max-width: 196px">
+				</div>
+			</div>
+		</div>
+		<div class="layui-form-mid layui-word-aux">请上传jpg、png格式图片</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">默认时区</label>
+		<div class="layui-input-inline">
+			<select name="default_time_zone" lay-verify="required" lay-search>
+				<option value="1" {$data.default_time_zone == 1 ? 'selected' : ''}>(标准时-11:00) 中途岛、萨摩亚群岛</option>
+				<option value="2" {$data.default_time_zone == 2 ? 'selected' : ''}>(标准时-10:00) 夏威夷</option>
+				<option value="3" {$data.default_time_zone == 3 ? 'selected' : ''}>(标准时-9:00) 阿拉斯加</option>
+				<option value="4" {$data.default_time_zone == 4 ? 'selected' : ''}>(标准时-8:00) 太平洋时间(美国和加拿大)</option>
+				<option value="5" {$data.default_time_zone == 5 ? 'selected' : ''}>(标准时-7:00) 山地时间(美国和加拿大)</option>
+				<option value="6" {$data.default_time_zone == 6 ? 'selected' : ''}>(标准时-6:00) 中部时间(美国和加拿大)、墨西哥城</option>
+				<option value="7" {$data.default_time_zone == 7 ? 'selected' : ''}>(标准时-5:00) 东部时间(美国和加拿大)、波哥大</option>
+				<option value="8" {$data.default_time_zone == 8 ? 'selected' : ''}>(标准时-4:00) 大西洋时间(加拿大)、加拉加斯</option>
+				<option value="9" {$data.default_time_zone == 9 ? 'selected' : ''}>(标准时-3:00) 巴西、布宜诺斯艾利斯、乔治敦</option>
+				<option value="10" {$data.default_time_zone == 10 ? 'selected' : ''}>(标准时-2:00) 中大西洋</option>
+				<option value="11" {$data.default_time_zone == 11 ? 'selected' : ''}>(标准时-1:00) 亚速尔群岛、佛得角群岛</option>
+				<option value="12" {$data.default_time_zone == 12 ? 'selected' : ''}>(格林尼治标准时) 西欧时间、伦敦、卡萨布兰卡</option>
+				<option value="13" {$data.default_time_zone == 13 ? 'selected' : ''}>(标准时+1:00) 中欧时间、安哥拉、利比亚</option>
+				<option value="14" {$data.default_time_zone == 14 ? 'selected' : ''}>(标准时+2:00) 东欧时间、开罗，雅典</option>
+				<option value="15" {$data.default_time_zone == 15 ? 'selected' : ''}>(标准时+3:00) 巴格达、科威特、莫斯科</option>
+				<option value="16" {$data.default_time_zone == 16 ? 'selected' : ''}>(标准时+4:00) 阿布扎比、马斯喀特、巴库</option>
+				<option value="17" {$data.default_time_zone == 17 ? 'selected' : ''}>(标准时+5:00) 叶卡捷琳堡、伊斯兰堡、卡拉奇</option>
+				<option value="18" {$data.default_time_zone == 18 ? 'selected' : ''}>(标准时+6:00) 阿拉木图、 达卡、新亚伯利亚</option>
+				<option value="19" {$data.default_time_zone == 19 ? 'selected' : ''}>(标准时+7:00) 曼谷、河内、雅加达</option>
+				<option value="20" {$data.default_time_zone == 20 ? 'selected' : ''}>(标准时+8:00)北京、重庆、香港、新加坡</option>
+				<option value="21" {$data.default_time_zone == 21 ? 'selected' : ''}>(标准时+9:00) 东京、汉城、大阪、雅库茨克</option>
+				<option value="22" {$data.default_time_zone == 22 ? 'selected' : ''}>(标准时+10:00) 悉尼、关岛</option>
+				<option value="23" {$data.default_time_zone == 23 ? 'selected' : ''}>(标准时+11:00) 马加丹、索罗门群岛</option>
+				<option value="24" {$data.default_time_zone == 24 ? 'selected' : ''}>(标准时+12:00) 奥克兰、惠灵顿、堪察加半岛</option>
+			</select>
+		</div>
+		<div class="layui-form-mid layui-word-aux">默认亚洲/上海[标准时+8]</div>
+	</div>
+
+	<div class="layui-form-item">
+    	<label class="layui-form-label">站点状态</label>
+		<div class="layui-input-inline">
+			<select name="site_status" lay-verify="required" lay-search>
+				<option value="1" {$data.site_status == 1 ? 'selected' : ''}>关闭</option>
+				<option value="2" {$data.site_status == 2 ? 'selected' : ''}>开启</option>
+			</select>
+		</div>
+    	<div class="layui-form-mid layui-word-aux">可暂时将站点关闭，其他人无法访问，但不影响管理员访问后台</div>
+	</div>
+
+	<div class="layui-form-item textarea">
+		<label class="layui-form-label">关闭原因</label>
+		<div class="layui-input-inline">
+			<textarea name="closed_reason" placeholder="关闭原因" class="layui-textarea">{$data.closed_reason}</textarea>
+		</div>
+		<div class="layui-form-mid layui-word-aux">支持html，当网站处于关闭状态时，关闭原因将显示在前台</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">页面最大宽度</label>
+		<div class="layui-input-inline">
+			<input type="number" name="page_max_width" value="{$data.page_max_width}" lay-verify="required" placeholder="请填站点名称" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">页面最大宽度，单位px，0则100%</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">css/js版本标记</label>
+		<div class="layui-input-inline">
+			<input type="text" name="version_mark" value="{$data.version_mark}" placeholder="请填站点名称" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">用于css/js浏览器缓存版本识别</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">ICP证书号</label>
+		<div class="layui-input-inline">
+			<input type="text" name="icp_certificate" value="{$data.icp_certificate}" placeholder="请填站点名称" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">ICP域名备案号</div>
+	</div>
+
+	<div class="layui-form-item textarea">
+		<label class="layui-form-label">底部代码</label>
+		<div class="layui-input-inline">
+			<textarea name="bottom_code" placeholder="底部代码" class="layui-textarea">{$data.bottom_code}</textarea>
+		</div>
+		<div class="layui-form-mid layui-word-aux">支持html，可用于添加流量统计代码</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="baseSetting">立即提交</button>
+	    </div>
+	</div>
+</form>

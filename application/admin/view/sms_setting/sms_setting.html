@@ -1,0 +1,34 @@
+<div class="tip">阿里云短信管理地址 https://dysms.console.aliyun.com/dysms.html<i class="iconfont iconclose"></i></div>
+
+<form class="layui-form layui-form-pane" action="">
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">短信KeyID</label>
+		<div class="layui-input-inline">
+			<input type="text" name="sms_key_id" value="{$data.sms_key_id}" placeholder="请填短信KeyID" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">Access Key ID</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">短信KeySecret</label>
+		<div class="layui-input-inline">
+			<input type="text" name="sms_key_secret" value="{$data.sms_key_secret}" placeholder="请填短信KeySecret" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">Access Key Secret</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">短信签名</label>
+		<div class="layui-input-inline">
+			<input type="text" name="sms_sign" value="{$data.sms_sign}" placeholder="请填短信签名" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">发送短信包含的签名</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="smsSetting">立即提交</button>
+	    </div>
+	</div>
+</form>

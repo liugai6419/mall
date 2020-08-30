@@ -1,0 +1,40 @@
+{include file="public/header" title="用户登录" /}
+<link rel="stylesheet" href="/static/admin/css/login.css" />
+</head>
+<body>
+
+	<div class="container layui-bg-blue">
+		<div class="inner">
+			<div class="title">ShopOX</div>
+			<div class="login-panel">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+					    <div class="layui-input-block">
+					      <input type="text" name="username" placeholder="请输入用户名称" autocomplete="on" class="layui-input username">
+					    </div>
+				  	</div>
+				  	<div class="layui-form-item">
+					    <div class="layui-input-block">
+					      <input type="password" name="password" placeholder="请输入密码" autocomplete="on" class="layui-input password">
+					    </div>
+				  	</div>
+				  	<div class="layui-form-item">
+					    <div class="layui-input-block">
+					    	<button class="layui-btn" lay-submit lay-filter="login">立即登录</button>
+					    </div>
+				  	</div>
+				</form>
+				<div class="forget-password-container">
+					<div class="forget-password">忘记密码?</div>
+					<div class="forget-password-tip">
+						请联系管理员重置密码
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{include file="public/footer" /}
+<script src="/static/admin/js/login.js"></script>
+</body>
+</html>

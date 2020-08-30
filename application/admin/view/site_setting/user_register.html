@@ -1,0 +1,70 @@
+
+
+<form class="layui-form layui-form-pane" action="">
+
+		<div class="layui-form-item image">
+		<label class="layui-form-label">用户注册背景图片</label>
+		<div class="layui-input-inline">
+			<div class="layui-upload-drag" id="register_bg">
+				<div class="icon" style="display:{$data.register_bg ? 'none' : 'block'}">
+					<i class="layui-icon"></i>
+					<p>点击上传，或将文件拖拽到此处</p>
+				</div>
+				<div class="{$data.register_bg ? '' : 'layui-hide'}" id="uploadDemoView">
+					<img src="{$data.register_bg}" alt="上传成功后渲染" style="max-width: 196px">
+				</div>
+			</div>
+		</div>
+		<div class="layui-form-mid layui-word-aux">可自定义背景图片，请上传jpg、png、gif格式图片；默认底灰色。</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">是否开启注册</label>
+		<div class="layui-input-inline">
+			<select name="is_open_register" xm-select="select1" multiple="" lay-search>
+				<option value="1" {:$data.is_open_register ? (in_array(1,$data.is_open_register) ? 'selected' : '') : ''}>短信</option>
+				<option value="2" {:$data.is_open_register ? (in_array(2,$data.is_open_register) ? 'selected' : '') : ''}>邮箱</option>
+				<option value="3" {:$data.is_open_register ? (in_array(3,$data.is_open_register) ? 'selected' : '') : ''}>用户名</option>
+			</select>
+		</div>
+		<div class="layui-form-mid layui-word-aux">关闭注册后，前端站点将无法注册，可选择 [ 短信, 邮箱, 用户名 ]</div>
+	</div>
+
+	<div class="layui-form-item">
+    	<label class="layui-form-label">用户注册图片验证码</label>
+		<div class="layui-input-inline">
+			<select name="img_proving" lay-verify="required" lay-search>
+				<option value="1" {$data.img_proving == 1 ? 'selected' : ''}>关闭</option>
+				<option value="2" {$data.img_proving == 2 ? 'selected' : ''}>开启</option>
+			</select>
+		</div>
+    	<div class="layui-form-mid layui-word-aux">可以防止非法注册</div>
+	</div>
+
+	<div class="layui-form-item">
+    	<label class="layui-form-label">用户注册开启审核</label>
+		<div class="layui-input-inline">
+			<select name="open_auditing" lay-verify="required" lay-search>
+				<option value="1" {$data.open_auditing == 1 ? 'selected' : ''}>否</option>
+				<option value="2" {$data.open_auditing == 2 ? 'selected' : ''}>是</option>
+			</select>
+		</div>
+    	<div class="layui-form-mid layui-word-aux">开启后用户注册需要审核通过方可登录</div>
+	</div>
+
+	<div class="layui-form-item">
+    	<label class="layui-form-label">用户注册协议</label>
+		<div class="layui-input-inline">
+			<select name="register_agreement" lay-verify="required" lay-search>
+				<option value="1" {$data.register_agreement == 1 ? 'selected' : ''}>关闭</option>
+				<option value="2" {$data.register_agreement == 2 ? 'selected' : ''}>开启</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="userRegister">立即提交</button>
+	    </div>
+	</div>
+</form>

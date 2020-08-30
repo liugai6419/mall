@@ -1,0 +1,40 @@
+<form class="layui-form layui-form-pane" action="">
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">站点状态</label>
+		<div class="layui-input-inline">
+			<select name="site_status" lay-verify="required" lay-search>
+				<option value="1" {$data.site_status == 1 ? 'selected' : ''}>关闭</option>
+				<option value="2" {$data.site_status == 2 ? 'selected' : ''}>自动</option>
+				<option value="3" {$data.site_status == 3 ? 'selected' : ''}>自定义</option>
+			</select>
+		</div>
+		<div class="layui-form-mid layui-word-aux">可暂时将站点关闭，其他人无法访问，但不影响管理员访问后台</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">搜索关键字</label>
+		<div class="layui-input-inline">
+			<div class="add-search-key">
+				<div class="search-key-input" contenteditable="true"></div>
+				<button type="button">添加</button>
+			</div>
+			<div class="added-search-key">
+				{volist name="$data.search_key" id="vo"}
+				<div class='search-key-item'>
+					<span>{$vo}</span>
+					<input type='hidden' name='item{$i}' mydata='{$i}' value='{$vo}'>
+					<i class='iconfont iconclose1 closeItem'></i>
+				</div>
+				{/volist}
+			</div>
+		</div>
+		<div class="layui-form-mid layui-word-aux">搜索框下热门关键字（输入回车）</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="search">立即提交</button>
+	    </div>
+	</div>
+</form>

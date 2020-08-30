@@ -1,0 +1,31 @@
+<form class="layui-form layui-form-pane" action="">
+	<div class="layui-form-item">
+		<label class="layui-form-label">图片最大限制</label>
+		<div class="layui-input-inline">
+			<input type="number" name="pic_max_limit" value="{$data.pic_max_limit}" lay-verify="required" placeholder="请填图片最大限制" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">单位B [上传图片还受到服务器空间PHP配置最大上传 20M 限制]</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">文件最大限制</label>
+		<div class="layui-input-inline">
+			<input type="number" name="file_max_limit" value="{$data.file_max_limit}" lay-verify="required" placeholder="请填文件最大限制" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">单位B [上传文件还受到服务器空间PHP配置最大上传 20M 限制]</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">视频最大限制</label>
+		<div class="layui-input-inline">
+			<input type="number" name="video_max_limit" value="{$data.video_max_limit}" lay-verify="required" placeholder="请填视频最大限制" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">单位B [上传视频还受到服务器空间PHP配置最大上传 20M 限制]</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="accessory">立即提交</button>
+	    </div>
+	</div>
+</form>

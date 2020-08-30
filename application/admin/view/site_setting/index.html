@@ -1,0 +1,118 @@
+{include file="public/header" title="后台信息" /}
+{switch $tab }
+
+	{case 2 }
+		<link rel="stylesheet" href="/static/admin/lib/layui/css/formSelects-v4.css" />
+	{/case}
+		
+	{case 3 }
+		<link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" />
+	{/case}
+
+	{case 4 }
+		<link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" />
+	{/case}
+
+	{case 6 }
+		<link rel="stylesheet" href="/static/admin/lib/layui/css/formSelects-v4.css" />
+	{/case}
+
+	{case 8 }
+		<link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" />
+	{/case}
+
+{/switch}
+<link rel="stylesheet" href="/static/admin/css/system_setting/backstage_configure.css" />
+<link rel="stylesheet" href="/static/admin/css/site_configure/site_setting.css" />
+</head>
+<body>
+
+	<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+		<ul class="layui-tab-title">
+			<a href="/admin/site_setting/index?tab=1"><li class="{$tab == 1 ? 'layui-this' : ''}">基础配置</li></a>
+			<a href="/admin/site_setting/index?tab=2"><li class="{$tab == 2 ? 'layui-this' : ''}">用户注册</li></a>
+			<a href="/admin/site_setting/index?tab=3"><li class="{$tab == 3 ? 'layui-this' : ''}">用户登录</li></a>
+			<a href="/admin/site_setting/index?tab=4"><li class="{$tab == 4 ? 'layui-this' : ''}">密码找回</li></a>
+			<a href="/admin/site_setting/index?tab=5"><li class="{$tab == 5 ? 'layui-this' : ''}">附件</li></a>
+			<a href="/admin/site_setting/index?tab=6"><li class="{$tab == 6 ? 'layui-this' : ''}">图片验证码</li></a>
+			<a href="/admin/site_setting/index?tab=7"><li class="{$tab == 7 ? 'layui-this' : ''}">订单售后</li></a>
+			<a href="/admin/site_setting/index?tab=8"><li class="{$tab == 8 ? 'layui-this' : ''}">搜索</li></a>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				{switch $tab }
+					{case 1 }
+						{include file="site_setting/base_setting" /}
+					{/case}
+
+					{case 2 }
+						{include file="site_setting/user_register" /}
+					{/case}
+
+					{case 3 }
+						{include file="site_setting/user_login" /}
+					{/case}
+
+					{case 4 }
+						{include file="site_setting/password_find" /}
+					{/case}
+
+					{case 5 }
+						{include file="site_setting/accessory" /}
+					{/case}
+
+					{case 6 }
+						{include file="site_setting/pic_identifying_code" /}
+					{/case}
+
+					{case 7 }
+						{include file="site_setting/ordering_service" /}
+					{/case}
+
+					{case 8 }
+						{include file="site_setting/search" /}
+					{/case}
+				{/switch}
+			</div>
+		</div>
+	</div>
+
+{include file="public/footer" /}
+
+{switch $tab }
+	{case 1 }
+		<script src="/static/admin/js/site_configure/site_setting/base_configure.js"></script>
+	{/case}
+
+	{case 2 }
+		<script src="/static/admin/lib/layui/formSelects-v4.js"></script>
+		<script src="/static/admin/js/site_configure/site_setting/user_register.js"></script>
+	{/case}
+
+	{case 3 }
+		<script src="/static/admin/js/site_configure/site_setting/user_login.js"></script>
+	{/case}
+
+	{case 4 }
+		<script src="/static/admin/js/site_configure/site_setting/password_find.js"></script>
+	{/case}
+
+	{case 5 }
+		<script src="/static/admin/js/site_configure/site_setting/accessory.js"></script>
+	{/case}
+
+	{case 6 }
+		<script src="/static/admin/lib/layui/formSelects-v4.js"></script>
+		<script src="/static/admin/js/site_configure/site_setting/pic_identifying_code.js"></script>
+	{/case}
+
+	{case 7 }
+		<script src="/static/admin/js/site_configure/site_setting/ordering_service.js"></script>
+	{/case}
+
+	{case 8 }
+		<script src="/static/admin/js/site_configure/site_setting/search.js"></script>
+	{/case}
+{/switch}
+</body>
+</html>

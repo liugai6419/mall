@@ -1,0 +1,32 @@
+<form class="layui-form layui-form-pane" action="">
+	
+	<div class="layui-form-item textarea">
+		<label class="layui-form-label">仅退款原因</label>
+		<div class="layui-input-inline">
+			<textarea name="only_refundment_reason" placeholder="填写仅退款原因" class="layui-textarea">{$data.only_refundment_reason}</textarea>
+		</div>
+		<div class="layui-form-mid layui-word-aux">可换行，一行一个</div>
+	</div>
+
+	<div class="layui-form-item textarea">
+		<label class="layui-form-label">退货退款原因</label>
+		<div class="layui-input-inline">
+			<textarea name="refundment_returngoods_reason" placeholder="填写退货退款原因" class="layui-textarea">{$data.refundment_returngoods_reason}</textarea>
+		</div>
+		<div class="layui-form-mid layui-word-aux">可换行，一行一个</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">退货地址</label>
+		<div class="layui-input-inline">
+			<input type="text" name="returngoods_address" value="{$data.returngoods_address}" placeholder="填写退货地址" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">用户退货货物收货地址</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="orderingService">立即提交</button>
+	    </div>
+	</div>
+</form>

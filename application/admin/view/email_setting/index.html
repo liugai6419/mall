@@ -1,0 +1,40 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/css/system_setting/backstage_configure.css" />
+<link rel="stylesheet" href="/static/admin/css/site_configure/email_setting.css" />
+</head>
+<body>
+
+	<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+		<ul class="layui-tab-title">
+			<a href="/admin/email_setting/index?tab=1"><li class="{$tab == 1 ? 'layui-this' : ''}">邮箱设置</li></a>
+			<a href="/admin/email_setting/index?tab=2"><li class="{$tab == 2 ? 'layui-this' : ''}">邮箱模板</li></a>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				{switch $tab }
+					{case 1 }
+						{include file="email_setting/email_setting" /}
+					{/case}
+
+					{case 2 }
+						{//include file="email_setting/message_template" /}{$tab}
+					{/case}
+				{/switch}
+			</div>
+		</div>
+	</div>
+
+{include file="public/footer" /}
+
+{switch $tab }
+	{case 1 }
+		<script src="/static/admin/js/site_configure/email_setting/email_setting.js"></script>
+	{/case}
+
+	{case 2 }
+		<!-- <script src="/static/admin/js/site_configure/sms_setting/message_template.js"></script> -->
+	{/case}
+{/switch}
+</body>
+</html>

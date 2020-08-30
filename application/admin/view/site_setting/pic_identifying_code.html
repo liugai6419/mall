@@ -1,0 +1,47 @@
+<form class="layui-form layui-form-pane" action="">
+	<div class="layui-form-item">
+		<label class="layui-form-label">验证码有效时间</label>
+		<div class="layui-input-inline">
+			<input type="number" name="code_valid_time" value="{$data.code_valid_time}" lay-verify="required" placeholder="请填验证码有效时间" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">验证码过期时间，一般10分钟左右，单位 [秒]</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">获取验证码时间间隔</label>
+		<div class="layui-input-inline">
+			<input type="number" name="achieve_time_spacing" value="{$data.achieve_time_spacing}" lay-verify="required" placeholder="请填获取验证码时间间隔" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">防止频繁获取验证码，一般在 30~120 秒之间，单位 [秒]</div>
+	</div>
+
+	<div class="layui-form-item">
+    	<label class="layui-form-label">获取验证码-开启图片验证码</label>
+		<div class="layui-input-inline">
+			<select name="is_open_pic_identify" lay-verify="required" lay-search>
+				<option value="1" {$data.is_open_pic_identify == 1 ? 'selected' : ''}>关闭</option>
+				<option value="2" {$data.is_open_pic_identify == 2 ? 'selected' : ''}>开启</option>
+			</select>
+		</div>
+    	<div class="layui-form-mid layui-word-aux">防止短信轰炸</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">图片验证码规则</label>
+		<div class="layui-input-inline">
+			<select name="pic_code_regulation" xm-select="select1" multiple="" lay-search>
+				<option value="1" {:$data.pic_code_regulation ? (in_array(1,$data.pic_code_regulation) ? 'selected' : '') : ''}>彩色背景</option>
+				<option value="2" {:$data.pic_code_regulation ? (in_array(2,$data.pic_code_regulation) ? 'selected' : '') : ''}>彩色文字</option>
+				<option value="3" {:$data.pic_code_regulation ? (in_array(3,$data.pic_code_regulation) ? 'selected' : '') : ''}>干扰点</option>
+				<option value="4" {:$data.pic_code_regulation ? (in_array(4,$data.pic_code_regulation) ? 'selected' : '') : ''}>干扰线</option>
+			</select>
+		</div>
+		<div class="layui-form-mid layui-word-aux">默认白底黑字，可根据需求i加大验证码识别难度</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="picIdentifyingCode">立即提交</button>
+	    </div>
+	</div>
+</form>

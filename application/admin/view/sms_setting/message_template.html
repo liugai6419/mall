@@ -1,0 +1,42 @@
+<div class="tip">阿里云短信管理地址 https://dysms.console.aliyun.com/dysms.html<i class="iconfont iconclose"></i></div>
+
+<form class="layui-form layui-form-pane" action="">
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">通用-短信模板ID</label>
+		<div class="layui-input-inline">
+			<input type="text" name="currency_sms_id" value="{$data.currency_sms_id}" placeholder="请填通用-短信模板ID" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">验证码code</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">用户注册-短信模板ID</label>
+		<div class="layui-input-inline">
+			<input type="text" name="user_register_sms_id" value="{$data.user_register_sms_id}" placeholder="请填用户注册-短信模板ID" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">验证码code</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">密码找回-短信模板ID</label>
+		<div class="layui-input-inline">
+			<input type="text" name="password_find_sms_id" value="{$data.password_find_sms_id}" placeholder="请填密码找回-短信模板ID" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">验证码code</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">手机号码绑定-短信模板ID</label>
+		<div class="layui-input-inline">
+			<input type="text" name="telephone_bind_sms_id" value="{$data.telephone_bind_sms_id}" placeholder="请填手机号码绑定-短信模板ID" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">验证码code</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn" lay-submit lay-filter="messageTemplate">立即提交</button>
+	    </div>
+	</div>
+</form>
