@@ -18,6 +18,7 @@ class Login extends Controller
 		$username = trim(Request::post('username'));
 		$password = trim(Request::post('password'));
 
+		// 用户名称不能为空
 		if($username === ''){
 			return ['code' => 0, 'msg' => '用户名称不能为空!'];
 		}
