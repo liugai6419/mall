@@ -1,0 +1,15 @@
+.layui-form .layui-form-item .layui-form-label{
+	width: 180px;
+}
+
+.layui-form .layui-form-item .layui-input-block{
+	margin-left: 180px!important;
+}
+
+.layui-form .layui-form-item .layui-input-inline{
+	width: 50%;
+}
+
+.layui-form .layui-form-item .layui-btn{
+	width: 59%;
+}

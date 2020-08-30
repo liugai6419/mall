@@ -1,0 +1,71 @@
+.container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*标题*/
+.title{
+	width: 100%;
+	height: 40%;
+	color: white;
+	font-size: 36px;
+	display: flex;
+	font-weight: bold;
+	justify-content: center;
+	align-items: center;
+}
+
+/*登录*/
+.inner{
+	width: 410px;
+	height: 410px;
+}
+
+
+.login-panel{
+	width: 100%;
+	height: 60%;
+	padding: 32px;
+	box-sizing: border-box;
+	border-radius: 6px;
+	box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+	background: white;
+}
+
+.inner .layui-input-block{
+	margin: 0;
+
+}
+.layui-btn{
+	width: 100%;
+}
+
+/*忘记密码*/
+.forget-password-container{
+	display: flex;
+}
+
+.forget-password{
+	color: #999;
+	cursor: pointer;
+	padding: 2px 0;
+	padding-right: 4px;
+}
+
+.forget-password:hover{
+	color: #666;
+}
+
+.forget-password-tip{
+	width: 140px;
+	height: 21px;
+	color: white;
+	padding-left: 18px;
+	line-height: 21px;
+	display: none;
+	background-image: url('/static/admin/images/forget-password-tip.svg');
+	background-size: 150px 21px;
+}

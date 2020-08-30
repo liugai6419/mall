@@ -1,0 +1,58 @@
+{
+  "id": "1839054",
+  "name": "MyAdmin",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "16579584",
+      "name": "关  闭",
+      "font_class": "close1",
+      "unicode": "e79d",
+      "unicode_decimal": 59293
+    },
+    {
+      "icon_id": "16575414",
+      "name": "关闭",
+      "font_class": "close",
+      "unicode": "e79c",
+      "unicode_decimal": 59292
+    },
+    {
+      "icon_id": "3216062",
+      "name": "缩小",
+      "font_class": "shrink",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "3216060",
+      "name": "放大",
+      "font_class": "enlarge",
+      "unicode": "e70e",
+      "unicode_decimal": 59150
+    },
+    {
+      "icon_id": "13087809",
+      "name": "设 置",
+      "font_class": "setting",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "2339600",
+      "name": "退出",
+      "font_class": "back",
+      "unicode": "e6ac",
+      "unicode_decimal": 59052
+    },
+    {
+      "icon_id": "14895090",
+      "name": "提示框",
+      "font_class": "forget-password-tip",
+      "unicode": "e76f",
+      "unicode_decimal": 59247
+    }
+  ]
+}

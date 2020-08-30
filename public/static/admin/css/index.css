@@ -1,0 +1,139 @@
+.container{
+	width: 100%;
+	height: 100%;
+}
+
+/*顶部导航*/
+.top-nav{
+	width: 100%;
+	height: 40px;
+	background: #393D49;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.top-nav .company-name{
+	width: 200px;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+}
+
+.top-nav .company-name a{
+	font-size: 24px;
+	color: white;
+}
+
+/*收缩全屏开始*/
+.enlarg-shrink{
+	position: absolute;
+	right: 100px;
+	color: white;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	height: 40px;
+}
+
+.enlarg-shrink i{
+	font-size: 20px;
+}
+
+.enlarg-shrink span{
+	font-size: 14px;
+}
+/*收缩全屏结束*/
+
+.top-nav .my{
+	cursor: pointer;
+	position: relative;
+}
+
+.my .username{
+	height: 100%;
+	line-height: 40px;
+	margin-right: 20px;
+	color: white;
+	font-size: 16px;
+}
+
+.my .setting-back{
+	width: 100px;
+	position: absolute;
+	right: 20px;
+	border-radius: 4px;
+	box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+	display: none;
+}
+
+.my:hover .setting-back{
+	display: block;
+}
+
+.my .setting-back a{
+	color: #333;
+	font-size: 13px;
+	display: block;
+	background: white;
+	padding: 6px 0;
+}
+
+.my .setting-back a span{
+	color:#333;
+	font-size:13px;
+	margin: 0 10px;
+}
+
+.my .setting-back a:hover{
+	color:#009688;
+}
+
+.my .setting-back a:hover span{
+	color:#009688;
+}
+
+.bottom{
+	width: 100%;
+	height: calc(100% - 40px);
+	display: flex;
+}
+
+/*左侧导航栏*/
+.left-nav{
+	width: 200px;
+	height: 100%;
+	background: #393D49;
+	overflow-y: scroll;
+}
+
+/*隐藏滚动条*/
+.left-nav::-webkit-scrollbar {
+	display: none;
+}
+
+.layui-nav-side{
+	position: static;
+}
+
+/*内容区*/
+.content{
+	width: calc(100% - 220px);
+	height: calc(100% - 20px);
+	padding: 10px;
+	background: #f6f6f6;
+}
+
+.second-content{
+	width: calc(100% - 32px);
+	height: calc(100% - 32px);
+	padding: 16px;
+	border-radius: 12px;
+	background: white;
+}
+
+.iframe{
+	border: none;
+	background: white;
+	overflow: auto;
+}

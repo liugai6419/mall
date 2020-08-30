@@ -1,0 +1,24 @@
+body{
+	height: calc(100% - 10px);
+}
+
+.layui-form .layui-form-item .receive_email_address{
+	display: flex;
+}
+
+.layui-form .layui-form-item .receive_email_address input{
+	width: 508px;
+	border-radius: none;
+	border-right: none;
+
+}
+
+.layui-form .layui-form-item .receive_email_address button{
+	width: 80px;
+	height: 38px;
+	color: white;
+	background-color: #009688;
+	border: none;
+	border-radius: 0 2px 2px 0;
+	cursor: pointer;
+}

@@ -1,0 +1,25 @@
+body{
+	height: calc(100% - 10px);
+}
+
+/*提示*/
+.tip{
+	width: calc(100% - 36px);
+	padding: 6px 15px;
+	margin-bottom: 10px;
+	background-color: #fff7f1;
+	border: 1px solid #fff0e4;
+	color: #f37b1d;
+}
+
+.tip i{
+	font-size: 14px;
+	color: #999;
+	float: right;
+	margin-top: 2px;
+	cursor: pointer;
+}
+
+.group .content .layui-form-item .color{
+	background-color: #fbfbfb;
+}

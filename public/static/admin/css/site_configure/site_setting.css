@@ -1,0 +1,163 @@
+body{
+	height: calc(100% - 10px);
+}
+
+.image .layui-form-label{
+	height: 133px!important;
+	line-height: 125px!important;
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+}
+
+.image .layui-input-inline{
+	width: 230px!important;
+}
+
+.image .layui-upload-drag{
+	border: 1px solid #e2e2e2;
+}
+
+.image .layui-form-mid{
+	margin-top: 96px;
+}
+
+.image .layui-upload-drag{
+	width: 230px;
+	height: 131px;
+	padding: 0;
+}
+
+.image .icon{
+	margin-top: 28px;
+}
+
+.textarea .layui-form-label{
+	height: 100px!important;
+	line-height: 82px!important;
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+}
+
+.textarea .layui-form-mid{
+	margin-top: 62px;
+}
+
+.textarea textarea{
+	resize: none;
+}
+
+#uploadDemoView{
+	width: 100%;
+	height: 100%;
+}
+
+#uploadDemoView img{
+	width: 100%;
+	height: 100%;
+}
+
+.group{
+	width: calc(100% - 6px);
+	border: 1px solid #e6e6e6;
+	border-radius: 2px;
+	margin-bottom: 15px;
+}
+
+.group .title{
+	width: calc(100% - 16px);
+	height: 32px;
+	color: #333;
+	line-height: 32px;
+	padding-left: 15px;
+	margin-bottom: 15px;
+	background: #FBFBFB;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.group .content{
+	width: 100%;
+	padding-left: 15px;
+}
+
+/*提示*/
+.tip{
+	width: calc(100% - 36px);
+	padding: 6px 15px;
+	margin-bottom: 10px;
+	background-color: #fff7f1;
+	border: 1px solid #fff0e4;
+	color: #f37b1d;
+}
+
+.tip i{
+	font-size: 14px;
+	color: #999;
+	float: right;
+	margin-top: 2px;
+	cursor: pointer;
+}
+
+.group .content .layui-form-item .color{
+	background-color: #fbfbfb;
+}
+
+/*搜索*/
+.add-search-key{
+	width: 584px;
+	display: flex;
+}
+
+.add-search-key .search-key-input{
+	width: 500px;
+	height: 36px;
+	border: 1px solid #e6e6e6;
+	border-right: none;
+	padding-left: 10px;
+	line-height: 36px;
+	color: #333;
+}
+
+.add-search-key .search-key-input:focus{
+	outline: none;
+	border: 1px solid #d6d6d6;
+	border-right: none;
+}
+
+.add-search-key button{
+	width: 84px;
+	height: 38px;
+	border-radius: 0 2px 0 0;
+	background-color: #009688;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+.added-search-key{
+	width: 574px;
+	border: 1px solid #e6e6e6;
+	border-top: none;
+	background-color: #FBFBFB;
+	border-radius: 0 0 2px 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 3px 4px;
+	min-height: 30px;
+}
+
+.added-search-key .search-key-item{
+	border-radius: 2px;
+	background-color: #009688;
+	color: white;
+	margin: 3px 0 3px 9px;
+	padding: 4px 5px;
+}
+
+.added-search-key .search-key-item i{
+	color: white;
+	font-size: 10px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
