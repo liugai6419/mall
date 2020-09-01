@@ -1,0 +1,16 @@
+---------------------------------------------------------------
+
+[2020-05-20T20:43:52+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[ error ] [2]Missing argument 1 for think\Controller::assign(), called in D:\phpstudy\WWW\mall\tp51\application\admin\controller\Index.php on line 9 and defined
+---------------------------------------------------------------
+
+[2020-05-20T20:48:44+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[ error ] [8]Use of undefined constant app_name - assumed 'app_name'
+---------------------------------------------------------------
+
+[2020-05-20T20:48:56+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[ error ] [8]Use of undefined constant app_name - assumed 'app_name'
+---------------------------------------------------------------
+
+[2020-05-20T22:27:07+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[ error ] [8]未定义变量: version

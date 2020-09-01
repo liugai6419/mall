@@ -1,0 +1,2644 @@
+---------------------------------------------------------------
+
+[2020-06-23T22:12:23+08:00] 127.0.0.1 GET www.mall.io/admin/login/index
+[运行时间：1.605021s] [吞吐率：0.62req/s] [内存消耗：567.42kb] [文件加载：64]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\login\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:12:40+08:00] 127.0.0.1 POST www.mall.io/admin/login/login
+[运行时间：0.288018s] [吞吐率：3.47req/s] [内存消耗：646.80kb] [文件加载：69]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'origin' => 'http://www.mall.io',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '31',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login' => '',
+  'username' => 'liugai',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026880s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.032461s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'liugai' LIMIT 1 [ RunTime:0.004941s ]
+---------------------------------------------------------------
+
+[2020-06-23T22:12:40+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.276854s] [吞吐率：3.61req/s] [内存消耗：393.13kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=gh4o5u0buh3ajiv4ocd3rrh1tk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:12:41+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.028528s] [吞吐率：35.05req/s] [内存消耗：380.06kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=gh4o5u0buh3ajiv4ocd3rrh1tk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:20:10+08:00] 127.0.0.1 GET www.mall.io/admin/login/index
+[运行时间：0.007239s] [吞吐率：138.14req/s] [内存消耗：368.16kb] [文件加载：64]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\login\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:20:45+08:00] 127.0.0.1 GET www.mall.io/admin/login/index
+[运行时间：0.003560s] [吞吐率：280.91req/s] [内存消耗：368.16kb] [文件加载：64]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\login\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:20:49+08:00] 127.0.0.1 GET www.mall.io/admin/login/index
+[运行时间：0.007566s] [吞吐率：132.17req/s] [内存消耗：368.16kb] [文件加载：64]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\login\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:20:57+08:00] 127.0.0.1 POST www.mall.io/admin/login/login
+[运行时间：0.027815s] [吞吐率：35.95req/s] [内存消耗：580.87kb] [文件加载：69]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'origin' => 'http://www.mall.io',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '31',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login' => '',
+  'username' => 'liugai',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011467s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.004711s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'liugai' LIMIT 1 [ RunTime:0.000591s ]
+---------------------------------------------------------------
+
+[2020-06-23T22:20:57+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.004628s] [吞吐率：216.08req/s] [内存消耗：381.08kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:20:57+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.004099s] [吞吐率：243.97req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:23:14+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.010958s] [吞吐率：91.26req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:23:14+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.005650s] [吞吐率：176.99req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:23:27+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.004597s] [吞吐率：217.54req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:23:27+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.006676s] [吞吐率：149.79req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:09+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.012144s] [吞吐率：82.34req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:09+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.021505s] [吞吐率：46.50req/s] [内存消耗：387.91kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:22+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.007739s] [吞吐率：129.21req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:22+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.020832s] [吞吐率：48.00req/s] [内存消耗：388.34kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:23+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.007995s] [吞吐率：125.08req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:23+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.006481s] [吞吐率：154.30req/s] [内存消耗：380.21kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:23+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.016401s] [吞吐率：60.97req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:23+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.025008s] [吞吐率：39.99req/s] [内存消耗：380.21kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:23+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.006549s] [吞吐率：152.69req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:23+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.005240s] [吞吐率：190.84req/s] [内存消耗：380.21kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:24+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.003293s] [吞吐率：303.67req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:24:24+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.004994s] [吞吐率：200.24req/s] [内存消耗：380.21kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:17+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.013914s] [吞吐率：71.87req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:17+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.016175s] [吞吐率：61.82req/s] [内存消耗：387.64kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:18+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.005966s] [吞吐率：167.62req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:18+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.003449s] [吞吐率：289.94req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:22+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.006598s] [吞吐率：151.56req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:22+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.006187s] [吞吐率：161.63req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:40+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.012314s] [吞吐率：81.21req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:40+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.018014s] [吞吐率：55.51req/s] [内存消耗：388.59kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:40+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.006736s] [吞吐率：148.46req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:40+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.006667s] [吞吐率：149.99req/s] [内存消耗：380.21kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:40+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.010390s] [吞吐率：96.25req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:25:40+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.006478s] [吞吐率：154.37req/s] [内存消耗：380.21kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:32:05+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.013164s] [吞吐率：75.96req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:32:05+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.004667s] [吞吐率：214.28req/s] [内存消耗：379.69kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:48:43+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.015606s] [吞吐率：64.08req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:48:43+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.056258s] [吞吐率：17.78req/s] [内存消耗：388.81kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:49:48+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.007059s] [吞吐率：141.67req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:49:48+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.009209s] [吞吐率：108.59req/s] [内存消耗：379.69kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:49:59+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.006771s] [吞吐率：147.69req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:49:59+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.009394s] [吞吐率：106.45req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:50:08+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.172832s] [吞吐率：5.79req/s] [内存消耗：250.04kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:51:16+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.016196s] [吞吐率：61.74req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:51:16+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.009215s] [吞吐率：108.52req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:51:33+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.006389s] [吞吐率：156.52req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:51:33+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.006627s] [吞吐率：150.90req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:51:45+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.007183s] [吞吐率：139.22req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:51:45+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.008699s] [吞吐率：114.96req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:51:52+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.004191s] [吞吐率：238.60req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:52:28+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.008584s] [吞吐率：116.50req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:52:28+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.021191s] [吞吐率：47.19req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:52:28+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.018954s] [吞吐率：52.76req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:52:29+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.013267s] [吞吐率：75.37req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:52:48+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.007765s] [吞吐率：128.78req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:52:48+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.013552s] [吞吐率：73.79req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:52:48+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.010924s] [吞吐率：91.54req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:52:49+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.007768s] [吞吐率：128.73req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:53:03+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.006560s] [吞吐率：152.44req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:53:03+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.009070s] [吞吐率：110.25req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:53:03+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.005623s] [吞吐率：177.85req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:53:03+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.017250s] [吞吐率：57.97req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:55:15+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.016623s] [吞吐率：60.16req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:55:15+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.044321s] [吞吐率：22.56req/s] [内存消耗：388.81kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:55:15+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.010819s] [吞吐率：92.43req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:55:16+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.012100s] [吞吐率：82.64req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:55:57+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.019717s] [吞吐率：50.72req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:55:57+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.055487s] [吞吐率：18.02req/s] [内存消耗：389.34kb] [文件加载：68]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:55:57+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.011323s] [吞吐率：88.32req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:55:57+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.004573s] [吞吐率：218.68req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:55:58+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.008764s] [吞吐率：114.10req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:55:58+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.015055s] [吞吐率：66.42req/s] [内存消耗：380.21kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:55:58+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003475s] [吞吐率：287.75req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:55:58+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.014367s] [吞吐率：69.60req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:56:16+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.011139s] [吞吐率：89.77req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:56:16+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.010122s] [吞吐率：98.79req/s] [内存消耗：379.69kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:56:17+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.007070s] [吞吐率：141.44req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:56:17+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.009649s] [吞吐率：103.64req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:57:01+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.006691s] [吞吐率：149.45req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:57:01+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.008699s] [吞吐率：114.96req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:57:01+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.006711s] [吞吐率：149.01req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:57:01+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.010348s] [吞吐率：96.64req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:57:06+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.018090s] [吞吐率：55.28req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:57:06+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.024902s] [吞吐率：40.16req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:57:06+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.016440s] [吞吐率：60.83req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:57:07+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.005305s] [吞吐率：188.51req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:59:05+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.043609s] [吞吐率：22.93req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:59:05+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.025373s] [吞吐率：39.41req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T22:59:06+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.005740s] [吞吐率：174.22req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T22:59:06+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.011772s] [吞吐率：84.95req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:00:22+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.020129s] [吞吐率：49.68req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:00:22+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.024557s] [吞吐率：40.72req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:00:22+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.009685s] [吞吐率：103.25req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:00:22+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.005208s] [吞吐率：192.01req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:00:34+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.018489s] [吞吐率：54.09req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:00:34+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.025266s] [吞吐率：39.58req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:00:34+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.015494s] [吞吐率：64.54req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:00:35+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003968s] [吞吐率：252.02req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:01:26+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.044885s] [吞吐率：22.28req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:01:26+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.044619s] [吞吐率：22.41req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:01:26+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.007613s] [吞吐率：131.35req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:01:26+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.013108s] [吞吐率：76.29req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:01:27+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.011285s] [吞吐率：88.61req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:01:27+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.010362s] [吞吐率：96.51req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:01:27+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.008027s] [吞吐率：124.58req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:01:27+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.008416s] [吞吐率：118.82req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:01:28+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.017650s] [吞吐率：56.66req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:01:28+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.029076s] [吞吐率：34.39req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:01:29+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.012700s] [吞吐率：78.74req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:01:29+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.012958s] [吞吐率：77.17req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:03:54+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.015937s] [吞吐率：62.75req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:03:54+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.007144s] [吞吐率：139.98req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:03:54+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.007062s] [吞吐率：141.60req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:03:55+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003446s] [吞吐率：290.20req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:04:19+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003684s] [吞吐率：271.44req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:05:22+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.003008s] [吞吐率：332.46req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:05:23+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.002846s] [吞吐率：351.37req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:05:35+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.003035s] [吞吐率：329.48req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:05:35+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.004070s] [吞吐率：245.70req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:06:53+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.005418s] [吞吐率：184.58req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:08:49+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.004981s] [吞吐率：200.76req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:08:49+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.008918s] [吞吐率：112.13req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:08:49+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.002729s] [吞吐率：366.44req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:08:49+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.002827s] [吞吐率：353.71req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:09:21+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.005205s] [吞吐率：192.13req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:09:21+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.003714s] [吞吐率：269.25req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:09:21+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003144s] [吞吐率：318.06req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:09:21+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.002130s] [吞吐率：469.48req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:09:46+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.002658s] [吞吐率：376.24req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:09:46+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.003891s] [吞吐率：257.00req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:09:46+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003024s] [吞吐率：330.68req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:09:46+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003521s] [吞吐率：283.99req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:10:08+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.004231s] [吞吐率：236.35req/s] [内存消耗：380.36kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:10:08+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.003814s] [吞吐率：262.19req/s] [内存消耗：379.27kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:10:08+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003654s] [吞吐率：273.67req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:10:08+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.002676s] [吞吐率：373.69req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:11:21+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.004306s] [吞吐率：232.23req/s] [内存消耗：380.55kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:11:22+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.007379s] [吞吐率：135.52req/s] [内存消耗：379.79kb] [文件加载：66]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=noe5cjqh099l3fp8pv184ttvl5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-06-23T23:11:22+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.002440s] [吞吐率：409.80req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-23T23:11:22+08:00] 127.0.0.1 GET www.mall.io/static/admin/lib/echarts.js.map
+[运行时间：0.003011s] [吞吐率：332.12req/s] [内存消耗：248.62kb] [文件加载：52]
+[ info ] [ LANG ] D:\soft\phpstudy_pro\WWW\mall\tp51\thinkphp\lang\zh-cn.php
