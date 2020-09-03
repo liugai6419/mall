@@ -7,6 +7,8 @@ use think\facade\Request;
 use think\facade\Session;
 use think\Db;
 
+use phpmailer\PHPMailer;
+
 class EmailSetting extends Common
 {
 	public function index()
@@ -20,15 +22,15 @@ class EmailSetting extends Common
 		}
 
 		$data = null;
-		// if($tab == 1){
+		if($tab == 1){
 
-		// 	$data = Db::table("sms_setting")->where("user_id",$user_id)->find();
+			$data = Db::table("eamil_setting")->where("user_id",$user_id)->find();
 			
-		// }elseif($tab == 2){
+		}elseif($tab == 2){
 
-		// 	$data = Db::table("message_template")->where("user_id",$user_id)->find();
+			// $data = Db::table("message_template")->where("user_id",$user_id)->find();
 
-		// }
+		}
 
 		$this->assign('tab',$tab);
 		$this->assign('data',$data);
@@ -36,25 +38,25 @@ class EmailSetting extends Common
 		return $this->fetch();
 	}
 
-	public function saveSmsSetting()
+	public function saveEmailSetting()
 	{
 		$data = Request::post();
 
 		// 获取用户id
 		$user_id = Session::get('admin')["id"];
 
-		$res = Db::table("sms_setting")->where("user_id",$user_id)->find();
+		$res = Db::table("eamil_setting")->where("user_id",$user_id)->find();
 
 		if(!$res){
 
 			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
-			$res = Db::table("sms_setting")->insert($data);
+			$res = Db::table("eamil_setting")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("sms_setting")->where("user_id",$user_id)->update($data);
+			$res = Db::table("eamil_setting")->where("user_id",$user_id)->update($data);
 
 		}
 

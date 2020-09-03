@@ -3,7 +3,7 @@ $(function(){
 		var layer = layui.layer,
 			form = layui.form;
 
-		$("button").click(function(){
+		$(".testBtn").click(function(){
 			var val = $(this).prev().val();
 			console.log(val);
 		});
@@ -13,19 +13,15 @@ $(function(){
 
 			var field = data.field;
 
-			console.log(field);
-
-			// $.post("/admin/email_setting/saveMessageTemplate",field,function(res){
-			// 	// console.log(res);
-			// 	if(res.code === 1){
-			// 		layer.msg(res.msg);
-			// 	}else{
-			// 		layer.msg(res.msg);
-			// 	}
-			// });
+			$.post("/admin/email_setting/saveEmailSetting",field,function(res){
+				if(res.code === 1){
+					layer.msg(res.msg);
+				}else{
+					layer.msg(res.msg);
+				}
+			});
 			return false;
 		});
-
 	});
 
 });
