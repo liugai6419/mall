@@ -1,4 +1,4 @@
-<?php /*a:4:{s:82:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\index.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:90:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_setting.html";i:1599116392;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:4:{s:82:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\index.html";i:1599116426;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:90:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_setting.html";i:1599116423;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
