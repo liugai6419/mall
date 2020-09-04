@@ -1,4 +1,4 @@
-<?php /*a:4:{s:82:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\index.html";i:1599116426;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:90:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_setting.html";i:1599116423;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:5:{s:82:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\index.html";i:1599207444;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:90:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_setting.html";i:1599205863;s:91:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_template.html";i:1599212256;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,41 +34,41 @@
 	<div class="layui-form-item">
 		<label class="layui-form-label">SMTP服务器</label>
 		<div class="layui-input-inline">
-			<input type="text" name="smtp_server" value="<?php echo htmlentities($data['smtp_server']); ?>" placeholder="请填SMTP服务器" autocomplete="off" class="layui-input">
+			<input type="text" name="smtp_server" lay-verify="required" value="<?php echo htmlentities($data['smtp_server']); ?>" placeholder="请填SMTP服务器" autocomplete="off" class="layui-input">
 		</div>
-		<div class="layui-form-mid layui-word-aux">设置SMTP服务器的地址，如 smtp.163.com</div>
+		<div class="layui-form-mid layui-word-aux">设置SMTP服务器的地址，如: smtp.qq.com</div>
 	</div>
 
 	<div class="layui-form-item">
 		<label class="layui-form-label">SMTP端口</label>
 		<div class="layui-input-inline">
-			<input type="number" name="smtp_port" value="<?php echo htmlentities($data['smtp_port']); ?>" placeholder="请填SMTP端口" autocomplete="off" class="layui-input">
+			<input type="number" name="smtp_port" lay-verify="required|number" value="<?php echo htmlentities($data['smtp_port']); ?>" placeholder="请填SMTP端口" autocomplete="off" class="layui-input">
 		</div>
-		<div class="layui-form-mid layui-word-aux">设置SMTP服务器的端口，默认为 25</div>
+		<div class="layui-form-mid layui-word-aux">设置SMTP服务器的端口，默认为465</div>
 	</div>
 
 	<div class="layui-form-item">
 		<label class="layui-form-label">发信人邮件地址</label>
 		<div class="layui-input-inline">
-			<input type="email" name="sender_email_address" value="<?php echo htmlentities($data['sender_email_address']); ?>" placeholder="请填发信人邮件地址" autocomplete="off" class="layui-input">
+			<input type="email" name="sender_email_address" lay-verify="required|email" value="<?php echo htmlentities($data['sender_email_address']); ?>" placeholder="请填发信人邮件地址" autocomplete="off" class="layui-input">
 		</div>
-		<div class="layui-form-mid layui-word-aux">使用SMTP协议发送的邮件地址，如 shopxo@163.com</div>
+		<div class="layui-form-mid layui-word-aux">使用SMTP协议发送的邮件地址，如: shopxo@qq.com</div>
 	</div>
 
 	<div class="layui-form-item">
 		<label class="layui-form-label">SMTP身份验证用户名</label>
 		<div class="layui-input-inline">
-			<input type="text" name="smtp_proving_username" value="<?php echo htmlentities($data['smtp_proving_username']); ?>" placeholder="请填SMTP身份验证用户名" autocomplete="off" class="layui-input">
+			<input type="email" name="smtp_proving_username" lay-verify="required|email" value="<?php echo htmlentities($data['smtp_proving_username']); ?>" placeholder="请填SMTP身份验证用户名" autocomplete="off" class="layui-input">
 		</div>
-		<div class="layui-form-mid layui-word-aux">如 ShopXO</div>
+		<div class="layui-form-mid layui-word-aux">如: shopxo@qq.com</div>
 	</div>
 
 	<div class="layui-form-item">
-		<label class="layui-form-label">SMTP身份验证密码</label>
+		<label class="layui-form-label">SMTP身份验证授权码</label>
 		<div class="layui-input-inline">
-			<input type="password" name="smtp_proving_password" value="<?php echo htmlentities($data['smtp_proving_password']); ?>" placeholder="请填SMTP身份验证密码" autocomplete="off" class="layui-input">
+			<input type="password" name="smtp_proving_password" lay-verify="required" value="<?php echo htmlentities($data['smtp_proving_password']); ?>" placeholder="请填SMTP身份验证密码" autocomplete="off" class="layui-input">
 		</div>
-		<div class="layui-form-mid layui-word-aux">shopxo@163.com邮件的密码</div>
+		<div class="layui-form-mid layui-word-aux">shopxo@qq.com授权码</div>
 	</div>
 
 	<div class="layui-form-item">
@@ -84,7 +84,7 @@
 	<div class="layui-form-item">
 		<label class="layui-form-label">发件人显示名称</label>
 		<div class="layui-input-inline">
-			<input type="text" name="sender_show_name" value="<?php echo htmlentities($data['sender_show_name']); ?>" placeholder="请填发件人显示名称" autocomplete="off" class="layui-input">
+			<input type="text" name="sender_show_name" lay-verify="required" value="<?php echo htmlentities($data['sender_show_name']); ?>" placeholder="请填发件人显示名称" autocomplete="off" class="layui-input">
 		</div>
 		<div class="layui-form-mid layui-word-aux">如 ShopXO</div>
 	</div>
@@ -93,7 +93,7 @@
 		<label class="layui-form-label">测试接收的邮件地址</label>
 		<div class="layui-input-inline receive_email_address">
 			<input type="email" name="receive_email_address" value="<?php echo htmlentities($data['receive_email_address']); ?>" placeholder="请填测试接收的邮件地址" autocomplete="off" class="layui-input">
-			<button type="button" class="testBtn">测试</button>
+			<button class="layui-btn" lay-submit lay-filter="testEmail">测试</button>
 		</div>
 		<div class="layui-form-mid layui-word-aux">请先保存配置后，再进行测试</div>
 	</div>
@@ -105,7 +105,19 @@
 	</div>
 </form>
 					<?php break; case "2": ?>
-						<?php echo htmlentities($tab); break; ?>
+							<!-- 加载编辑器的容器 -->
+    <script id="container" name="content" type="text/plain">
+        这里写你的初始化内容
+    </script>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="/static/admin/lib/ueditor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="/static/admin/lib/ueditor/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>
+					<?php break; ?>
 				<?php endswitch; ?>
 			</div>
 		</div>
