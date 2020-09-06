@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html";i:1597581875;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:74:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html";i:1599399888;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +51,7 @@
 						<dd><a href="javascript:;" data-url="/admin/site_setting/index" class="nav">站点设置</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/sms_setting/index" class="nav">短信设置</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/email_setting/index" class="nav">邮箱设置</a></dd>
-						<dd><a href="javascript:;" data-url="/admin/index/seo" class="nav">SEO设置</a></dd>
+						<dd><a href="javascript:;" data-url="/admin/seo_setting/index" class="nav">SEO设置</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/index/xieyi" class="nav">协议管理</a></dd>
 				    </dl>
 				</li>

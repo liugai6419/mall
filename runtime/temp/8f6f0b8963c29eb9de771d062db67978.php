@@ -1,4 +1,4 @@
-<?php /*a:5:{s:82:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\email_setting\index.html";i:1599393743;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:90:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\email_setting\email_setting.html";i:1599358582;s:93:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\email_setting\message_template.html";i:1599393690;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:5:{s:82:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\email_setting\index.html";i:1599393743;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:90:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\email_setting\email_setting.html";i:1599358582;s:93:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\email_setting\message_template.html";i:1599394470;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,14 +123,14 @@
 	</div>
 
 	<div class="layui-form-item">
-		<label class="layui-form-label message-template-title"></label>
+		<label class="layui-form-label message-template-title">密码找回-邮件模板</label>
 		<div class="layui-input-inline rich-text">
 			<script id="find-password-template" name="find_password_template" type="text/plain"></script>
 		</div>
 	</div>
 
 	<div class="layui-form-item">
-		<label class="layui-form-label message-template-title"></label>
+		<label class="layui-form-label message-template-title">邮箱绑定-邮件模板</label>
 		<div class="layui-input-inline rich-text">
 			<script id="email-bind-template" name="email_bind_template" type="text/plain"></script>
 		</div>

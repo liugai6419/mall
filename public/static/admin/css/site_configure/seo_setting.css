@@ -1,0 +1,18 @@
+body{
+	height: calc(100% - 10px);
+}
+
+.textarea .layui-form-label{
+	height: 100px!important;
+	line-height: 82px!important;
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+}
+
+.textarea .layui-form-mid{
+	margin-top: 62px;
+}
+
+.textarea textarea{
+	resize: none;
+}
