@@ -31,15 +31,6 @@ $(function(){
 			return false;
 		});
 
-		// $(".testEmail").click(function(){
-		// 	var val = $(this).prev().val();
-
-			
-
-
-		// });
-
-		// 邮箱设置
 		form.on('submit(emailSetting)', function(data){
 
 			var field = data.field;

@@ -31,7 +31,7 @@ class EmailSetting extends Common
 			
 		}elseif($tab == 2){
 			
-			// $data = Db::table("message_template")->where("user_id",$user_id)->find();
+			$data = Db::table("email_message_template")->where("user_id",$user_id)->find();
 
 		}
 
@@ -104,25 +104,25 @@ class EmailSetting extends Common
 		}
 	}
 
-	public function saveMessageTemplate()
+	public function saveEmailMessageTemplate()
 	{
 		$data = Request::post();
 
 		// 获取用户id
 		$user_id = Session::get('admin')["id"];
 
-		$res = Db::table("message_template")->where("user_id",$user_id)->find();
+		$res = Db::table("email_message_template")->where("user_id",$user_id)->find();
 
 		if(!$res){
 
 			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
-			$res = Db::table("message_template")->insert($data);
+			$res = Db::table("email_message_template")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("message_template")->where("user_id",$user_id)->update($data);
+			$res = Db::table("email_message_template")->where("user_id",$user_id)->update($data);
 
 		}
 

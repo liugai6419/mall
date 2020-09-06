@@ -22,3 +22,33 @@ body{
 	border-radius: 0 2px 2px 0;
 	cursor: pointer;
 }
+
+.layui-form .layui-form-item .message-template-title{
+	height: 251px;
+	line-height: 250px;
+}
+
+.layui-form .layui-form-item .message-template-btn{
+	width: 100%;
+}
+
+.layui-form .layui-form-item .rich-text{
+	width: calc(100% - 182px);
+	margin-right: 0px;
+	border: 1px solid #e6e6e6;
+	border-radius: 0 2px 2px 0;
+}
+.layui-form .layui-form-item .rich-text .edui-default .edui-editor{
+	border: none;
+	border-radius: none;
+}
+
+.layui-form .layui-form-item .rich-text .edui-default .edui-editor-toolbarboxouter{
+	box-shadow: none;
+	border-bottom: none;
+	border-radius: 0px;
+}
+
+.layui-form .layui-form-item .rich-text .edui-default .edui-editor-breadcrumb{
+	display: none;
+}
