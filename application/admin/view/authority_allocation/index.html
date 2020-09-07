@@ -1,0 +1,33 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/css/system_setting/backstage_configure.css" />
+<link rel="stylesheet" href="/static/admin/css/authority_control/authority_allocation.css" />
+</head>
+<body>
+
+	<!-- 搜索和新增 -->
+	<div class="top">
+		<div></div>
+		<button type="button" class="layui-btn found"><i class="layui-icon">&#xe608;</i> 新增</button>
+	</div>
+
+	<div class="layui-collapse" lay-accordion>
+		<div class="layui-colla-item">
+			<h2 class="layui-colla-title">杜甫</h2>
+			<div class="layui-colla-content">内容区域</div>
+		</div>
+		<div class="layui-colla-item">
+			<h2 class="layui-colla-title">李清照</h2>
+			<div class="layui-colla-content">内容区域</div>
+		</div>
+		<div class="layui-colla-item">
+			<h2 class="layui-colla-title">鲁迅</h2>
+			<div class="layui-colla-content">内容区域</div>
+		</div>
+	</div>
+	
+	{include file="public/footer" /}
+
+	<script src="/static/admin/js/authority_control/authority_allocation.js"></script>
+</body>
+</html>

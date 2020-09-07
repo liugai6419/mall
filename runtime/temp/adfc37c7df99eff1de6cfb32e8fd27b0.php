@@ -1,4 +1,4 @@
-<?php /*a:5:{s:82:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\index.html";i:1599207444;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:90:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_setting.html";i:1599205863;s:91:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_template.html";i:1599212256;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:5:{s:82:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\index.html";i:1599444000;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:90:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\email_setting.html";i:1599205863;s:93:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\email_setting\message_template.html";i:1599444000;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,18 +105,43 @@
 	</div>
 </form>
 					<?php break; case "2": ?>
-							<!-- 加载编辑器的容器 -->
-    <script id="container" name="content" type="text/plain">
-        这里写你的初始化内容
-    </script>
-    <!-- 配置文件 -->
-    <script type="text/javascript" src="/static/admin/lib/ueditor/ueditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="/static/admin/lib/ueditor/ueditor.all.js"></script>
-    <!-- 实例化编辑器 -->
-    <script type="text/javascript">
-        var ue = UE.getEditor('container');
-    </script>
+						<form class="layui-form layui-form-pane" action="">
+
+	<div class="layui-form-item">
+		<label class="layui-form-label message-template-title">通用-邮件模板</label>
+		<div class="layui-input-inline rich-text">
+			<script id="general-template" name="general_template" type="text/plain"></script>
+
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label message-template-title">用户注册-邮件模板</label>
+		<div class="layui-input-inline rich-text">
+			<script id="user-register-template" name="user_register_template" type="text/plain"></script>
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label message-template-title">密码找回-邮件模板</label>
+		<div class="layui-input-inline rich-text">
+			<script id="find-password-template" name="find_password_template" type="text/plain"></script>
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label message-template-title">邮箱绑定-邮件模板</label>
+		<div class="layui-input-inline rich-text">
+			<script id="email-bind-template" name="email_bind_template" type="text/plain"></script>
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+	    <div class="layui-input-block">
+	    	<button class="layui-btn message-template-btn" lay-submit lay-filter="messageTemplate">立即提交</button>
+	    </div>
+	</div>
+</form>
 					<?php break; ?>
 				<?php endswitch; ?>
 			</div>
@@ -133,7 +158,114 @@
 <?php switch($tab): case "1": ?>
 		<script src="/static/admin/js/site_configure/email_setting/email_setting.js"></script>
 	<?php break; case "2": ?>
-		<!-- <script src="/static/admin/js/site_configure/sms_setting/message_template.js"></script> -->
+		
+		<script type="text/javascript" charset="gbk" src="/static/admin/lib/ueditor/ueditor.config.js"></script>
+		<script type="text/javascript" charset="gbk" src="/static/admin/lib/ueditor/ueditor.all.min.js"></script>
+		<script type="text/javascript" charset="gbk" src="/static/admin/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+		<script type="text/javascript">
+
+			$(function(){
+				var toolbars = [[
+					'fullscreen', 'source', '|', 'undo', 'redo', '|',
+					'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+					'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+					'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+					'directionalityltr', 'directionalityrtl', 'indent', '|',
+					'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|', 'link', 'unlink', 'anchor', '|',
+					'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+					'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+					'print', 'preview', 'searchreplace', 'drafts', 'help'
+				]];
+
+				function htmlRestore(str) {
+					var s = "";
+					if (str.length === 0) {
+						return "";
+					}
+					s = str.replace(/&amp;/g, "&");
+					s = s.replace(/&lt;/g, "<");
+					s = s.replace(/&gt;/g, ">");
+					s = s.replace(/&nbsp;/g, " ");
+					s = s.replace(/&#39;/g, "\'");
+					s = s.replace(/&quot;/g, "\"");
+					return s;
+				}
+
+				// 通用-邮件模板
+				var generalTemplate = UE.getEditor('general-template',{
+					toolbars: toolbars,
+					initialFrameHeight: 150,
+					autoHeightEnabled: false
+				});
+
+				generalTemplate.ready(function() {
+					var html = htmlRestore('<?php echo htmlentities($data['general_template']); ?>');
+					generalTemplate.setContent(html);
+				});
+				
+
+				// 用户注册-邮件模板
+				var userRegisterTemplate = UE.getEditor('user-register-template',{
+					toolbars: toolbars,
+					initialFrameHeight: 150,
+					autoHeightEnabled: false
+				});
+
+				userRegisterTemplate.ready(function() {
+					var html = htmlRestore('<?php echo htmlentities($data['user_register_template']); ?>');
+					userRegisterTemplate.setContent(html);
+				});
+
+				// 密码找回-邮件模板
+				var findPasswordTemplate = UE.getEditor('find-password-template',{
+					toolbars: toolbars,
+					initialFrameHeight: 150,
+					autoHeightEnabled: false
+				});
+
+				findPasswordTemplate.ready(function() {
+					var html = htmlRestore('<?php echo htmlentities($data['find_password_template']); ?>');
+					findPasswordTemplate.setContent(html);
+				});
+
+				// 邮箱绑定-邮件模板
+				var emailBindTemplate = UE.getEditor('email-bind-template',{
+					toolbars: toolbars,
+					initialFrameHeight: 150,
+					autoHeightEnabled: false
+				});
+
+				emailBindTemplate.ready(function() {
+					var html = htmlRestore('<?php echo htmlentities($data['email_bind_template']); ?>');
+					emailBindTemplate.setContent(html);
+				});
+
+
+				layui.use(['layer', 'form'], function(){
+					var layer = layui.layer,
+						form = layui.form;
+
+					form.on('submit(messageTemplate)', function(data){
+
+						var field = data.field;
+
+						$.post("/admin/email_setting/saveEmailMessageTemplate",field,function(res){
+
+							if(res.code === 1){
+								layer.msg(res.msg);
+							}else{
+								layer.msg(res.msg);
+							}
+						});
+						return false;
+					});
+				});
+			});
+
+    	</script>
+
+		<!-- <script src="/static/admin/js/site_configure/email_setting/message_template.js"></script> -->
 	<?php break; ?>
 <?php endswitch; ?>
 </body>

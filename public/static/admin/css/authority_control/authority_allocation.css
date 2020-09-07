@@ -1,0 +1,26 @@
+.top{
+	width: 100%;
+	margin-bottom: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*新增权限弹窗样式*/
+.layer-container{
+	width: calc(100% - 40px);
+	/*height: calc(100% - 40px);*/
+	padding: 20px;
+}
+
+.layer-container .layui-form-pane .layui-input-inline{
+	width: calc(100% - 109px);
+	margin-right: 0px;
+}
+
+.layer-container .layui-form-pane .layui-input-block{
+	margin-left: 0px;
+}
+
+.layer-container .layui-btn{
+	width: 100%;
+}

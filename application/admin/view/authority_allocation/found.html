@@ -1,0 +1,76 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/css/authority_control/authority_allocation.css" />
+</head>
+<body>
+	<div class="layer-container">
+		<form class="layui-form layui-form-pane" action="">
+			
+			<div class="layui-form-item">
+				<label class="layui-form-label">栏目级别</label>
+				<div class="layui-input-inline">
+					<select name="parent_id" lay-verify="required" lay-search>
+						<option value="0" {//$data.parent_id == 1 ? 'selected' : ''}>一级栏目</option>
+						{volist name="$data" id="vo"}
+						<option value="{$vo.id}" {//$data.parent_id == 2 ? 'selected' : ''}>{$vo.authority_name}</option>
+						{/volist}
+					</select>
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+		    	<label class="layui-form-label">权限名称</label>
+				<div class="layui-input-inline">
+					<input type="text" name="authority_name" value="{//$data.authority_name}" lay-verify="required" placeholder="请填权限名称" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">控制器名称</label>
+				<div class="layui-input-inline">
+					<input type="text" name="controller_name" value="{//$data.controller_name}" lay-verify="required" placeholder="请填控制器名称" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">方法名称</label>
+				<div class="layui-input-inline">
+					<input type="text" name="method_name" value="{//$data.method_name}" lay-verify="required" placeholder="请填方法名称" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">图标名称</label>
+				<div class="layui-input-inline">
+					<input type="text" name="icon_name" value="{//$data.icon_name}" placeholder="将svg格式icon放到/static/admin/images文件夹中" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">排序顺序</label>
+				<div class="layui-input-inline">
+					<input type="number" name="marshalling_sequence" value="{//$data.marshalling_sequence}" lay-verify="required" placeholder="请填排序顺序" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">是否显示</label>
+				<div class="layui-input-inline">
+					<input type="radio" name="is_show" value="1" title="显示" checked>
+					<input type="radio" name="is_show" value="2" title="隐藏">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+			    <div class="layui-input-block">
+			    	<button class="layui-btn" lay-submit lay-filter="foundAuthority">保存</button>
+			    </div>
+			</div>
+		</form>
+	</div>
+	
+	{include file="public/footer" /}
+
+	<script src="/static/admin/js/authority_control/found_authority.js"></script>
+</body>
+</html>

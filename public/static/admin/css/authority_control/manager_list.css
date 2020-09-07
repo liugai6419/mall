@@ -1,0 +1,9 @@
+.top{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.layui-form .layui-form-item .layui-btn{
+	width: 100%;
+}
