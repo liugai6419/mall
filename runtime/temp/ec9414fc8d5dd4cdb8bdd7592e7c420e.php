@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html";i:1599399888;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:74:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html";i:1599486030;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,14 +46,22 @@
 			    	</dl>
 				</li>
 				<li class="layui-nav-item">
-			    	<a href="javascript:;">站点配置</a>
+					<a href="javascript:;">站点配置</a>
 					<dl class="layui-nav-child">
 						<dd><a href="javascript:;" data-url="/admin/site_setting/index" class="nav">站点设置</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/sms_setting/index" class="nav">短信设置</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/email_setting/index" class="nav">邮箱设置</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/seo_setting/index" class="nav">SEO设置</a></dd>
-						<dd><a href="javascript:;" data-url="/admin/index/xieyi" class="nav">协议管理</a></dd>
-				    </dl>
+						<dd><a href="javascript:;" data-url="/admin/agreement_mange/index" class="nav">协议管理</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">权限控制</a>
+					<dl class="layui-nav-child">
+						<dd><a href="javascript:;" data-url="/admin/manager_list/index" class="nav">管理员列表</a></dd>
+						<dd><a href="javascript:;" data-url="/admin/role_mange/index" class="nav">角色管理</a></dd>
+						<dd><a href="javascript:;" data-url="/admin/authority_allocation/index" class="nav">权限分配</a></dd>
+					</dl>
 				</li>
 			</ul>
 		</div>

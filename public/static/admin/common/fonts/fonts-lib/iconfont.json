@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "17017052",
+      "name": "删 除",
+      "font_class": "delete",
+      "unicode": "e79f",
+      "unicode_decimal": 59295
+    },
+    {
+      "icon_id": "17016816",
+      "name": "编辑",
+      "font_class": "edit",
+      "unicode": "e79e",
+      "unicode_decimal": 59294
+    },
+    {
       "icon_id": "16579584",
       "name": "关  闭",
       "font_class": "close1",

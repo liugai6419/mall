@@ -1,6 +1,6 @@
 .top{
 	width: 100%;
-	margin-bottom: 32px;
+	margin-bottom: 24px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -23,4 +23,53 @@
 
 .layer-container .layui-btn{
 	width: 100%;
+}
+
+/*一级权限*/
+.layui-colla-title .iconfont{
+	color:#666;
+	font-size:20px;
+	float: right;
+}
+
+.layui-colla-title .iconfont:hover{
+	color: #009688;
+}
+
+/*二级权限*/
+.layui-colla-content{
+	padding: 13px 15px;
+	/*display: flex;
+	flex-wrap: wrap;*/
+}
+
+.second-authority{
+	color: #666;
+	padding: 10px 6px;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 5px 10px 5px 0;
+	background: rgba(0,150,136,0.1);
+	border: 1px dashed rgba(0,150,136,0.2);
+}
+
+.second-authority span{
+	display: none;
+}
+
+.second-authority:hover span{
+	display: inline;
+}
+
+.second-authority .iconfont{
+	font-size: 15px;
+	margin-left: 4px;
+}
+
+.second-authority .icondelete{
+	font-size: 16px;
+}
+
+.second-authority .iconfont:hover{
+	color: #009688;
 }
