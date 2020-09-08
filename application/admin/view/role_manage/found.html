@@ -1,0 +1,55 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" />
+<link rel="stylesheet" href="/static/admin/css/authority_control/role_manage.css" />
+</head>
+<body>
+	<div class="found-top">
+		<div class="return-page"><i class="iconfont iconreturn"></i><span>返回</span></div>
+		<div class="title">角色添加</div>
+	</div>
+
+	<div class="layer-container">
+		<form class="layui-form layui-form-pane" action="">
+			<!-- 角色id -->
+			{//if $list !=  null}
+			<!-- <input type="hidden" name="id" value="{//$list.id}"> -->
+			{///if}
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">角色名称</label>
+				<div class="layui-input-inline">
+					<input type="text" name="route_delimiter" value="{//$data.route_delimiter}" placeholder="角色名称格式2~8个字符之间" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-collapse" lay-accordion>
+				{//volist name="$lists" id="list"}
+				<div class="layui-colla-item">
+					<h2 class="layui-colla-title">{//$list.authority_name}呕吼</h2>
+					<div class="layui-colla-content layui-show">
+						<div class="second-centent">
+							{//volist name="$list.second_authority" id="vo"}
+							<span class="second-authority green {//$vo.is_show == 1 ? 'green' : 'yellow'}">
+								{//$vo.authority_name}哇呜
+							</span>
+							{///volist}
+						</div>
+					</div>
+				</div>
+				{///volist}
+			</div>
+			
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button class="layui-btn" lay-submit lay-filter="foundAuthority">保存</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	{include file="public/footer" /}
+
+	<script src="/static/admin/js/authority_control/found_role.js"></script>
+</body>
+</html>

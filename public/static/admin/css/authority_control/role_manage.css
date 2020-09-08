@@ -1,0 +1,80 @@
+.top{
+	width: 100%;
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*创建和编辑角色  顶部*/
+.found-top{
+	display: flex;
+	margin-bottom: 32px;
+	justify-content: space-between;
+}
+
+.found-top .return-page{
+	color: #009688;
+	cursor: pointer;
+}
+
+.found-top .return-page i{
+	font-size: 14px;
+}
+
+.found-top .return-page span{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.found-top .title{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+
+/*创建和编辑角色  角色名称*/
+.layui-form-pane .layui-input-inline{
+	width: calc(100% - 109px);
+	margin-right: 0;
+}
+
+/*创建和编辑角色  拥有权限*/
+
+/*保存按钮*/
+.layer-container .layui-form-pane .layui-input-block{
+	margin-left: 0px;
+}
+.layer-container .layui-btn{
+	width: 100%;
+	margin-top: 10px;
+}
+
+/*二级权限*/
+.layui-colla-content{
+	padding: 5px 15px;
+}
+
+.second-centent{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.second-authority{
+	color: #666;
+	padding: 10px 6px;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 5px 10px 5px 0;
+	
+}
+
+.green{
+	background: rgba(0,150,136,0.1);
+	border: 1px dashed rgba(0,150,136,0.2);
+}
+
+.yellow{
+	background: rgba(255,184,0,0.1);
+	border: 1px dashed rgba(255,184,0,0.2);
+}
