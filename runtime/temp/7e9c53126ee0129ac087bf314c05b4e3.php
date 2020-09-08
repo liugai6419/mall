@@ -1,4 +1,4 @@
-<?php /*a:3:{s:89:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\authority_allocation\found.html";i:1599469550;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:89:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\authority_allocation\found.html";i:1599540155;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +25,9 @@
 				<label class="layui-form-label">栏目级别</label>
 				<div class="layui-input-inline">
 					<select name="parent_id" lay-verify="required" lay-search>
-						<option value="0" >一级栏目</option>
+						<option value="0" <?php echo $list['parent_id']==0 ? 'selected'  :  ''; ?>>一级栏目</option>
 						<?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-						<option value="<?php echo htmlentities($vo['id']); ?>" ><?php echo htmlentities($vo['authority_name']); ?></option>
+						<option value="<?php echo htmlentities($vo['id']); ?>" <?php echo $list['parent_id']==$vo['id'] ? 'selected'  :  ''; ?>><?php echo htmlentities($vo['authority_name']); ?></option>
 						<?php endforeach; endif; else: echo "" ;endif; ?>
 					</select>
 				</div>
@@ -36,43 +36,43 @@
 			<div class="layui-form-item">
 		    	<label class="layui-form-label">权限名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="authority_name" value="" lay-verify="required" placeholder="请填权限名称" autocomplete="off" class="layui-input">
+					<input type="text" name="authority_name" value="<?php echo htmlentities($list['authority_name']); ?>" lay-verify="required" placeholder="请填权限名称" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">控制器名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="controller_name" value="" lay-verify="required" placeholder="请填控制器名称" autocomplete="off" class="layui-input">
+					<input type="text" name="controller_name" value="<?php echo htmlentities($list['controller_name']); ?>" lay-verify="required" placeholder="请填控制器名称" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">方法名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="method_name" value="" lay-verify="required" placeholder="请填方法名称" autocomplete="off" class="layui-input">
+					<input type="text" name="method_name" value="<?php echo htmlentities($list['method_name']); ?>" lay-verify="required" placeholder="请填方法名称" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">图标名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="icon_name" value="" placeholder="将svg格式icon放到/static/admin/images文件夹中" autocomplete="off" class="layui-input">
+					<input type="text" name="icon_name" value="<?php echo htmlentities($list['icon_name']); ?>" placeholder="将svg格式icon放到/static/admin/images文件夹中" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">排序顺序</label>
 				<div class="layui-input-inline">
-					<input type="number" name="marshalling_sequence" value="" lay-verify="required" placeholder="请填排序顺序" autocomplete="off" class="layui-input">
+					<input type="number" name="marshalling_sequence" value="<?php echo htmlentities($list['marshalling_sequence']); ?>" lay-verify="required" placeholder="请填排序顺序" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">是否显示</label>
 				<div class="layui-input-inline">
-					<input type="radio" name="is_show" value="1" title="显示" checked>
-					<input type="radio" name="is_show" value="2" title="隐藏">
+					<input type="radio" name="is_show" value="1" title="显示" <?php echo $list['is_show']==1 ? 'checked'  :  ''; ?>>
+					<input type="radio" name="is_show" value="2" title="隐藏" <?php echo $list['is_show']==2 ? 'checked'  :  ''; ?>>
 				</div>
 			</div>
 

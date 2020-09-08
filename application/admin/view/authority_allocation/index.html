@@ -13,61 +13,21 @@
 	</div>
 
 	<div class="layui-collapse" lay-accordion>
+		{volist name="$lists" id="list"}
 		<div class="layui-colla-item">
-			<h2 class="layui-colla-title">系统设置<i class="iconfont iconedit"></i></h2>
+			<h2 class="layui-colla-title">{$list.authority_name}<i class="iconfont iconedit" data-id="{$list.id}"></i></h2>
 			<div class="layui-colla-content">
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
+				<div class="second-centent">
+					{volist name="$list.second_authority" id="vo"}
+					<span class="second-authority {$vo.is_show == 1 ? 'green' : 'yellow'}">
+						{$vo.authority_name}
+						<span><i class="iconfont iconedit" data-id="{$vo.id}"></i><i class="iconfont icondelete" data-id="{$vo.id}"></i></span>
+					</span>
+					{/volist}
+				</div>
 			</div>
 		</div>
-		<div class="layui-colla-item">
-			<h2 class="layui-colla-title">站点配置<i class="iconfont iconedit"></i></h2>
-			<div class="layui-colla-content">内容区域</div>
-		</div>
-		<div class="layui-colla-item">
-			<h2 class="layui-colla-title">权限控制<i class="iconfont iconedit"></i></h2>
-			<div class="layui-colla-content">内容区域</div>
-		</div>
+		{/volist}
 	</div>
 	
 	{include file="public/footer" /}

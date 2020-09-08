@@ -10,9 +10,9 @@
 				<label class="layui-form-label">栏目级别</label>
 				<div class="layui-input-inline">
 					<select name="parent_id" lay-verify="required" lay-search>
-						<option value="0" {//$data.parent_id == 1 ? 'selected' : ''}>一级栏目</option>
+						<option value="0" {$list.parent_id == 0 ? 'selected' : ''}>一级栏目</option>
 						{volist name="$data" id="vo"}
-						<option value="{$vo.id}" {//$data.parent_id == 2 ? 'selected' : ''}>{$vo.authority_name}</option>
+						<option value="{$vo.id}" {$list.parent_id == $vo.id ? 'selected' : ''}>{$vo.authority_name}</option>
 						{/volist}
 					</select>
 				</div>
@@ -21,43 +21,43 @@
 			<div class="layui-form-item">
 		    	<label class="layui-form-label">权限名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="authority_name" value="{//$data.authority_name}" lay-verify="required" placeholder="请填权限名称" autocomplete="off" class="layui-input">
+					<input type="text" name="authority_name" value="{$list.authority_name}" lay-verify="required" placeholder="请填权限名称" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">控制器名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="controller_name" value="{//$data.controller_name}" lay-verify="required" placeholder="请填控制器名称" autocomplete="off" class="layui-input">
+					<input type="text" name="controller_name" value="{$list.controller_name}" lay-verify="required" placeholder="请填控制器名称" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">方法名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="method_name" value="{//$data.method_name}" lay-verify="required" placeholder="请填方法名称" autocomplete="off" class="layui-input">
+					<input type="text" name="method_name" value="{$list.method_name}" lay-verify="required" placeholder="请填方法名称" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">图标名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="icon_name" value="{//$data.icon_name}" placeholder="将svg格式icon放到/static/admin/images文件夹中" autocomplete="off" class="layui-input">
+					<input type="text" name="icon_name" value="{$list.icon_name}" placeholder="将svg格式icon放到/static/admin/images文件夹中" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">排序顺序</label>
 				<div class="layui-input-inline">
-					<input type="number" name="marshalling_sequence" value="{//$data.marshalling_sequence}" lay-verify="required" placeholder="请填排序顺序" autocomplete="off" class="layui-input">
+					<input type="number" name="marshalling_sequence" value="{$list.marshalling_sequence}" lay-verify="required" placeholder="请填排序顺序" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">是否显示</label>
 				<div class="layui-input-inline">
-					<input type="radio" name="is_show" value="1" title="显示" checked>
-					<input type="radio" name="is_show" value="2" title="隐藏">
+					<input type="radio" name="is_show" value="1" title="显示" {$list.is_show == 1 ? 'checked' : ''}>
+					<input type="radio" name="is_show" value="2" title="隐藏" {$list.is_show == 2 ? 'checked' : ''}>
 				</div>
 			</div>
 

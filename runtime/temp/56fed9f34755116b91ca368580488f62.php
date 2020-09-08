@@ -1,4 +1,4 @@
-<?php /*a:3:{s:81:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\manager_list\index.html";i:1599453480;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:81:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\manager_list\index.html";i:1599453913;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,6 +73,9 @@
 		<button type="button" class="layui-btn"><i class="layui-icon">&#xe608;</i> 新增</button>
 
 	</div>
+
+	<!-- 数据表格 -->
+	<table id="demo" lay-filter="test"></table>
 	
 			<script src="/static/admin/lib/jquery-3.5.1.js"></script>
 		<script src="/static/admin/lib/layui/layui.js"></script>
