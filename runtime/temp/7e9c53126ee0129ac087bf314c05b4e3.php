@@ -1,4 +1,4 @@
-<?php /*a:3:{s:89:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\authority_allocation\found.html";i:1599540155;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:89:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\authority_allocation\found.html";i:1599544202;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,10 @@
 <body>
 	<div class="layer-container">
 		<form class="layui-form layui-form-pane" action="">
-			
+			<?php if($list !=  null): ?>
+			<input type="hidden" name="id" value="<?php echo htmlentities($list['id']); ?>">
+			<?php endif; ?>
+
 			<div class="layui-form-item">
 				<label class="layui-form-label">栏目级别</label>
 				<div class="layui-input-inline">

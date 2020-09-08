@@ -74,18 +74,29 @@ class AuthorityAllocation extends Common
 	{	
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
+		if(!isset($data["id"])){
+			// 获取用户id
+			$user_id = Session::get('admin')["id"];
 
-		$data["user_id"] = $user_id;
-		$data["create_time"] = time();
-		$res = Db::table("authority_allocation")->insert($data);
+			$data["user_id"] = $user_id;
+			$data["create_time"] = time();
+			$res = Db::table("authority_allocation")->insert($data);
+			
+		}else{
+			$id = $data["id"];
+
+			unset($data["id"]);
+			
+			$data["update_time"] = time();
+			$res = Db::table("authority_allocation")->where("id",$id)->update($data);
+		}
 
 		if($res){
 			return ["code"=>1,"msg"=>"保存成功"];
 		}else{
 			return ["code"=>0,"msg"=>"保存失败"];
 		}
+	
 	}
 
 	public function delAuthority()

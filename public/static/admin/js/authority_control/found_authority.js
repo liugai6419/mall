@@ -7,6 +7,7 @@ $(function(){
 		form.on('submit(foundAuthority)', function(data){
 
 			var field = data.field;
+			// console.log(field);
 
 			$.post("/admin/authority_allocation/addFoundAuthority",field,function(res){
 				// console.log(res);
@@ -18,7 +19,7 @@ $(function(){
 						var index = parent.layer.getFrameIndex(window.name);
 						parent.layer.close(index);
 						parent.location.reload();
-					},2000);
+					},1000);
 					
 				}else{
 					layer.msg(res.msg);

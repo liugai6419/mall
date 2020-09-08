@@ -5,7 +5,10 @@
 <body>
 	<div class="layer-container">
 		<form class="layui-form layui-form-pane" action="">
-			
+			{if $list !=  null}
+			<input type="hidden" name="id" value="{$list.id}">
+			{/if}
+
 			<div class="layui-form-item">
 				<label class="layui-form-label">栏目级别</label>
 				<div class="layui-input-inline">
