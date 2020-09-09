@@ -21,6 +21,36 @@ class RoleManage extends Common
 
 	public function found()
 	{
+		$user_id = Session::get('admin')["id"];
+
+		$data = Db::table("authority_allocation")
+				->where("user_id",$user_id)
+				->order('marshalling_sequence', 'desc')
+				->field('id,parent_id,authority_name,is_show')
+				->select();
+		// dump($data);
+
+		$lists = [];
+
+		foreach ($data as $value) {
+			if($value["parent_id"] == 0){
+				foreach ($data as $val) {
+					if($value["id"] == $val["parent_id"]){
+						$value["second_authority"][] = $val;
+					}
+				}
+
+				
+				if(!isset($value["second_authority"])){
+					$value["second_authority"] = [];
+				}
+				
+				$lists[] = $value;
+			}
+		}
+
+		$this->assign('lists',$lists);
+		
 		return $this->fetch();
 	}
 

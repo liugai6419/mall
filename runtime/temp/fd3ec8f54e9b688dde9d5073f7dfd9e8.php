@@ -1,4 +1,4 @@
-<?php /*a:3:{s:89:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\authority_allocation\index.html";i:1599492052;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:89:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\authority_allocation\index.html";i:1599570005;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,61 +28,21 @@
 	</div>
 
 	<div class="layui-collapse" lay-accordion>
+		<?php if(is_array($lists) || $lists instanceof \think\Collection || $lists instanceof \think\Paginator): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
 		<div class="layui-colla-item">
-			<h2 class="layui-colla-title">系统设置<i class="iconfont iconedit"></i></h2>
+			<h2 class="layui-colla-title"><?php echo htmlentities($list['authority_name']); ?><i class="iconfont iconedit" data-id="<?php echo htmlentities($list['id']); ?>"></i></h2>
 			<div class="layui-colla-content">
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
-				<span class="second-authority">后台配置
-					<span><i class="iconfont iconedit"></i><i class="iconfont icondelete"></i></span>
-				</span>
+				<div class="second-centent">
+					<?php if(is_array($list['second_authority']) || $list['second_authority'] instanceof \think\Collection || $list['second_authority'] instanceof \think\Paginator): $i = 0; $__LIST__ = $list['second_authority'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+					<span class="second-authority <?php echo $vo['is_show']==1 ? 'green'  :  'yellow'; ?>">
+						<?php echo htmlentities($vo['authority_name']); ?>
+						<span><i class="iconfont iconedit" data-id="<?php echo htmlentities($vo['id']); ?>"></i><i class="iconfont icondelete" data-id="<?php echo htmlentities($vo['id']); ?>"></i></span>
+					</span>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
+				</div>
 			</div>
 		</div>
-		<div class="layui-colla-item">
-			<h2 class="layui-colla-title">站点配置<i class="iconfont iconedit"></i></h2>
-			<div class="layui-colla-content">内容区域</div>
-		</div>
-		<div class="layui-colla-item">
-			<h2 class="layui-colla-title">权限控制<i class="iconfont iconedit"></i></h2>
-			<div class="layui-colla-content">内容区域</div>
-		</div>
+		<?php endforeach; endif; else: echo "" ;endif; ?>
 	</div>
 	
 			<script src="/static/admin/lib/jquery-3.5.1.js"></script>

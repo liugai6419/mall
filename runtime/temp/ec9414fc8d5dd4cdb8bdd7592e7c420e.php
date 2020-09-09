@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html";i:1599486030;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:74:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\index\index.html";i:1599570005;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +59,7 @@
 					<a href="javascript:;">权限控制</a>
 					<dl class="layui-nav-child">
 						<dd><a href="javascript:;" data-url="/admin/manager_list/index" class="nav">管理员列表</a></dd>
-						<dd><a href="javascript:;" data-url="/admin/role_mange/index" class="nav">角色管理</a></dd>
+						<dd><a href="javascript:;" data-url="/admin/role_manage/index" class="nav">角色管理</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/authority_allocation/index" class="nav">权限分配</a></dd>
 					</dl>
 				</li>
@@ -67,7 +67,7 @@
 		</div>
 		<div class="content">
 			<div class="second-content">
-				<iframe class="iframe" src="/admin/home/index" height="100%" width="100%"></iframe>
+				<iframe class="iframe" id="iframe" src="/admin/home/index" height="100%" width="100%"></iframe>
 			</div>
 		</div>
 	</div>

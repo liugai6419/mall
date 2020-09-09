@@ -23,26 +23,33 @@
 				</div>
 			</div>
 
-			<div class="layui-collapse" lay-accordion>
-				{//volist name="$lists" id="list"}
+			<div class="layui-collapse">
+				{volist name="$lists" id="list"}
 				<div class="layui-colla-item">
-					<h2 class="layui-colla-title">{//$list.authority_name}呕吼</h2>
+					<h2 class="layui-colla-title"></h2>
+					<span class="first-authority">
+						<input id="id{$list.id}" type="checkbox" name="name{$list.id}" value="{$list.id}" lay-ignore>
+						<label for="id{$list.id}">{$list.authority_name}</label>
+					</span>
+					<!-- <input type="checkbox" name="" title="{//$list.authority_name}" lay-skin="primary" checked> -->
+					
 					<div class="layui-colla-content layui-show">
 						<div class="second-centent">
-							{//volist name="$list.second_authority" id="vo"}
-							<span class="second-authority green {//$vo.is_show == 1 ? 'green' : 'yellow'}">
-								{//$vo.authority_name}哇呜
+							{volist name="$list.second_authority" id="vo"}
+							<span class="second-authority {$vo.is_show == 1 ? 'green' : 'yellow'}">
+								<input id="id{$vo.id}" type="checkbox" name="name{$vo.id}" value="{$vo.id}" lay-ignore>
+								<label for="id{$vo.id}">{$vo.authority_name}</label>
 							</span>
-							{///volist}
+							{/volist}
 						</div>
 					</div>
 				</div>
-				{///volist}
+				{/volist}
 			</div>
 			
 			<div class="layui-form-item">
 				<div class="layui-input-block">
-					<button class="layui-btn" lay-submit lay-filter="foundAuthority">保存</button>
+					<button class="layui-btn" lay-submit lay-filter="foundRole">保存</button>
 				</div>
 			</div>
 		</form>
