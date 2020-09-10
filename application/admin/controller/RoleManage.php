@@ -11,6 +11,15 @@ class RoleManage extends Common
 {
 	public function index()
 	{
+		$user_id = Session::get('admin')["id"];
+		$data = Db::table("role_manage")->where("user_id",$user_id)->paginate(2);
+		
+		$page = $data->render();
+
+		$this->assign('page', $page);
+		$this->assign('data',$data);
+		$this->assign('num',1);
+
 		return $this->fetch();
 	}
 
@@ -18,6 +27,12 @@ class RoleManage extends Common
 	{
 		$user_id = Session::get('admin')["id"];
 		$data = Db::table("role_manage")->where("user_id",$user_id)->select();
+		
+		for ($i=0; $i<count($data) ; $i++) { 
+			$data[$i]['create_time'] = date('Y-m-s h:i:s', $data[$i]['create_time']);
+		}
+
+
 
 		return $data;
 	}

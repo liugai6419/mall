@@ -8,15 +8,47 @@
 	<!-- 搜索和新增 -->
 	<div class="top">
 		<div></div>
-		<button type="button" class="layui-btn found"><i class="layui-icon">&#xe608;</i> 新增</button>
+		<button type="button" class="layui-btn found"><i class="layui-icon">&#xe608;</i>新增</button>
 	</div>
 
-	<table id="demo" lay-filter="test"></table>
+	<table>
+		<thead>
+			<tr>
+				<th>序列</th>
+				<th>角色名称</th>
+				<th>角色</th>
+				<th>创建时间</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{volist name="$data" id="vo"}
+			<tr>
+				<td>{$num++}</td>
+				<td>{$vo.role_delimiter}</td>
+				<td><span class="stop">启用</span></td>
+				<td>{:date('Y-m-s h:i:s',$vo.create_time)}</td>
+				<td><span class="edit">编辑</span><span class="delete">删除</span></td>
+			</tr>
+			{/volist}
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="5">
+					{$page|raw}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<!-- <table class="layui-table" id="demo"></table> -->
 	
 	{include file="public/footer" /}
 
 	<!-- <script src="/static/admin/js/authority_control/role_manage.js"></script> -->
-<script>
+<!-- <script>
     layui.use('table', function(){
         var table = layui.table;
 
@@ -36,13 +68,24 @@
 			},
 			cols: [[
 				{title: '序号', type: 'numbers'},
-				{type: 'checkbox', LAY_CHECKED: true, hide: true},
+				{field: 'id', title: 'id', hide: true},
 				{field: 'role_delimiter', title: '角色名称'},
-				{field: 'create_time', title: '创建时间'}
-
+				{title: '状态', toolbar: '#status'},
+				{field: 'create_time', title: '创建时间'},
+				{title: '操作', toolbar: '#operation'}
 			]]
 		});
     });
 </script>
+
+<script type="text/html" id="operation">
+	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+<script type="text/html" id="status">
+	<span class="stop">启用</span>
+</script> -->
+
 </body>
 </html>

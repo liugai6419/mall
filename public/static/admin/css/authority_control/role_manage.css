@@ -5,6 +5,77 @@
 	justify-content: space-between;
 }
 
+/*表格*/
+table{
+	width: 100%;
+}
+
+/*表格头部*/
+table thead th{
+	color: #666;
+	height: 44px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 44px;
+	padding-left: 16px;
+	font-weight: normal;
+	background: #f2f2f2;
+}
+
+/*表格身体*/
+table td{
+	color: #666;
+	height: 44px;
+	font-size: 14px;
+	line-height: 44px;
+	padding-left: 16px;
+}
+
+table tbody tr:nth-child(even){
+	background: rgba(0,150,136,0.04);
+}
+
+/*角色状态*/
+table td .start{
+	color: #009688;
+	padding: 4px 8px;
+	border-radius: 2px;
+	background: rgba(0,150,136,0.1);
+	border: 1px dashed rgba(0,150,136,0.2);
+}
+
+table td .stop{
+	color: #ff5722;
+	padding: 4px 8px;
+	border-radius: 2px;
+	background: rgba(255,87,34,0.1);
+	border: 1px dashed rgba(255,87,34,0.2);
+}
+
+/*编辑*/
+table td .edit{
+	color: white;
+	padding: 4px 8px;
+	cursor: pointer;
+	border-radius: 2px;
+	background: #009688;
+}
+
+/*删除*/
+table td .delete{
+	color: white;
+	padding: 4px 8px;
+	cursor: pointer;
+	border-radius: 2px;
+	background: #ff5722;
+	margin-left: 6px;
+}
+
+/*表格页脚*/
+table tfoot td{
+	text-align: center;
+}
+
 /*创建和编辑角色  顶部*/
 .found-top{
 	display: flex;
