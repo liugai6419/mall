@@ -11,12 +11,15 @@ class RoleManage extends Common
 {
 	public function index()
 	{
-		// $user_id = Session::get('admin')["id"];
-		// $data = Db::table("seo_setting")->where("user_id",$user_id)->find();
-
-		// $this->assign('data',$data);
-
 		return $this->fetch();
+	}
+
+	public function returnLayui()
+	{
+		$user_id = Session::get('admin')["id"];
+		$data = Db::table("role_manage")->where("user_id",$user_id)->select();
+
+		return $data;
 	}
 
 	public function found()
@@ -58,62 +61,35 @@ class RoleManage extends Common
 		$data = Request::post();
 
 		// 限制角色名称的字数
-		$length = mb_strlen($data['route_delimiter']);
+		$roleDelimiter = $data['role_delimiter'];
+		$length = mb_strlen($roleDelimiter);
 		if($length < 2 || $length > 6){
 			return ["code"=>0,"msg"=>"角色名称请填写2~6个字符"];
 		}
 
-		// 移除数组中的route_delimiter值
-		unset($data['route_delimiter']);
+		// 移除数组中的role_delimiter值
+		unset($data['role_delimiter']);
 
 		// 将数组转为字符串
-		dump(implode(',',$data));
+		$authority = implode(',',$data);
 
-		// 获取用户id
-		// $user_id = Session::get('admin')["id"];
+		$newData = [];
+		$newData['role_delimiter'] = $roleDelimiter;
+		$newData['authority'] = $authority;
 
-		// $res = Db::table("seo_setting")->where("user_id",$user_id)->find();
+		if(!isset($data["id"])){
+			// 获取用户id
+			$user_id = Session::get('admin')["id"];
 
-		// if(!$res){
-
-		// 	$data["user_id"] = $user_id;
-		// 	$data["create_time"] = time();
-		// 	$res = Db::table("seo_setting")->insert($data);
-
-		// }else{
-
-		// 	$data["update_time"] = time();
-		// 	$res = Db::table("seo_setting")->where("user_id",$user_id)->update($data);
-
-		// }
-
-		// if($res){
-		// 	return ["code"=>1,"msg"=>"保存成功"];
-		// }else{
-		// 	return ["code"=>0,"msg"=>"保存失败"];
-		// }
-	}
-
-	public function saveMessageTemplate()
-	{
-		$data = Request::post();
-
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("message_template")->where("user_id",$user_id)->find();
-
-		if(!$res){
-
-			$data["user_id"] = $user_id;
-			$data["create_time"] = time();
-			$res = Db::table("message_template")->insert($data);
-
+			$newData["user_id"] = $user_id;
+			$newData["create_time"] = time();
+			$res = Db::table("role_manage")->insert($newData);
+			
 		}else{
+			$id = $data["id"];
 
-			$data["update_time"] = time();
-			$res = Db::table("message_template")->where("user_id",$user_id)->update($data);
-
+			$newData["update_time"] = time();
+			$res = Db::table("role_manage")->where("id",$id)->update($newData);
 		}
 
 		if($res){

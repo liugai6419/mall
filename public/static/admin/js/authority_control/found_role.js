@@ -56,27 +56,19 @@ $(function(){
 			var field = data.field;
 
 			// 限制角色名称的字数
-			var length = field.route_delimiter.length;
+			var length = field.role_delimiter.length;
 			if(length < 2 || length > 6){
 				layer.msg('角色名称请填写2~6个字符');
 				return false;
 			}
 
 			$.post("/admin/role_manage/saveRoleManage",field,function(res){
-				console.log(res);
-				// if(res.code === 1){
-				// 	layer.msg(res.msg);
-
-				// 	// 关闭弹窗
-				// 	setTimeout(function(){
-				// 		var index = parent.layer.getFrameIndex(window.name);
-				// 		parent.layer.close(index);
-				// 		parent.location.reload();
-				// 	},1000);
-					
-				// }else{
-				// 	layer.msg(res.msg);
-				// }
+				// console.log(res);
+				if(res.code === 1){
+					layer.msg(res.msg);
+				}else{
+					layer.msg(res.msg);
+				}
 			});
 			return false;
 		});

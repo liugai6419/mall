@@ -1,7 +1,6 @@
 {include file="public/header" title="后台信息" /}
 
 <link rel="stylesheet" href="/static/admin/css/system_setting/backstage_configure.css" />
-<!-- <link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" /> -->
 <link rel="stylesheet" href="/static/admin/css/authority_control/role_manage.css" />
 </head>
 <body>
@@ -11,9 +10,39 @@
 		<div></div>
 		<button type="button" class="layui-btn found"><i class="layui-icon">&#xe608;</i> 新增</button>
 	</div>
+
+	<table id="demo" lay-filter="test"></table>
 	
 	{include file="public/footer" /}
 
-	<script src="/static/admin/js/authority_control/role_manage.js"></script>
+	<!-- <script src="/static/admin/js/authority_control/role_manage.js"></script> -->
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+		//第一个实例
+		table.render({
+			elem: '#demo',
+			height: 312,
+			url:"{:url('/admin/role_manage/returnLayui')}",
+			id:'tryReload',
+			parseData:function(res){
+				return{
+					"code":0,
+					"msg":"",
+					"count":8,
+					data:res
+				}
+			},
+			cols: [[
+				{title: '序号', type: 'numbers'},
+				{type: 'checkbox', LAY_CHECKED: true, hide: true},
+				{field: 'role_delimiter', title: '角色名称'},
+				{field: 'create_time', title: '创建时间'}
+
+			]]
+		});
+    });
+</script>
 </body>
 </html>

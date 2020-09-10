@@ -1,4 +1,4 @@
-<?php /*a:3:{s:80:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\role_manage\found.html";i:1599709961;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:80:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\role_manage\found.html";i:1599716979;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">角色名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="route_delimiter" value="" placeholder="角色名称2~6个字符" autocomplete="off" class="layui-input route-delimiter">
+					<input type="text" name="role_delimiter" value="" placeholder="角色名称2~6个字符" autocomplete="off" class="layui-input route-delimiter">
 				</div>
 			</div>
 
