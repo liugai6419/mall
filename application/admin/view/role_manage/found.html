@@ -19,7 +19,7 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">角色名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="route_delimiter" value="{//$data.route_delimiter}" placeholder="角色名称格式2~8个字符之间" autocomplete="off" class="layui-input">
+					<input type="text" name="role_delimiter" value="{//$data.role_delimiter}" placeholder="角色名称2~6个字符" autocomplete="off" class="layui-input route-delimiter">
 				</div>
 			</div>
 
@@ -28,17 +28,16 @@
 				<div class="layui-colla-item">
 					<h2 class="layui-colla-title"></h2>
 					<span class="first-authority">
-						<input id="id{$list.id}" type="checkbox" name="name{$list.id}" value="{$list.id}" lay-ignore>
-						<label for="id{$list.id}">{$list.authority_name}</label>
+						<input class="first-input" type="checkbox" name="name{$list.id}" value="{$list.id}" lay-ignore>
+						<span>{$list.authority_name}</span>
 					</span>
-					<!-- <input type="checkbox" name="" title="{//$list.authority_name}" lay-skin="primary" checked> -->
 					
 					<div class="layui-colla-content layui-show">
 						<div class="second-centent">
 							{volist name="$list.second_authority" id="vo"}
 							<span class="second-authority {$vo.is_show == 1 ? 'green' : 'yellow'}">
-								<input id="id{$vo.id}" type="checkbox" name="name{$vo.id}" value="{$vo.id}" lay-ignore>
-								<label for="id{$vo.id}">{$vo.authority_name}</label>
+								<input class="second-input" type="checkbox" name="name{$vo.id}" value="{$vo.id}" lay-ignore>
+								<span>{$vo.authority_name}</span>
 							</span>
 							{/volist}
 						</div>

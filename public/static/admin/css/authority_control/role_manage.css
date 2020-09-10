@@ -60,11 +60,10 @@
 	left: 36px;
 }
 
-.first-authority label{
+.first-authority span{
 	font-size: 14px;
 	color: #666;
 	margin-left: 4px;
-	cursor: pointer;
 }
 
 /*二级权限*/
@@ -86,11 +85,10 @@
 	margin: 5px 10px 5px 0;
 }
 
-.second-authority label{
+.second-authority span{
 	font-size: 14px;
 	color: #666;
 	margin-left: 4px;
-	cursor: pointer;
 }
 
 .green{

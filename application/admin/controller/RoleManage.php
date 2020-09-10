@@ -11,27 +11,30 @@ class RoleManage extends Common
 {
 	public function index()
 	{
-		// $user_id = Session::get('admin')["id"];
-		// $data = Db::table("seo_setting")->where("user_id",$user_id)->find();
-
-		// $this->assign('data',$data);
-
 		return $this->fetch();
+	}
+
+	public function returnLayui()
+	{
+		$user_id = Session::get('admin')["id"];
+		$data = Db::table("role_manage")->where("user_id",$user_id)->select();
+
+		return $data;
 	}
 
 	public function found()
 	{
 		$user_id = Session::get('admin')["id"];
 
+		// 获取权限名称
 		$data = Db::table("authority_allocation")
 				->where("user_id",$user_id)
 				->order('marshalling_sequence', 'desc')
 				->field('id,parent_id,authority_name,is_show')
 				->select();
-		// dump($data);
 
+		// 将二级权限归入到一级权限数组中
 		$lists = [];
-
 		foreach ($data as $value) {
 			if($value["parent_id"] == 0){
 				foreach ($data as $val) {
@@ -40,7 +43,6 @@ class RoleManage extends Common
 					}
 				}
 
-				
 				if(!isset($value["second_authority"])){
 					$value["second_authority"] = [];
 				}
@@ -54,55 +56,40 @@ class RoleManage extends Common
 		return $this->fetch();
 	}
 
-	public function saveSeoSetting()
+	public function saveRoleManage()
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("seo_setting")->where("user_id",$user_id)->find();
-
-		if(!$res){
-
-			$data["user_id"] = $user_id;
-			$data["create_time"] = time();
-			$res = Db::table("seo_setting")->insert($data);
-
-		}else{
-
-			$data["update_time"] = time();
-			$res = Db::table("seo_setting")->where("user_id",$user_id)->update($data);
-
+		// 限制角色名称的字数
+		$roleDelimiter = $data['role_delimiter'];
+		$length = mb_strlen($roleDelimiter);
+		if($length < 2 || $length > 6){
+			return ["code"=>0,"msg"=>"角色名称请填写2~6个字符"];
 		}
 
-		if($res){
-			return ["code"=>1,"msg"=>"保存成功"];
+		// 移除数组中的role_delimiter值
+		unset($data['role_delimiter']);
+
+		// 将数组转为字符串
+		$authority = implode(',',$data);
+
+		$newData = [];
+		$newData['role_delimiter'] = $roleDelimiter;
+		$newData['authority'] = $authority;
+
+		if(!isset($data["id"])){
+			// 获取用户id
+			$user_id = Session::get('admin')["id"];
+
+			$newData["user_id"] = $user_id;
+			$newData["create_time"] = time();
+			$res = Db::table("role_manage")->insert($newData);
+			
 		}else{
-			return ["code"=>0,"msg"=>"保存失败"];
-		}
-	}
+			$id = $data["id"];
 
-	public function saveMessageTemplate()
-	{
-		$data = Request::post();
-
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("message_template")->where("user_id",$user_id)->find();
-
-		if(!$res){
-
-			$data["user_id"] = $user_id;
-			$data["create_time"] = time();
-			$res = Db::table("message_template")->insert($data);
-
-		}else{
-
-			$data["update_time"] = time();
-			$res = Db::table("message_template")->where("user_id",$user_id)->update($data);
-
+			$newData["update_time"] = time();
+			$res = Db::table("role_manage")->where("id",$id)->update($newData);
 		}
 
 		if($res){
