@@ -1,4 +1,4 @@
-<?php /*a:3:{s:80:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\role_manage\found.html";i:1599556171;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:80:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\role_manage\found.html";i:1599709961;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,30 +34,36 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">角色名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="route_delimiter" value="" placeholder="角色名称格式2~8个字符之间" autocomplete="off" class="layui-input">
+					<input type="text" name="route_delimiter" value="" placeholder="角色名称2~6个字符" autocomplete="off" class="layui-input route-delimiter">
 				</div>
 			</div>
 
-			<div class="layui-collapse" lay-accordion>
-				
+			<div class="layui-collapse">
+				<?php if(is_array($lists) || $lists instanceof \think\Collection || $lists instanceof \think\Paginator): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
 				<div class="layui-colla-item">
-					<h2 class="layui-colla-title">呕吼</h2>
+					<h2 class="layui-colla-title"></h2>
+					<span class="first-authority">
+						<input class="first-input" type="checkbox" name="name<?php echo htmlentities($list['id']); ?>" value="<?php echo htmlentities($list['id']); ?>" lay-ignore>
+						<span><?php echo htmlentities($list['authority_name']); ?></span>
+					</span>
+					
 					<div class="layui-colla-content layui-show">
 						<div class="second-centent">
-							
-							<span class="second-authority green ">
-								哇呜
+							<?php if(is_array($list['second_authority']) || $list['second_authority'] instanceof \think\Collection || $list['second_authority'] instanceof \think\Paginator): $i = 0; $__LIST__ = $list['second_authority'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+							<span class="second-authority <?php echo $vo['is_show']==1 ? 'green'  :  'yellow'; ?>">
+								<input class="second-input" type="checkbox" name="name<?php echo htmlentities($vo['id']); ?>" value="<?php echo htmlentities($vo['id']); ?>" lay-ignore>
+								<span><?php echo htmlentities($vo['authority_name']); ?></span>
 							</span>
-							
+							<?php endforeach; endif; else: echo "" ;endif; ?>
 						</div>
 					</div>
 				</div>
-				
+				<?php endforeach; endif; else: echo "" ;endif; ?>
 			</div>
 			
 			<div class="layui-form-item">
 				<div class="layui-input-block">
-					<button class="layui-btn" lay-submit lay-filter="foundAuthority">保存</button>
+					<button class="layui-btn" lay-submit lay-filter="foundRole">保存</button>
 				</div>
 			</div>
 		</form>

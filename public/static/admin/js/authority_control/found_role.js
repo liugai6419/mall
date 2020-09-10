@@ -1,78 +1,83 @@
 $(function(){
+
+	// 返回上一级
+	$('.return-page').click(function(){
+		location.href="/admin/role_manage/index";
+	});
+
+	// 全选
+	$('.first-input').click(function(){
+		// 获取二级权限input父级对象
+		var secondParentObj = $(this).parent().next();
+
+		// 获取二级权限input对象
+		var secondObj = secondParentObj.find('input');
+
+		// 获取二级权限input总数量
+		var secondAllNum = secondObj.length;
+
+		// 获取二级权限input被选中的数量
+		var secondCheckedNum = secondParentObj.find('input:checked').length;
+
+		if(secondAllNum !== secondCheckedNum){
+			secondObj.prop('checked', true);
+			$(this).prop('checked', true);
+		}else{
+			secondObj.prop('checked', false);
+			$(this).prop('checked', false);
+		}
+	});
+
+	// 单选
+	$('.second-input').click(function(){
+		// 获取二级权限input父级对象
+		var secondParentObj = $(this).parents('.layui-colla-content');
+
+		// 获取二级权限input被选中的数量
+		var secondCheckedNum = secondParentObj.find('input:checked').length;
+
+		// 获取一级权限input对象
+		var secondObj = secondParentObj.prev().children('input');
+
+		if(secondCheckedNum === 0){
+			secondObj.prop('checked', false);
+		}else{
+			secondObj.prop('checked', true);
+		}
+	});
+
 	layui.use(['layer', 'form', 'element'], function(){
 		var layer = layui.layer,
 			form = layui.form,
 			element = layui.element;
 
-		$('.return-page').click(function(){
-			location.href="/admin/role_manage/index";
-		});
-
-		// form.on('checkbox(firstAuthority)', function(data).function(){
-		// 	console.log(111);
-		// });
-
-		// 全选
-		// $('.layui-colla-item > .layui-form-checkbox').click(function(){
-			
-
-		// 	var secondObj = $(this).next().find('.second-centent .layui-form-checkbox');
-
-		// 	if(!$(this).hasClass('layui-form-checked')){
-		// 		console.log('全选true');
-		// 		secondObj.removeClass('layui-form-checked');
-		// 	}else{
-		// 		console.log('全选false');
-		// 		secondObj.addClass('layui-form-checked');
-		// 	}
-			
-		// });
-
-		// 单选
-		// $('.second-centent .layui-form-checkbox').click(function(){
-
-		// 	var secondObjNum = $(this).parent().parent().children().children('.layui-form-checkbox');
-
-		// 	for (var i = 0; i < secondObjNum.length; i++) {
-
-		// 		if($(secondObjNum[i]).hasClass('layui-form-checked')){
-		// 			console.log('单选');
-		// 			$(this).parents('.layui-colla-content').prev().addClass('layui-form-checked');
-		// 			break;
-		// 		}
-
-		// 		$(this).parents('.layui-colla-content').prev().removeClass('layui-form-checked');
-		// 	}
-		// });
-
-		// $('.layui-form-checkbox').click(function(){
-		// 	var obj = $(this).parent().next();
-		// 	if(!obj.hasClass("layui-show")){
-		// 		obj.removeClass("layui-show");
-		// 	}
-		// });
-		
 		form.on('submit(foundRole)', function(data){
 
 			var field = data.field;
-			console.log(field);
 
-			// $.post("/admin/authority_allocation/addFoundAuthority",field,function(res){
-			// 	// console.log(res);
-			// 	if(res.code === 1){
-			// 		layer.msg(res.msg);
+			// 限制角色名称的字数
+			var length = field.route_delimiter.length;
+			if(length < 2 || length > 6){
+				layer.msg('角色名称请填写2~6个字符');
+				return false;
+			}
 
-			// 		// 关闭弹窗
-			// 		setTimeout(function(){
-			// 			var index = parent.layer.getFrameIndex(window.name);
-			// 			parent.layer.close(index);
-			// 			parent.location.reload();
-			// 		},1000);
+			$.post("/admin/role_manage/saveRoleManage",field,function(res){
+				console.log(res);
+				// if(res.code === 1){
+				// 	layer.msg(res.msg);
+
+				// 	// 关闭弹窗
+				// 	setTimeout(function(){
+				// 		var index = parent.layer.getFrameIndex(window.name);
+				// 		parent.layer.close(index);
+				// 		parent.location.reload();
+				// 	},1000);
 					
-			// 	}else{
-			// 		layer.msg(res.msg);
-			// 	}
-			// });
+				// }else{
+				// 	layer.msg(res.msg);
+				// }
+			});
 			return false;
 		});
 	});
