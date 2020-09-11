@@ -13,10 +13,32 @@ class ManagerList extends Common
 	{
 		$user_id = Session::get('admin')["id"];
 
+		// 获取管理员
 		$data = Db::table("manager_list")
 				->where("user_id",$user_id)
 				->order('create_time', 'desc')
 				->select();
+
+		// 获取权限组
+		$authorityData = Db::table("role_manage")
+				->where("user_id",$user_id)
+				->field('id,role_delimiter')
+				->select();
+
+		// 将data数组中的权限组id换成角色名称
+		$num = 0;
+		foreach ($data as $value) {
+
+			foreach ($authorityData as $val) {
+				if($value["authority_group"] === $val["id"]){
+					$data[$num]["authority_group"] = $val["role_delimiter"];
+				}elseif($value["authority_group"] === 0){
+					$data[$num]["authority_group"] = '超级管理员';
+				}
+			}
+
+			$num++;
+		}
 
 		// $lists = [];
 

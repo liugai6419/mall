@@ -1,4 +1,4 @@
-<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\found.html";i:1599663352;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\found.html";i:1599828529;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,14 +27,24 @@
 	<div class="layer-container">
 		<form class="layui-form layui-form-pane" action="">
 			<!-- 角色id -->
-			
-			<!-- <input type="hidden" name="id" value=""> -->
-			
+			<?php if($results !=  null): ?>
+			<input type="hidden" name="id" value="<?php echo htmlentities($results['id']); ?>">
+			<?php endif; ?>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">角色名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="route_delimiter" value="" placeholder="角色名称格式2~8个字符之间" autocomplete="off" class="layui-input">
+					<input type="text" name="role_delimiter" value="<?php echo htmlentities($results['role_delimiter']); ?>" placeholder="角色名称2~6个字符" autocomplete="off" class="layui-input route-delimiter">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+		    	<label class="layui-form-label">是否启用</label>
+				<div class="layui-input-inline">
+					<select name="is_start" lay-verify="required" lay-search>
+						<option value="1" <?php echo $results['is_start']==1 ? 'selected'  :  ''; ?>>关闭</option>
+						<option value="2" <?php echo $results['is_start']==2 ? 'selected'  :  ''; ?>>开启</option>
+					</select>
 				</div>
 			</div>
 
@@ -43,17 +53,16 @@
 				<div class="layui-colla-item">
 					<h2 class="layui-colla-title"></h2>
 					<span class="first-authority">
-						<input id="id<?php echo htmlentities($list['id']); ?>" type="checkbox" name="name<?php echo htmlentities($list['id']); ?>" value="<?php echo htmlentities($list['id']); ?>" lay-ignore>
-						<label for="id<?php echo htmlentities($list['id']); ?>"><?php echo htmlentities($list['authority_name']); ?></label>
+						<input class="first-input" type="checkbox" name="name<?php echo htmlentities($list['id']); ?>" value="<?php echo htmlentities($list['id']); ?>" <?php echo in_array($list['id'],$results['authority'] ? $results['authority'] : []) ? 'checked' : ''; ?> lay-ignore>
+						<span><?php echo htmlentities($list['authority_name']); ?></span>
 					</span>
-					<!-- <input type="checkbox" name="" title="" lay-skin="primary" checked> -->
 					
 					<div class="layui-colla-content layui-show">
 						<div class="second-centent">
 							<?php if(is_array($list['second_authority']) || $list['second_authority'] instanceof \think\Collection || $list['second_authority'] instanceof \think\Paginator): $i = 0; $__LIST__ = $list['second_authority'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 							<span class="second-authority <?php echo $vo['is_show']==1 ? 'green'  :  'yellow'; ?>">
-								<input id="id<?php echo htmlentities($vo['id']); ?>" type="checkbox" name="name<?php echo htmlentities($vo['id']); ?>" value="<?php echo htmlentities($vo['id']); ?>" lay-ignore>
-								<label for="id<?php echo htmlentities($vo['id']); ?>"><?php echo htmlentities($vo['authority_name']); ?></label>
+								<input class="second-input" type="checkbox" name="name<?php echo htmlentities($vo['id']); ?>" value="<?php echo htmlentities($vo['id']); ?>" <?php echo in_array($vo['id'],$results['authority'] ? $results['authority'] : []) ? 'checked' : ''; ?> lay-ignore>
+								<span><?php echo htmlentities($vo['authority_name']); ?></span>
 							</span>
 							<?php endforeach; endif; else: echo "" ;endif; ?>
 						</div>

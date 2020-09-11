@@ -1,4 +1,4 @@
-<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\index.html";i:1599751106;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\index.html";i:1599828529;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,9 +42,12 @@
 			<tr>
 				<td><?php echo htmlentities($num++); ?></td>
 				<td><?php echo htmlentities($vo['role_delimiter']); ?></td>
-				<td><span class="stop">启用</span></td>
-				<td><?php echo date('Y-m-s h:i:s',$vo['create_time']); ?></td>
-				<td><span class="edit">编辑</span><span class="delete">删除</span></td>
+				<td><span class="<?php echo $vo['is_start']==2 ? 'start'  :  'stop'; ?>"><?php echo $vo['role_delimiter']==2 ? '启用'  :  '停用'; ?></span></td>
+				<td><?php echo date('Y-m-d H:i:s',$vo['create_time']); ?></td>
+				<td>
+					<button type="button" data-id="<?php echo htmlentities($vo['id']); ?>" class="layui-btn layui-btn-xs edit">编辑</button>
+					<button type="button" data-id="<?php echo htmlentities($vo['id']); ?>" class="layui-btn layui-btn-xs layui-btn-danger delete">删除</button>
+				</td>
 			</tr>
 			<?php endforeach; endif; else: echo "" ;endif; ?>
 		</tbody>
@@ -67,7 +70,7 @@
 		<!-- <script src="/static/admin/js/[my_js].js"></script> -->
 
 
-	<!-- <script src="/static/admin/js/authority_control/role_manage.js"></script> -->
+	<script src="/static/admin/js/authority_control/role_manage.js"></script>
 <!-- <script>
     layui.use('table', function(){
         var table = layui.table;

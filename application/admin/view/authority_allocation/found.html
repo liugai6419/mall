@@ -59,7 +59,7 @@
 			<div class="layui-form-item" pane>
 				<label class="layui-form-label">是否显示</label>
 				<div class="layui-input-inline">
-					<input type="radio" name="is_show" value="1" title="显示" {$list.is_show == 1 ? 'checked' : ''}>
+					<input type="radio" name="is_show" value="1" title="显示" {$list.is_show == 1||$list.is_show == '' ? 'checked' : ''}>
 					<input type="radio" name="is_show" value="2" title="隐藏" {$list.is_show == 2 ? 'checked' : ''}>
 				</div>
 			</div>
