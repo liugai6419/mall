@@ -51,7 +51,7 @@ $(function(){
 			form = layui.form,
 			element = layui.element;
 
-		form.on('submit(foundRole)', function(data){
+		form.on('submit(foundRole)', function(data){ 
 
 			var field = data.field;
 

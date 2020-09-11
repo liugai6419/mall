@@ -52,28 +52,33 @@ table td .stop{
 	border: 1px dashed rgba(255,87,34,0.2);
 }
 
-/*编辑*/
-table td .edit{
-	color: white;
-	padding: 4px 8px;
-	cursor: pointer;
-	border-radius: 2px;
-	background: #009688;
-}
-
-/*删除*/
-table td .delete{
-	color: white;
-	padding: 4px 8px;
-	cursor: pointer;
-	border-radius: 2px;
-	background: #ff5722;
-	margin-left: 6px;
-}
-
 /*表格页脚*/
 table tfoot td{
 	text-align: center;
+	padding: 12px;
+}
+
+table tfoot td ul{
+	display: flex;
+	 justify-content: center;
+}
+
+table tfoot td ul li a,table tfoot td ul li span{
+	padding: 6px 10px;
+	margin: 0 4px;
+	font-size: 14px;
+	border-radius: 3px;
+	background: #f6f6f6;
+}
+
+table tfoot td ul .active span{
+	color: white;
+	background: #009688;
+}
+
+table tfoot td ul li a:hover{
+	color: #009688;
+	font-weight: bold;
 }
 
 /*创建和编辑角色  顶部*/

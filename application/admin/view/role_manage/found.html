@@ -12,14 +12,24 @@
 	<div class="layer-container">
 		<form class="layui-form layui-form-pane" action="">
 			<!-- 角色id -->
-			{//if $list !=  null}
-			<!-- <input type="hidden" name="id" value="{//$list.id}"> -->
-			{///if}
+			{if $results !=  null}
+			<input type="hidden" name="id" value="{$results.id}">
+			{/if}
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">角色名称</label>
 				<div class="layui-input-inline">
-					<input type="text" name="role_delimiter" value="{//$data.role_delimiter}" placeholder="角色名称2~6个字符" autocomplete="off" class="layui-input route-delimiter">
+					<input type="text" name="role_delimiter" value="{$results.role_delimiter}" placeholder="角色名称2~6个字符" autocomplete="off" class="layui-input route-delimiter">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+		    	<label class="layui-form-label">是否启用</label>
+				<div class="layui-input-inline">
+					<select name="is_start" lay-verify="required" lay-search>
+						<option value="1" {$results.is_start == 1 ? 'selected' : ''}>关闭</option>
+						<option value="2" {$results.is_start == 2 ? 'selected' : ''}>开启</option>
+					</select>
 				</div>
 			</div>
 
@@ -28,7 +38,7 @@
 				<div class="layui-colla-item">
 					<h2 class="layui-colla-title"></h2>
 					<span class="first-authority">
-						<input class="first-input" type="checkbox" name="name{$list.id}" value="{$list.id}" lay-ignore>
+						<input class="first-input" type="checkbox" name="name{$list.id}" value="{$list.id}" {:in_array($list.id,$results['authority'] ? $results['authority'] : []) ? 'checked' : ''} lay-ignore>
 						<span>{$list.authority_name}</span>
 					</span>
 					
@@ -36,7 +46,7 @@
 						<div class="second-centent">
 							{volist name="$list.second_authority" id="vo"}
 							<span class="second-authority {$vo.is_show == 1 ? 'green' : 'yellow'}">
-								<input class="second-input" type="checkbox" name="name{$vo.id}" value="{$vo.id}" lay-ignore>
+								<input class="second-input" type="checkbox" name="name{$vo.id}" value="{$vo.id}" {:in_array($vo.id,$results['authority'] ? $results['authority'] : []) ? 'checked' : ''} lay-ignore>
 								<span>{$vo.authority_name}</span>
 							</span>
 							{/volist}

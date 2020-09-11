@@ -12,7 +12,7 @@ class RoleManage extends Common
 	public function index()
 	{
 		$user_id = Session::get('admin')["id"];
-		$data = Db::table("role_manage")->where("user_id",$user_id)->paginate(2);
+		$data = Db::table("role_manage")->where("user_id",$user_id)->order('create_time','desc')->paginate(10);
 		
 		$page = $data->render();
 
@@ -21,20 +21,6 @@ class RoleManage extends Common
 		$this->assign('num',1);
 
 		return $this->fetch();
-	}
-
-	public function returnLayui()
-	{
-		$user_id = Session::get('admin')["id"];
-		$data = Db::table("role_manage")->where("user_id",$user_id)->select();
-		
-		for ($i=0; $i<count($data) ; $i++) { 
-			$data[$i]['create_time'] = date('Y-m-s h:i:s', $data[$i]['create_time']);
-		}
-
-
-
-		return $data;
 	}
 
 	public function found()
@@ -65,8 +51,23 @@ class RoleManage extends Common
 				$lists[] = $value;
 			}
 		}
-
 		$this->assign('lists',$lists);
+
+
+		$getData = Request::get();
+
+		// 获取角色	
+		if(isset($getData["tab"])){
+			$results = Db::table("role_manage")->where("id",$getData["id"])->find();
+
+			// 将字符串转为数组
+			$results['authority'] = explode(',', $results['authority']);
+			
+			$this->assign('results',$results);
+		}else{
+			$this->assign('results',null);
+		}
+
 		
 		return $this->fetch();
 	}
@@ -75,8 +76,11 @@ class RoleManage extends Common
 	{
 		$data = Request::post();
 
-		// 限制角色名称的字数
+		
 		$roleDelimiter = $data['role_delimiter'];
+		$isStart = $data['is_start'];
+
+		// 限制角色名称的字数
 		$length = mb_strlen($roleDelimiter);
 		if($length < 2 || $length > 6){
 			return ["code"=>0,"msg"=>"角色名称请填写2~6个字符"];
@@ -84,12 +88,14 @@ class RoleManage extends Common
 
 		// 移除数组中的role_delimiter值
 		unset($data['role_delimiter']);
+		unset($data['is_start']);
 
 		// 将数组转为字符串
 		$authority = implode(',',$data);
 
 		$newData = [];
 		$newData['role_delimiter'] = $roleDelimiter;
+		$newData['is_start'] = $isStart;
 		$newData['authority'] = $authority;
 
 		if(!isset($data["id"])){
@@ -103,6 +109,8 @@ class RoleManage extends Common
 		}else{
 			$id = $data["id"];
 
+			unset($data["id"]);
+
 			$newData["update_time"] = time();
 			$res = Db::table("role_manage")->where("id",$id)->update($newData);
 		}
@@ -111,6 +119,19 @@ class RoleManage extends Common
 			return ["code"=>1,"msg"=>"保存成功"];
 		}else{
 			return ["code"=>0,"msg"=>"保存失败"];
+		}
+	}
+
+	public function deleteRoleMange()
+	{
+		$data = Request::get("id");
+
+		$res = Db::table('role_manage')->delete($data);
+
+		if($res){
+			return ["code"=>1,"msg"=>"删除成功"];
+		}else{
+			return ["code"=>0,"msg"=>"删除失败"];
 		}
 	}
 }

@@ -1,23 +1,37 @@
 $(function(){
-	layui.use(['layer', 'form', 'table'], function(){
-		var layer = layui.layer,
-			form = layui.form,
-			table = layui.table;
+	// 新增
+	$(".found").click(function(){
+		location.href="/admin/role_manage/found";
+	});
+	// 编辑
+	$(".edit").click(function(){
+		var id = $(this).attr('data-id');
+		
+		location.href="/admin/role_manage/found?tab=1&id="+id;
+	});
 
-		$(".found").click(function(){
-			location.href="/admin/role_manage/found";
+	layui.use('layer', function(){
+		var layer = layui.layer;
+
+		// 删除
+		$('.delete').click(function(){
+			var id = $(this).attr("data-id");
+			layer.alert("确定删除此权限?",{
+				title:false,
+				yes: function(){
+					$.get("/admin/role_manage/deleteRoleMange",{id:id},function(res){
+						if(res.code === 1){
+							layer.msg(res.msg);
+							setTimeout(function(){
+								location.reload();
+							},2000);
+						}else{
+							layer.msg(res.msg);
+						}
+					});
+				}
+			});
 		});
-
-		// table.render({
-		// 	elem: '#demo',
-		// 	height: 315,
-		// 	url: '/admin/role_manage/index',
-		// 	cols: [[
-		// 		{field: 'id', title: '序列'},
-		// 		{field: 'authority', title: '角色名称'},
-		// 		{field: 'crate_time', title: '创建时间'}
-		// 	]]
-		// });
 
 	});
 });

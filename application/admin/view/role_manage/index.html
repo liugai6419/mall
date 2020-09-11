@@ -27,9 +27,12 @@
 			<tr>
 				<td>{$num++}</td>
 				<td>{$vo.role_delimiter}</td>
-				<td><span class="stop">启用</span></td>
-				<td>{:date('Y-m-s h:i:s',$vo.create_time)}</td>
-				<td><span class="edit">编辑</span><span class="delete">删除</span></td>
+				<td><span class="{$vo.is_start == 2 ? 'start' : 'stop'}">{$vo.role_delimiter == 2 ? '启用' : '停用'}</span></td>
+				<td>{:date('Y-m-d H:i:s',$vo.create_time)}</td>
+				<td>
+					<button type="button" data-id="{$vo.id}" class="layui-btn layui-btn-xs edit">编辑</button>
+					<button type="button" data-id="{$vo.id}" class="layui-btn layui-btn-xs layui-btn-danger delete">删除</button>
+				</td>
 			</tr>
 			{/volist}
 		</tbody>
@@ -47,7 +50,7 @@
 	
 	{include file="public/footer" /}
 
-	<!-- <script src="/static/admin/js/authority_control/role_manage.js"></script> -->
+	<script src="/static/admin/js/authority_control/role_manage.js"></script>
 <!-- <script>
     layui.use('table', function(){
         var table = layui.table;
