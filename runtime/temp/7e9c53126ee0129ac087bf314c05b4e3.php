@@ -1,4 +1,4 @@
-<?php /*a:3:{s:89:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\authority_allocation\found.html";i:1599544202;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:89:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\authority_allocation\found.html";i:1599807827;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 
-			<div class="layui-form-item">
+			<div class="layui-form-item" pane>
 				<label class="layui-form-label">是否显示</label>
 				<div class="layui-input-inline">
 					<input type="radio" name="is_show" value="1" title="显示" <?php echo $list['is_show']==1 ? 'checked'  :  ''; ?>>

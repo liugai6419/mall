@@ -1,4 +1,4 @@
-<?php /*a:3:{s:81:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\manager_list\index.html";i:1599453913;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:81:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\manager_list\index.html";i:1599814205;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,12 +70,51 @@
 			</div>
 		</form>
 
-		<button type="button" class="layui-btn"><i class="layui-icon">&#xe608;</i> 新增</button>
+		<button type="button" class="layui-btn save-manager"><i class="layui-icon">&#xe608;</i> 新增</button>
 
 	</div>
 
 	<!-- 数据表格 -->
-	<table id="demo" lay-filter="test"></table>
+	<table>
+		<thead>
+			<tr>
+				<th>序列</th>
+				<th>管理员</th>
+				<th>登录次数</th>
+				<th>手机号码</th>
+				<th>权限组</th>
+				<th>上一次登录时间</th>
+				<th>创建时间</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+			<tr>
+				<td><?php echo htmlentities($num++); ?>1</td>
+				<td><?php echo htmlentities($vo['username']); ?></td>
+				<td>20</td>
+				<td><?php echo htmlentities($vo['telephone']); ?></td>
+				<td><?php echo htmlentities($vo['authority_group']); ?></td>
+				<td>刘盖</td>
+				<td><?php echo date('Y-m-d H:i:s',$vo['create_time']); ?></td>
+				<td>
+					<button type="button" data-id="" class="layui-btn layui-btn-xs edit">编辑</button>
+					<button type="button" data-id="" class="layui-btn layui-btn-xs layui-btn-danger delete">删除</button>
+				</td>
+			</tr>
+			<?php endforeach; endif; else: echo "" ;endif; ?>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="5">
+					
+				</td>
+			</tr>
+		</tfoot>
+	</table>
 	
 			<script src="/static/admin/lib/jquery-3.5.1.js"></script>
 		<script src="/static/admin/lib/layui/layui.js"></script>

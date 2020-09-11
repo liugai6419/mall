@@ -7,3 +7,113 @@
 .layui-form .layui-form-item .layui-btn{
 	width: 100%;
 }
+
+/*数据表格*/
+table{
+	width: 100%;
+}
+
+/*表格头部*/
+table thead th{
+	color: #666;
+	height: 44px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 44px;
+	padding-left: 16px;
+	font-weight: normal;
+	background: #f2f2f2;
+}
+
+/*表格身体*/
+table td{
+	color: #666;
+	height: 44px;
+	font-size: 14px;
+	line-height: 44px;
+	padding-left: 16px;
+}
+
+table tbody tr:nth-child(even){
+	background: rgba(0,150,136,0.04);
+}
+
+/*角色状态*/
+table td .start{
+	color: #009688;
+	padding: 4px 8px;
+	border-radius: 2px;
+	background: rgba(0,150,136,0.1);
+	border: 1px dashed rgba(0,150,136,0.2);
+}
+
+table td .stop{
+	color: #ff5722;
+	padding: 4px 8px;
+	border-radius: 2px;
+	background: rgba(255,87,34,0.1);
+	border: 1px dashed rgba(255,87,34,0.2);
+}
+
+/*表格页脚*/
+table tfoot td{
+	text-align: center;
+	padding: 12px;
+}
+
+table tfoot td ul{
+	display: flex;
+	 justify-content: center;
+}
+
+table tfoot td ul li a,table tfoot td ul li span{
+	padding: 6px 10px;
+	margin: 0 4px;
+	font-size: 14px;
+	border-radius: 3px;
+	background: #f6f6f6;
+}
+
+table tfoot td ul .active span{
+	color: white;
+	background: #009688;
+}
+
+table tfoot td ul li a:hover{
+	color: #009688;
+	font-weight: bold;
+}
+
+/*新增权限弹窗样式*/
+.layer-container{
+	width: calc(100% - 40px);
+	padding: 20px;
+}
+
+.layer-container .layui-form-pane .layui-input-inline{
+	width: calc(100% - 109px);
+	margin-right: 0px;
+}
+
+.layer-container .layui-form-pane .layui-input-block{
+	margin-left: 0px;
+}
+
+.layer-container .layui-btn{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.layer-container .layui-form-pane .layui-form-radio{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+/*去掉number类型input的上下按钮*/
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type="number"]{
+	-moz-appearance: textfield;
+}

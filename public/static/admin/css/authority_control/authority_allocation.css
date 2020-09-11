@@ -26,6 +26,11 @@
 	margin-top: 10px;
 }
 
+.layer-container .layui-form-pane .layui-form-radio{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
 /*一级权限*/
 .layui-colla-title .iconfont{
 	color:#666;
