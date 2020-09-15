@@ -45,50 +45,10 @@
 			</tr>
 		</tfoot>
 	</table>
-
-	<!-- <table class="layui-table" id="demo"></table> -->
 	
 	{include file="public/footer" /}
 
 	<script src="/static/admin/js/authority_control/role_manage.js"></script>
-<!-- <script>
-    layui.use('table', function(){
-        var table = layui.table;
-
-		//第一个实例
-		table.render({
-			elem: '#demo',
-			height: 312,
-			url:"{:url('/admin/role_manage/returnLayui')}",
-			id:'tryReload',
-			parseData:function(res){
-				return{
-					"code":0,
-					"msg":"",
-					"count":8,
-					data:res
-				}
-			},
-			cols: [[
-				{title: '序号', type: 'numbers'},
-				{field: 'id', title: 'id', hide: true},
-				{field: 'role_delimiter', title: '角色名称'},
-				{title: '状态', toolbar: '#status'},
-				{field: 'create_time', title: '创建时间'},
-				{title: '操作', toolbar: '#operation'}
-			]]
-		});
-    });
-</script>
-
-<script type="text/html" id="operation">
-	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-</script>
-
-<script type="text/html" id="status">
-	<span class="stop">启用</span>
-</script> -->
 
 </body>
 </html>

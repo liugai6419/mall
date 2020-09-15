@@ -1,4 +1,4 @@
-<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\index.html";i:1599828529;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\index.html";i:1599983629;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,8 +60,6 @@
 			</tr>
 		</tfoot>
 	</table>
-
-	<!-- <table class="layui-table" id="demo"></table> -->
 	
 			<script src="/static/admin/lib/jquery-3.5.1.js"></script>
 		<script src="/static/admin/lib/layui/layui.js"></script>
@@ -71,44 +69,6 @@
 
 
 	<script src="/static/admin/js/authority_control/role_manage.js"></script>
-<!-- <script>
-    layui.use('table', function(){
-        var table = layui.table;
-
-		//第一个实例
-		table.render({
-			elem: '#demo',
-			height: 312,
-			url:"<?php echo url('/admin/role_manage/returnLayui'); ?>",
-			id:'tryReload',
-			parseData:function(res){
-				return{
-					"code":0,
-					"msg":"",
-					"count":8,
-					data:res
-				}
-			},
-			cols: [[
-				{title: '序号', type: 'numbers'},
-				{field: 'id', title: 'id', hide: true},
-				{field: 'role_delimiter', title: '角色名称'},
-				{title: '状态', toolbar: '#status'},
-				{field: 'create_time', title: '创建时间'},
-				{title: '操作', toolbar: '#operation'}
-			]]
-		});
-    });
-</script>
-
-<script type="text/html" id="operation">
-	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-</script>
-
-<script type="text/html" id="status">
-	<span class="stop">启用</span>
-</script> -->
 
 </body>
 </html>

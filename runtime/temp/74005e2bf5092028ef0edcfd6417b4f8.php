@@ -1,4 +1,4 @@
-<?php /*a:3:{s:88:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\manager_list\save_manager.html";i:1599831446;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:88:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\manager_list\save_manager.html";i:1600069076;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,30 +20,30 @@
 <body>
 	<div class="layer-container">
 		<form class="layui-form layui-form-pane" action="">
-			
-			<!-- <input type="hidden" name="id" value=""> -->
-			
+			<?php if($list !=  null): ?>
+			<input type="hidden" name="id" value="<?php echo htmlentities($list['id']); ?>">
+			<?php endif; ?>
 
 			
 
 			<div class="layui-form-item">
 		    	<label class="layui-form-label">用户名</label>
 				<div class="layui-input-inline">
-					<input type="text" name="username" value="" lay-verify="required" placeholder="请填用户名" autocomplete="off" class="layui-input">
+					<input type="text" name="username" value="<?php echo htmlentities($list['username']); ?>" lay-verify="required" placeholder="请填用户名" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">登录密码</label>
 				<div class="layui-input-inline">
-					<input type="password" name="password" value="" lay-verify="required" placeholder="请填登录密码" autocomplete="off" class="layui-input">
+					<input type="password" name="password" value="" lay-verify="<?php echo $list==null ? 'required'  :  ''; ?>" placeholder="<?php echo $list==null ? '请填登录密码'  :  '若不修改密码则不用填写'; ?>" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
 				<label class="layui-form-label">手机号码</label>
 				<div class="layui-input-inline">
-					<input type="number" name="telephone" value="" lay-verify="required|phone" placeholder="请填手机号码" autocomplete="off" class="layui-input">
+					<input type="number" name="telephone" value="<?php echo htmlentities($list['telephone']); ?>" lay-verify="required|phone" placeholder="请填手机号码" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
@@ -51,9 +51,8 @@
 				<label class="layui-form-label">权限组</label>
 				<div class="layui-input-inline">
 					<select name="authority_group" lay-verify="required" lay-search>
-						<option value="0" >超级管理员</option>
 						<?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-						<option value="<?php echo htmlentities($vo['id']); ?>" ><?php echo htmlentities($vo['role_delimiter']); ?></option>
+						<option value="<?php echo htmlentities($vo['id']); ?>" <?php echo $list['authority_group']==$vo['id'] ? 'selected'  :  ''; ?>><?php echo htmlentities($vo['role_delimiter']); ?></option>
 						<?php endforeach; endif; else: echo "" ;endif; ?>
 					</select>
 				</div>
@@ -62,9 +61,9 @@
 			<div class="layui-form-item" pane>
 				<label class="layui-form-label">性别</label>
 				<div class="layui-input-inline">
-					<input type="radio" name="sex" value="1" title="男性" >
-					<input type="radio" name="sex" value="2" title="女性" >
-					<input type="radio" name="sex" value="3" title="保密"  checked>
+					<input type="radio" name="sex" value="1" title="男性" <?php echo $list['sex']==1 ? 'checked'  :  ''; ?>>
+					<input type="radio" name="sex" value="2" title="女性" <?php echo $list['sex']==2 ? 'checked'  :  ''; ?>>
+					<input type="radio" name="sex" value="3" title="保密" <?php echo $list['sex']==3||$list['sex'] == '' ? 'checked'  :  ''; ?>>
 				</div>
 			</div>
 

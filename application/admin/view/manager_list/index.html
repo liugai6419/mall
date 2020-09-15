@@ -7,45 +7,45 @@
 
 	<!-- 搜索和新增 -->
 	<div class="top">
-		<form class="layui-form" action="">
+		<form class="layui-form" action="/admin/manager_list/search" method="get">
 			<div class="layui-form-item">
 				<div class="layui-inline">
 					<div class="layui-input-inline" style="width: 200px;">
-						<input type="text" name="title" placeholder="用户名/手机" autocomplete="off" class="layui-input">
+						<input type="text" name="name_phone" placeholder="用户名/手机" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
 				<div class="layui-inline">
 					<div class="layui-input-inline" style="width: 200px;">
-						<select name="city">
+						<select name="authority_group">
 							<option value="">选择权限</option>
-							<option value="1">权限组</option>
-							<option value="2">管理员</option>
-							<option value="3">超级管理员</option>
+							{volist name="authorityData" id="vo"}
+							<option value="{$vo.id}">{$vo.role_delimiter}</option>
+							{/volist}
 						</select>
 					</div>
 				</div>
 
 				<div class="layui-inline">
 					<div class="layui-input-inline" style="width: 200px;">
-						<select name="city">
+						<select name="sex">
 							<option value="">选择性别</option>
-							<option value="1">保密</option>
-							<option value="2">男性</option>
-							<option value="3">女性</option>
+							<option value="3">保密</option>
+							<option value="2">女性</option>
+							<option value="1">男性</option>
 						</select>
 					</div>
 				</div>
 	 
 				<div class="layui-inline">
 					<div class="layui-input-inline" style="width: 200px;">
-						<input type="text" class="layui-input" id="date" placeholder="选择日期">
+						<input type="text" name="date" class="layui-input" id="date" placeholder="选择日期">
 					</div>
 				</div>
 
 				 <div class="layui-inline">
 					<div class="layui-input-inline" style="width: 66px;">
-						<button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+						<button class="layui-btn" lay-submit lay-filter="search">搜索</button>
 					</div>
 					<div class="layui-input-inline" style="width: 66px;">
 						<button type="reset" class="layui-btn layui-btn-primary">清空</button>
@@ -65,6 +65,7 @@
 			<tr>
 				<th>序列</th>
 				<th>管理员</th>
+				<th>性别</th>
 				<th>登录次数</th>
 				<th>手机号码</th>
 				<th>权限组</th>
@@ -79,14 +80,15 @@
 			<tr>
 				<td>{$num++}</td>
 				<td>{$vo.username}</td>
+				<td>{$vo.sex}</td>
 				<td>{$vo.login_total}</td>
 				<td>{$vo.telephone}</td>
 				<td>{$vo.authority_group}</td>
 				<td>{if $vo.login_time == '0' }0{else /}{:date('Y-m-d H:i:s',$vo.login_time)}{/if}</td>
 				<td>{:date('Y-m-d H:i:s',$vo.create_time)}</td>
 				<td>
-					<button type="button" data-id="{//$vo.id}" class="layui-btn layui-btn-xs edit">编辑</button>
-					<button type="button" data-id="{//$vo.id}" class="layui-btn layui-btn-xs layui-btn-danger delete">删除</button>
+					<button type="button" data-id="{$vo.id}" class="layui-btn layui-btn-xs edit">编辑</button>
+					<button type="button" data-id="{$vo.id}" class="layui-btn layui-btn-xs layui-btn-danger delete">删除</button>
 				</td>
 			</tr>
 			{/volist}
@@ -94,8 +96,8 @@
 
 		<tfoot>
 			<tr>
-				<td colspan="5">
-					
+				<td colspan="8">
+					{$page|raw}
 				</td>
 			</tr>
 		</tfoot>
@@ -104,5 +106,33 @@
 	{include file="public/footer" /}
 
 	<script src="/static/admin/js/authority_control/manager_list.js"></script>
+
+	<!-- <script>
+		layui.use('form', function(){
+			var form = layui.form;
+
+			// 查询
+			form.on('submit(search)', function(data){
+
+				var field = data.field;
+
+				location.href="/admin/manager_list/search?name_phone="+field["name_phone"]+"&authority_group="+field["authority_group"]+"&sex="+field["sex"]+"&date="+field["date"];
+
+				// $.get("/admin/manager_list/search",field,function(res){
+					
+				// 	// res = JSON.parse(res);
+				// 	// console.log(res);
+
+				// 	// $("table tbody tr").empty();
+				// 	// $("table tfoot tr td").empty();
+
+				// 	// var html = "<h2>"+res.num+"</h2>";
+				// 	// $("table tbody tr").append(html);
+				// 	// $("table tfoot tr td").append(res.page);
+				// });
+				return false;
+			});
+		});
+	</script> -->
 </body>
 </html>

@@ -12,11 +12,11 @@ $(function(){
 
 	    // 提交登录
 	    form.on('submit(login)', function(data){
-	    	var username = $('.username').val();
+	    	var account = $('.account').val();
 	    	var password = $('.password').val();
 
-	    	if(username == ''){
-	    		layer.msg('用户名称不能为空!');
+	    	if(account == ''){
+	    		layer.msg('账号不能为空!');
 	    		return false;
 	    	}
 
@@ -26,7 +26,7 @@ $(function(){
 	    	}
 
 	    	$.post("/admin/login/login", {
-	    		username: username,
+	    		account: account,
 	    		password: password
 	    	}, function(result, data){
 	    		if(result.code === 1){
