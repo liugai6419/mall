@@ -13,8 +13,6 @@ class SiteSetting extends Common
 	{
 		$tab = Request::param('tab');
 
-		$user_id = Session::get('admin')["id"];
-
 		if(!$tab){
 			$tab = 1;
 		}
@@ -22,11 +20,11 @@ class SiteSetting extends Common
 		$data = null;
 		if($tab == 1){
 			// 站点配置——站点设置——基础配置
-			$data = Db::table("base_configure")->where("user_id",$user_id)->find();
+			$data = Db::table("base_configure")->where("id",1)->find();
 			
 		}elseif($tab == 2){
 			// 站点配置——站点设置——用户注册
-			$data = Db::table("user_register")->where("user_id",$user_id)->find();
+			$data = Db::table("user_register")->where("id",1)->find();
 
 			if($data){
 				// 将is_open_register字符串转化为数组
@@ -36,19 +34,19 @@ class SiteSetting extends Common
 
 		}elseif($tab == 3){
 			// 站点配置——站点设置——用户登录
-			$data = Db::table("user_login")->where("user_id",$user_id)->find();
+			$data = Db::table("user_login")->where("id",1)->find();
 
 		}elseif($tab == 4){
 			// 站点配置——站点设置——密码找回
-			$data = Db::table("password_find")->where("user_id",$user_id)->find();
+			$data = Db::table("password_find")->where("id",1)->find();
 
 		}elseif($tab == 5){
 			// 站点配置——站点设置——附件
-			$data = Db::table("accessory")->where("user_id",$user_id)->find();
+			$data = Db::table("accessory")->where("id",1)->find();
 
 		}elseif($tab == 6){
 			// 站点配置——站点设置——图片验证码
-			$data = Db::table("pic_identifying_code")->where("user_id",$user_id)->find();
+			$data = Db::table("pic_identifying_code")->where("id",1)->find();
 
 			if($data){
 				// 将is_open_register字符串转化为数组
@@ -57,11 +55,11 @@ class SiteSetting extends Common
 			
 		}elseif($tab == 7){
 			// 站点配置——站点设置——订单售后
-			$data = Db::table("ordering_service")->where("user_id",$user_id)->find();
+			$data = Db::table("ordering_service")->where("id",1)->find();
 
 		}elseif($tab == 8){
 			// 站点配置——站点设置——搜索
-			$data = Db::table("search")->where("user_id",$user_id)->find();
+			$data = Db::table("search")->where("id",1)->find();
 
 			if($data){
 				
@@ -191,22 +189,18 @@ class SiteSetting extends Common
 			return ['code'=>0, 'msg'=>'请填写页面最大宽度'];
 		}
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
 		// 查询用户是否存在基础配置
-		$res = Db::table("base_configure")->where("user_id",$user_id)->find();
+		$res = Db::table("base_configure")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("base_configure")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("base_configure")->where("user_id",$user_id)->update($data);
+			$res = Db::table("base_configure")->where("id",1)->update($data);
 
 		}
 
@@ -222,22 +216,18 @@ class SiteSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
 		// 查询用户是否存在用户注册
-		$res = Db::table("user_register")->where("user_id",$user_id)->find();
+		$res = Db::table("user_register")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("user_register")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("user_register")->where("user_id",$user_id)->update($data);
+			$res = Db::table("user_register")->where("id",1)->update($data);
 
 		}
 
@@ -253,22 +243,18 @@ class SiteSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
 		// 查询用户是否存在用户登录
-		$res = Db::table("user_login")->where("user_id",$user_id)->find();
+		$res = Db::table("user_login")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("user_login")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("user_login")->where("user_id",$user_id)->update($data);
+			$res = Db::table("user_login")->where("id",1)->update($data);
 
 		}
 		
@@ -285,22 +271,18 @@ class SiteSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
 		// 查询用户是否存在用户登录
-		$res = Db::table("password_find")->where("user_id",$user_id)->find();
+		$res = Db::table("password_find")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("password_find")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("password_find")->where("user_id",$user_id)->update($data);
+			$res = Db::table("password_find")->where("id",1)->update($data);
 
 		}
 		
@@ -329,22 +311,18 @@ class SiteSetting extends Common
 			return ['code'=>0, 'msg'=>'请填写视频最大限制'];
 		}
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
 		// 查询用户是否存在基础配置
-		$res = Db::table("accessory")->where("user_id",$user_id)->find();
+		$res = Db::table("accessory")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("accessory")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("accessory")->where("user_id",$user_id)->update($data);
+			$res = Db::table("accessory")->where("id",1)->update($data);
 
 		}
 
@@ -360,22 +338,19 @@ class SiteSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
 
 		// 查询用户是否存在用户注册
-		$res = Db::table("pic_identifying_code")->where("user_id",$user_id)->find();
+		$res = Db::table("pic_identifying_code")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("pic_identifying_code")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("pic_identifying_code")->where("user_id",$user_id)->update($data);
+			$res = Db::table("pic_identifying_code")->where("id",1)->update($data);
 
 		}
 
@@ -391,22 +366,19 @@ class SiteSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
 
 		// 查询用户是否存在用户注册
-		$res = Db::table("ordering_service")->where("user_id",$user_id)->find();
+		$res = Db::table("ordering_service")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("ordering_service")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("ordering_service")->where("user_id",$user_id)->update($data);
+			$res = Db::table("ordering_service")->where("id",1)->update($data);
 
 		}
 
@@ -422,22 +394,19 @@ class SiteSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
 
 		// 查询用户是否存在用户注册
-		$res = Db::table("search")->where("user_id",$user_id)->find();
+		$res = Db::table("search")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("search")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("search")->where("user_id",$user_id)->update($data);
+			$res = Db::table("search")->where("id",1)->update($data);
 
 		}
 

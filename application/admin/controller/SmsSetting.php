@@ -13,8 +13,6 @@ class SmsSetting extends Common
 	{
 		$tab = Request::param('tab');
 
-		$user_id = Session::get('admin')["id"];
-
 		if(!$tab){
 			$tab = 1;
 		}
@@ -22,11 +20,11 @@ class SmsSetting extends Common
 		$data = null;
 		if($tab == 1){
 
-			$data = Db::table("sms_setting")->where("user_id",$user_id)->find();
+			$data = Db::table("sms_setting")->where("id",1)->find();
 			
 		}elseif($tab == 2){
 
-			$data = Db::table("message_template")->where("user_id",$user_id)->find();
+			$data = Db::table("message_template")->where("id",1)->find();
 
 		}
 
@@ -40,21 +38,17 @@ class SmsSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("sms_setting")->where("user_id",$user_id)->find();
+		$res = Db::table("sms_setting")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("sms_setting")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("sms_setting")->where("user_id",$user_id)->update($data);
+			$res = Db::table("sms_setting")->where("id",1)->update($data);
 
 		}
 
@@ -69,21 +63,17 @@ class SmsSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("message_template")->where("user_id",$user_id)->find();
+		$res = Db::table("message_template")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("message_template")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("message_template")->where("user_id",$user_id)->update($data);
+			$res = Db::table("message_template")->where("id",1)->update($data);
 
 		}
 

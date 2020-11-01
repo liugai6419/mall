@@ -11,10 +11,8 @@ class AuthorityAllocation extends Common
 {
 	public function index()
 	{
-		$user_id = Session::get('admin')["id"];
 
 		$data = Db::table("authority_allocation")
-				->where("user_id",$user_id)
 				->order('marshalling_sequence', 'desc')
 				->field('id,parent_id,authority_name,is_show')
 				->select();
@@ -48,11 +46,8 @@ class AuthorityAllocation extends Common
 	{	
 		$getData = Request::get();
 
-		$user_id = Session::get('admin')["id"];
-
 		// 获取目录级别选项
 		$data = Db::table("authority_allocation")
-				->where("user_id",$user_id)
 				->where("parent_id",0)
 				->order('marshalling_sequence', 'desc')
 				->field('id,authority_name')
@@ -75,10 +70,7 @@ class AuthorityAllocation extends Common
 		$data = Request::post();
 
 		if(!isset($data["id"])){
-			// 获取用户id
-			$user_id = Session::get('admin')["id"];
-
-			$data["user_id"] = $user_id;
+			
 			$data["create_time"] = time();
 			$res = Db::table("authority_allocation")->insert($data);
 			

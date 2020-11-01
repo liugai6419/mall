@@ -1,0 +1,80 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" />
+<link rel="stylesheet" href="/static/admin/css/goods_manage/goods_classify.css" />
+</head>
+<body>
+
+	<!-- 搜索和新增 -->
+	<div class="top">
+		<div></div>
+		<button type="button" class="layui-btn add" classify="1" data-userId="0"><i class="layui-icon">&#xe608;</i> 新增一级分类</button>
+	</div>
+
+	<div class="layui-collapse" lay-accordion>
+		{volist name="$data" id="first"}
+		<div class="layui-colla-item">
+			<h2 class="layui-colla-title">
+				<span>
+					{if $first.small_icon != ""}
+					<img class="classify-img" src="{$first.small_icon}">
+					{/if}
+
+					{$first.name}
+				</span>
+				<span class="icon">
+					<span class="add" classify="2" data-userId="{$first.id}"><i class="iconfont iconadd"></i>新增子级</span>
+					<span class="edit" data-userId="{$first.user_id}" data-id="{$first.id}"><i class="iconfont iconedit2"></i>编辑</span>
+					<span class="del" classify="1" data-id="{$first.id}"><i class="iconfont icondelete"></i>删除</span>
+				</span>
+			</h2>
+			<div class="layui-colla-content second-title">
+				<div class="layui-collapse" lay-accordion>
+					{volist name="$first.second" id="second"}
+					<div class="layui-colla-item">
+						<h2 class="layui-colla-title">
+							<span>
+								{if $second.small_icon != ""}
+								<img class="classify-img" src="{$second.small_icon}">
+								{/if}
+								
+								{$second.name}
+							</span>
+							<span class="icon">
+								<span class="add" classify="3" data-userId="{$second.id}"><i class="iconfont iconadd"></i>新增子级</span>
+								<span class="edit" data-userId="{$second.user_id}" data-id="{$second.id}"><i class="iconfont iconedit2"></i>编辑</span>
+								<span class="del" classify="2" data-id="{$second.id}"><i class="iconfont icondelete"></i>删除</span>
+							</span>
+						</h2>
+						<div class="layui-colla-content">
+							<ul>
+								{volist name="$second.third" id="third"}
+								<li>
+									<span>
+										{if $third.small_icon != ""}
+										<img class="classify-img" src="{$third.small_icon}">
+										{/if}
+										
+										{$third.name}
+									</span>
+									<span class="icon">
+										<span class="edit" data-userId="{$third.user_id}" data-id="{$third.id}"><i class="iconfont iconedit2"></i>编辑</span>
+										<span class="del" classify="3" data-id="{$third.id}"><i class="iconfont icondelete"></i>删除</span>
+									</span>
+								</li>
+								{/volist}
+							</ul>
+						</div>
+					</div>
+					{/volist}
+				</div>
+			</div>
+		</div>
+		{/volist}
+	</div>
+	
+	{include file="public/footer" /}
+
+	<script src="/static/admin/js/goods_manage/goods_classify.js"></script>
+</body>
+</html>

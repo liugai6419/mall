@@ -1,0 +1,118 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" />
+<link rel="stylesheet" href="/static/admin/css/brand_manage/brand_list.css" />
+</head>
+<body>
+
+	<!-- 搜索和新增 -->
+	<div class="top">
+		<form class="layui-form" action="/admin/brand_list/search" method="get">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<div class="layui-input-inline" style="width: 180px;">
+						<input type="text" name="name" placeholder="名称" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-inline">
+					<div class="layui-input-inline" style="width: 180px;">
+						<select name="is_start">
+							<option value="">是否启用</option>
+							<option value="1">启用</option>
+							<option value="2">停用</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-inline">
+					<div class="layui-input-inline" style="width: 180px;">
+						<select name="classify">
+							<option value="">品牌分类</option>
+							{volist name="$brandClassify" id="vo"}
+							<option value="{$vo.id}">{$vo.name}</option>
+							{/volist}
+						</select>
+					</div>
+				</div>
+	 
+				<div class="layui-inline">
+					<div class="layui-input-inline" style="width: 180px;">
+						<input type="text" name="date" class="layui-input" id="date" placeholder="选择日期">
+					</div>
+				</div>
+
+				 <div class="layui-inline">
+					<div class="layui-input-inline" style="width: 66px;">
+						<button class="layui-btn" lay-submit lay-filter="search">搜索</button>
+					</div>
+					<div class="layui-input-inline" style="width: 66px;">
+						<button type="reset" class="layui-btn layui-btn-primary">清空</button>
+					</div>
+				</div>
+
+			</div>
+		</form>
+		
+		<span>
+			<button type="button" class="layui-btn add"><i class="layui-icon">&#xe608;</i> 新增</button>
+		</span>
+	</div>
+
+	<!-- 数据表格 -->
+	<table>
+		<thead>
+			<tr>
+				<th style="width:60px">序列</th>
+				<th style="width:170px">名称</th>
+				<th style="width:150px">LOGO</th>
+				<th style="width:150px">品牌分类</th>
+				<th style="width:300px">官网地址</th>
+				<th style="width:100px">是否启用</th>
+				<th style="width:200px">创建时间</th>
+				<th style="width:200px">操作</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{volist name="$datas" id="data"}
+			<tr>
+				<td>{$num++}</td>
+				<td>{$data.name}</td>
+				{if $data.logo_img == ""}
+					<td class="no-has">无logo</td>
+				{else /}
+					<td class="logo"><img src="{$data.logo_img}"></td>
+				{/if}
+				<td>{$data.classify}</td>
+				{if $data.logo_img == ""}
+					<td class="no-has">无网站</td>
+				{else /}
+					<td><div class="website">{$data.website}</div></td>
+				{/if}
+				
+				<td><span class="{$data.is_start == 1 ? 'start' : 'stop'}">{$data.is_start == 1 ? '启用' : '停用'}</span></td>
+				<td>{:date('Y-m-d H:i:s',$data.create_time)}</td>
+				<td>
+					<button type="button" data-id="{$data.id}" class="layui-btn layui-btn-xs edit">编辑</button>
+					<button type="button" data-id="{$data.id}" class="layui-btn layui-btn-xs layui-btn-danger del">删除</button>
+				</td>
+			</tr>
+			{/volist}
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="8">
+					{$page|raw}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+	{include file="public/footer" /}
+
+	<script src="/static/admin/js/brand_manage/brand_list.js"></script>
+
+</body>
+</html>

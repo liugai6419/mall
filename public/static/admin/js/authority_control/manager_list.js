@@ -12,31 +12,6 @@ $(function(){
 			range: true
 		});
 
-		// 查询
-		// form.on('submit(search)', function(data){
-
-		// 	var field = data.field;
-		// 	console.log(field);
-
-		// 	$.post("/admin/manager_list/index",field,function(res){
-		// 		console.log(res);
-		// 		// if(res.code === 1){
-		// 		// 	layer.msg(res.msg);
-
-		// 		// 	// 关闭弹窗
-		// 		// 	setTimeout(function(){
-		// 		// 		var index = parent.layer.getFrameIndex(window.name);
-		// 		// 		parent.layer.close(index);
-		// 		// 		parent.location.reload();
-		// 		// 	},1000);
-					
-		// 		// }else{
-		// 		// 	layer.msg(res.msg);
-		// 		// }
-		// 	});
-		// 	return false;
-		// });
-
 		// 新增管理员
 		$(".save-manager").click(function(){
 			layer.open({
@@ -62,7 +37,7 @@ $(function(){
 		// 删除管理员
 		$(".delete").click(function(){
 			var selfObj = $(this)
-			var parentObj = selfObj.parent().parent();
+			var parentObj = selfObj.parent().parent().parent();
 
 			layer.alert("确定删除此权限?",{
 				title:false,

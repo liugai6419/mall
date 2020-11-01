@@ -10,21 +10,19 @@ use think\Db;
 class ManagerList extends Common
 {
 	public function index()
-	{
-		dump(Session::get('admin'));
-		$user_id = Session::get('admin')["id"];
+	{	
+		// 获取显示数量
+		$pageNum = Db::table("backstage_config")->find();
 
 		// 获取管理员
-		$data = Db::table("manager_list")
-				->where("user_id",$user_id)
+		$data = Db::table("admin")
 				->order("create_time", "desc")
-				->paginate(10);
+				->paginate($pageNum['paging_num']);
 
 		$page = $data->render();
 
 		// 获取权限组
 		$authorityData = Db::table("role_manage")
-				->where("user_id",$user_id)
 				->field('id,role_delimiter')
 				->select();
 
@@ -98,28 +96,27 @@ class ManagerList extends Common
 			$conditon["end"] = $arr[1];
 		}
 
-		$user_id = Session::get('admin')["id"];
-
 		$arg['query']['name_phone'] = $conditon["name_phone"];
 		$arg['query']['authority_group'] = $conditon["authority_group"];
 		$arg['query']['sex'] = $conditon["sex"];
 		$arg['query']['date'] = $conditon["date"];
 
+		// 获取显示数量
+		$pageNum = Db::table("backstage_config")->find();
+		
 		// 获取管理员
-		$data = Db::table("manager_list")
-				->where("user_id",$user_id)
+		$data = Db::table("admin")
 				->where("username|telephone", "like", $conditon["name_phone"])
 				->where("authority_group",$conditon["authority_group"])
 				->where("sex",$conditon["sex"])
 				->where("create_time", "between time", [$conditon["start"], $conditon["end"]])
 				->order("create_time", "desc")
-				->paginate(10,"",$arg);
+				->paginate($pageNum['paging_num'],"",$arg);
 
 		$page = $data->render();
 
 		// 获取权限组
 		$authorityData = Db::table("role_manage")
-				->where("user_id",$user_id)
 				->field('id,role_delimiter')
 				->select();
 
@@ -161,11 +158,8 @@ class ManagerList extends Common
 	{	
 		$getData = Request::get();
 
-		$user_id = Session::get('admin')["id"];
-
 		// 获取权限组
 		$data = Db::table("role_manage")
-				->where("user_id",$user_id)
 				->field('id,role_delimiter')
 				->select();
 
@@ -173,13 +167,12 @@ class ManagerList extends Common
 
 		// 获取权限内容		
 		if(isset($getData["tab"])){
-			$list = Db::table("manager_list")->where("id",$getData["id"])->find();
+			$list = Db::table("admin")->where("id",$getData["id"])->find();
 			$this->assign('list',$list);
 		}else{
 			$this->assign('list',null);
 		}
 
-		
 		return $this->fetch();
 	}
 
@@ -188,34 +181,42 @@ class ManagerList extends Common
 		$data = Request::post();
 
 		if(!isset($data["id"])){
-			// 获取用户id
-			$user_id = Session::get('admin')["id"];
 
-			$username = Db::table("manager_list")->where('username', $data['username'])->find();
+			$username = Db::table("admin")->where('username', $data['username'])->find();
+			$telephone = Db::table("admin")->where('telephone', $data['telephone'])->find();
 
 			if($username){
 				return ["code"=>0,"msg"=>"用户名称已存在"];
+			}elseif($telephone){
+				return ["code"=>0,"msg"=>"手机号码已存在"];
 			}else{
-				$data["user_id"] = $user_id;
 				$data["create_time"] = time();
 				$data["password"] = md5($data["password"]);
 
-				$res = Db::table("manager_list")->insert($data);
+				$res = Db::table("admin")->insert($data);
 			}
 			
 		}else{
 
-			$id = $data["id"];
+			$username = Db::table("admin")->where('username', $data['username'])->where('id', '<>', $data['id'])->find();
+			$telephone = Db::table("admin")->where('telephone', $data['telephone'])->where('id', '<>', $data['id'])->find();
 
-			if($data['password'] === ''){
-				unset($data['password']);
+			if($username){
+				return ["code"=>0,"msg"=>"用户名称已存在"];
+			}elseif($telephone){
+				return ["code"=>0,"msg"=>"手机号码已存在"];
 			}else{
-				$data["password"] = md5($data["password"]);
-			}
-			
+				$id = $data["id"];
 
-			$data["update_time"] = time();
-			$res = Db::table("manager_list")->where("id",$id)->update($data);
+				if($data['password'] === ''){
+					unset($data['password']);
+				}else{
+					$data["password"] = md5($data["password"]);
+				}
+
+				$data["update_time"] = time();
+				$res = Db::table("admin")->where("id",$id)->update($data);
+			}
 		}
 
 		if($res){
@@ -230,7 +231,7 @@ class ManagerList extends Common
 	{
 		$data = Request::get("id");
 
-		$res = Db::table('manager_list')->delete($data);
+		$res = Db::table('admin')->delete($data);
 
 		if($res){
 			return ["code"=>1,"msg"=>"删除成功"];

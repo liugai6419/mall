@@ -11,8 +11,10 @@ class RoleManage extends Common
 {
 	public function index()
 	{
-		$user_id = Session::get('admin')["id"];
-		$data = Db::table("role_manage")->where("user_id",$user_id)->order('create_time','desc')->paginate(10);
+		// 获取显示数量
+		$pageNum = Db::table("backstage_config")->find();
+		
+		$data = Db::table("role_manage")->order('create_time','desc')->paginate($pageNum['paging_num']);
 		
 		$page = $data->render();
 
@@ -25,11 +27,8 @@ class RoleManage extends Common
 
 	public function found()
 	{
-		$user_id = Session::get('admin')["id"];
-
 		// 获取权限名称
 		$data = Db::table("authority_allocation")
-				->where("user_id",$user_id)
 				->order('marshalling_sequence', 'desc')
 				->field('id,parent_id,authority_name,is_show')
 				->select();
@@ -76,9 +75,9 @@ class RoleManage extends Common
 	{
 		$data = Request::post();
 
-		
 		$roleDelimiter = $data['role_delimiter'];
 		$isStart = $data['is_start'];
+		$id = $data["id"] ? $data["id"] : false;
 
 		// 限制角色名称的字数
 		$length = mb_strlen($roleDelimiter);
@@ -89,6 +88,7 @@ class RoleManage extends Common
 		// 移除数组中的role_delimiter值
 		unset($data['role_delimiter']);
 		unset($data['is_start']);
+		unset($data['id']);
 
 		// 将数组转为字符串
 		$authority = implode(',',$data);
@@ -98,20 +98,15 @@ class RoleManage extends Common
 		$newData['is_start'] = $isStart;
 		$newData['authority'] = $authority;
 
-		if(!isset($data["id"])){
-			// 获取用户id
-			$user_id = Session::get('admin')["id"];
+		if(!$id){
 
-			$newData["user_id"] = $user_id;
 			$newData["create_time"] = time();
 			$res = Db::table("role_manage")->insert($newData);
 			
 		}else{
-			$id = $data["id"];
-
-			unset($data["id"]);
 
 			$newData["update_time"] = time();
+
 			$res = Db::table("role_manage")->where("id",$id)->update($newData);
 		}
 

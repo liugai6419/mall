@@ -10,12 +10,19 @@ class Index extends Common
 	public function index()
 	{
 		$admin = Session::get('admin');
-
+		
 		$authority = null;
-		if($admin["role"] == 1){
-			$authority = Db::table("authority_allocation")->where("user_id", $admin["id"])->select();
+
+		if($admin["id"] == 5){
+			// 顶级超级管理员
+			$authority = Db::table("authority_allocation")->order('marshalling_sequence', 'desc')->select();
 		}else{
-			$authority = Db::table("authority_allocation")->where("user_id", $admin["user_id"])->where("is_show",1)->select();
+			// 获取此用户的角色组
+			$roleAuthority = Db::table("role_manage")->where("id",$admin["authority_group"])->find();
+
+			// 其他管理员
+			$authority = Db::table("authority_allocation")->where("is_show",1)->where('id','in',$roleAuthority['authority'])->order('marshalling_sequence', 'desc')->select();
+
 		}
 
 		$lists = [];
@@ -34,10 +41,10 @@ class Index extends Common
 				$lists[] = $value;
 			}
 		}
-
-		// dump($lists);
 		
 		$this->assign('admin',$admin);
+
+		$this->assign('lists',$lists);
 
 		return $this->fetch();
 	}

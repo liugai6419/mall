@@ -1,4 +1,4 @@
-<?php /*a:3:{s:81:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\manager_list\index.html";i:1600093620;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:81:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\manager_list\index.html";i:1600249443;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,8 +102,15 @@
 				<td><?php if($vo['login_time'] == '0'): ?>0<?php else: ?><?php echo date('Y-m-d H:i:s',$vo['login_time']); ?><?php endif; ?></td>
 				<td><?php echo date('Y-m-d H:i:s',$vo['create_time']); ?></td>
 				<td>
-					<button type="button" data-id="<?php echo htmlentities($vo['id']); ?>" class="layui-btn layui-btn-xs edit">编辑</button>
-					<button type="button" data-id="<?php echo htmlentities($vo['id']); ?>" class="layui-btn layui-btn-xs layui-btn-danger delete">删除</button>
+					<?php if($vo['id'] === 5): ?>
+						不可操作
+					<?php else: ?>
+					<span>
+						<button type="button" data-id="<?php echo htmlentities($vo['id']); ?>" class="layui-btn layui-btn-xs edit">编辑</button>
+						<button type="button" data-id="<?php echo htmlentities($vo['id']); ?>" class="layui-btn layui-btn-xs layui-btn-danger delete">删除</button>
+					</span>
+					<?php endif; ?>
+					
 				</td>
 			</tr>
 			<?php endforeach; endif; else: echo "" ;endif; ?>

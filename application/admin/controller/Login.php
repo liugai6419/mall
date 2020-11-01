@@ -27,16 +27,7 @@ class Login extends Controller
 			return ['code' => 0, 'msg' => '密码不能为空!'];
 		}
 
-		// 判断是注册者还是管理员
-		$data = null;
-		if(preg_match("/^1[34578]{1}\d{9}$/", $account)){
-			$data = Db::table('admin')->where('telephone',$account)->find();
-			$data["role"] = 1;
-		}else{
-			$data = Db::table('manager_list')->where('username',$account)->find();
-			$data["role"] = 2;
-		}
-
+		$data = Db::table('admin')->where('username|telephone',$account)->find();
 
 		$md5Pwd = md5($password);
 
@@ -44,7 +35,15 @@ class Login extends Controller
 			return ['code' => 0, 'msg' => '用户名称或密码错误!'];
 		}
 
+		if($data['id'] != 5){
+			$roleState = Db::table('role_manage')->where('id', $data['authority_group'])->field('is_start')->find();
+			if($roleState['is_start'] == 1){
+				return ["code"=>0,"msg"=>"你所属角色组已被停用，请联系超级管理员"];
+			}
+		}
+
 		Session::set('admin', $data);
+		Db::table('admin')->where('id',$data['id'])->inc('login_total')->exp('login_time', time())->update();
 
 		return ['code' => 1, 'msg' => '登录成功'];
 	}

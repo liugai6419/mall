@@ -11,8 +11,8 @@ class SeoSetting extends Common
 {
 	public function index()
 	{
-		$user_id = Session::get('admin')["id"];
-		$data = Db::table("seo_setting")->where("user_id",$user_id)->find();
+
+		$data = Db::table("seo_setting")->where("id",1)->find();
 
 		$this->assign('data',$data);
 
@@ -23,21 +23,17 @@ class SeoSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("seo_setting")->where("user_id",$user_id)->find();
+		$res = Db::table("seo_setting")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("seo_setting")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("seo_setting")->where("user_id",$user_id)->update($data);
+			$res = Db::table("seo_setting")->where("id",1)->update($data);
 
 		}
 
@@ -52,21 +48,17 @@ class SeoSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("message_template")->where("user_id",$user_id)->find();
+		$res = Db::table("message_template")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("message_template")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("message_template")->where("user_id",$user_id)->update($data);
+			$res = Db::table("message_template")->where("id",1)->update($data);
 
 		}
 

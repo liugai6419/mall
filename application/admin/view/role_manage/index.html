@@ -27,7 +27,7 @@
 			<tr>
 				<td>{$num++}</td>
 				<td>{$vo.role_delimiter}</td>
-				<td><span class="{$vo.is_start == 2 ? 'start' : 'stop'}">{$vo.role_delimiter == 2 ? '启用' : '停用'}</span></td>
+				<td><span class="{$vo.is_start == 2 ? 'start' : 'stop'}">{$vo.is_start == 2 ? '启用' : '停用'}</span></td>
 				<td>{:date('Y-m-d H:i:s',$vo.create_time)}</td>
 				<td>
 					<button type="button" data-id="{$vo.id}" class="layui-btn layui-btn-xs edit">编辑</button>

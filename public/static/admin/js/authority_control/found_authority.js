@@ -1,8 +1,7 @@
 $(function(){
-	layui.use(['layer', 'form', 'layer'], function(){
+	layui.use(['layer', 'form'], function(){
 		var layer = layui.layer,
-			form = layui.form,
-			layer = layui.layer;
+			form = layui.form;
 		
 		form.on('submit(foundAuthority)', function(data){
 

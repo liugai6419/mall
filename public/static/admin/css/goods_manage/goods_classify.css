@@ -1,0 +1,193 @@
+.top{
+	width: 100%;
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*一级商品分类*/
+.layui-colla-content{
+	padding: 0;
+}
+
+/*二级商品分类*/
+.second-title{
+	border: none;
+}
+
+.second-title .layui-collapse{
+	border: none;
+}
+
+.second-title .layui-colla-item{
+	border: none;
+}
+
+.second-title .layui-colla-title{
+	background: white;
+	padding: 0 15px 0 54px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.second-title .layui-colla-icon{
+	left: 34px;
+}
+
+.second-title .layui-colla-title:hover{
+	background: rgba(0,150,136,0.04);
+}
+
+.second-title .layui-colla-content{
+	border: none;
+}
+
+.second-title .layui-colla-content li{
+	color: #333;
+	font-size: 14px;
+	line-height: 42px;
+	padding-left: 55px;
+	padding-right: 15px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.second-title .layui-colla-content li:hover{
+	background: rgba(0,150,136,0.04);
+}
+
+/*新增、编辑、删除按钮*/
+.layui-colla-title .icon,.layui-colla-content .icon{
+	display: none;
+	font-size:20px;
+	float: right;
+}
+
+.layui-colla-title .icon .add,.layui-colla-content .icon .add{
+	color: #009688;
+	padding: 3px 10px;
+	line-height: normal;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(0,150,136,0.1);
+	border: 1px dashed rgba(0,150,136,0.2);
+}
+
+.layui-colla-title .icon .edit,.layui-colla-content .icon .edit{
+	color: #1e9fff;
+	padding: 3px 10px;
+	line-height: normal;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(30,159,255,0.1);
+	border: 1px dashed rgba(30,159,255,0.2);
+}
+
+.layui-colla-title .icon .del,.layui-colla-content .icon .del{
+	color: #ff5722;
+	padding: 3px 10px;;
+	line-height: normal;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(255,87,34,0.1);
+	border: 1px dashed rgba(255,87,34,0.2);
+}
+
+.layui-colla-title:hover .icon,.layui-colla-content li:hover .icon{
+	display: block;
+	cursor: pointer;
+}
+
+/*图片设置*/
+.layui-collapse .classify-img{
+	width: 20px;
+	height: 20px;
+	border-radius: 2px;
+}
+
+
+
+
+
+/*新增权限弹窗样式*/
+.layer-container{
+	width: calc(100% - 40px);
+	padding: 20px;
+}
+
+.layer-container .layui-form-pane .layui-input-inline{
+	width: calc(100% - 109px);
+	margin-right: 0px;
+}
+
+.layer-container .layui-form-pane .layui-input-block{
+	margin-left: 0px;
+}
+
+.layer-container .layui-btn{
+	width: 100%;
+	margin-top: 10px;
+}
+
+/*更改图片*/
+.img{
+	display: flex;
+}
+
+.image .layui-form-label{
+	height: 110px!important;
+	line-height: 95px!important;
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+}
+
+.image .layui-input-inline{
+	width: 110px!important;
+	height: 110px!important;
+}
+
+.image .layui-upload-drag{
+	border: 1px solid #e2e2e2;
+}
+
+.image .layui-form-mid{
+	margin-top: 96px;
+}
+
+.image .layui-upload-drag{
+	width: 110px;
+	height: 108px;
+	padding: 0;
+}
+
+.image .icon{
+	margin-top: 15px;
+}
+
+.image img{
+	width: 106px;
+	height: 106px;
+}
+
+/*文本域*/
+.textarea .layui-form-label{
+	height: 100px!important;
+	line-height: 82px!important;
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+}
+
+.textarea .layui-form-mid{
+	margin-top: 62px;
+}
+
+.textarea textarea{
+	resize: none;
+}
+
+/*将单选框上下居中*/
+.layer-container .layui-form-pane .layui-form-radio{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}

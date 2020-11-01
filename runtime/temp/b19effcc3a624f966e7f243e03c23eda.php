@@ -1,4 +1,4 @@
-<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\index.html";i:1599983629;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:80:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\role_manage\index.html";i:1602391174;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +42,7 @@
 			<tr>
 				<td><?php echo htmlentities($num++); ?></td>
 				<td><?php echo htmlentities($vo['role_delimiter']); ?></td>
-				<td><span class="<?php echo $vo['is_start']==2 ? 'start'  :  'stop'; ?>"><?php echo $vo['role_delimiter']==2 ? '启用'  :  '停用'; ?></span></td>
+				<td><span class="<?php echo $vo['is_start']==2 ? 'start'  :  'stop'; ?>"><?php echo $vo['is_start']==2 ? '启用'  :  '停用'; ?></span></td>
 				<td><?php echo date('Y-m-d H:i:s',$vo['create_time']); ?></td>
 				<td>
 					<button type="button" data-id="<?php echo htmlentities($vo['id']); ?>" class="layui-btn layui-btn-xs edit">编辑</button>

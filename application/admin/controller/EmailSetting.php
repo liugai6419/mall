@@ -18,8 +18,6 @@ class EmailSetting extends Common
 	{
 		$tab = Request::param('tab');
 
-		$user_id = Session::get('admin')["id"];
-
 		if(!$tab){
 			$tab = 1;
 		}
@@ -27,11 +25,11 @@ class EmailSetting extends Common
 		$data = null;
 		if($tab == 1){
 
-			$data = Db::table("eamil_setting")->where("user_id",$user_id)->find();
+			$data = Db::table("eamil_setting")->where("id",1)->find();
 			
 		}elseif($tab == 2){
 			
-			$data = Db::table("email_message_template")->where("user_id",$user_id)->find();
+			$data = Db::table("email_message_template")->where("id",1)->find();
 
 		}
 
@@ -79,21 +77,17 @@ class EmailSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("eamil_setting")->where("user_id",$user_id)->find();
+		$res = Db::table("eamil_setting")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("eamil_setting")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("eamil_setting")->where("user_id",$user_id)->update($data);
+			$res = Db::table("eamil_setting")->where("id",1)->update($data);
 
 		}
 
@@ -108,21 +102,17 @@ class EmailSetting extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("email_message_template")->where("user_id",$user_id)->find();
+		$res = Db::table("email_message_template")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("email_message_template")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("email_message_template")->where("user_id",$user_id)->update($data);
+			$res = Db::table("email_message_template")->where("id",1)->update($data);
 
 		}
 
