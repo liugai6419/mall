@@ -1,0 +1,109 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/css/user_manage/user_list.css" />
+</head>
+<body>
+	<div class="layer-container">
+		<div class="top">
+			<div class="left">
+				<ul>
+					<li>用户名</li>
+					<li>{$results.username}</li>
+				</ul>
+				<ul>
+					<li>昵称</li>
+					<li>{$results.nickname}</li>
+				</ul>
+				<ul>
+					<li>性别</li>
+					<li>
+						{switch $results.sex}
+						{case 1}男性{/case}
+						{case 2}女性{/case}
+						{default /}保密
+					{/switch}
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<img src="/static/admin/images/default-figure.jpg">
+			</div>
+		</div>
+		<ul>
+			<li>手机号码</li>
+			<li>{$results.telephone}</li>
+		</ul>
+		<ul>
+			<li>电子邮箱</li>
+			<li class="{$results.email == '' ? 'fill-out' : ''}">{$results.email == "" ? '未填写' : $results.email}</li>
+		</ul>
+		<ul>
+			<li>状态</li>
+			<li>
+				{switch $results.user_status }
+					{case 1}正常{/case}
+					{case 2}待审核{/case}
+					{case 3}禁止发言{/case}
+					{default /}禁止登录
+				{/switch}
+			</li>
+		</ul>
+		<ul>
+			<li>支付宝openid</li>
+			<li class="{$results.alipay_openid == '' ? 'fill-out' : ''}">{$results.alipay_openid == "" ? '未填写' : $results.alipay_openid}</li>
+		</ul>
+		<ul>
+			<li>微信openid</li>
+			<li class="{$results.alipay_openid == '' ? 'fill-out' : ''}">{$results.alipay_openid == "" ? '未填写' : $results.alipay_openid}</li>
+		</ul>
+		<ul>
+			<li>百度openid</li>
+			<li class="{$results.alipay_openid == '' ? 'fill-out' : ''}">{$results.alipay_openid == "" ? '未填写' : $results.alipay_openid}</li>
+		</ul>
+		<ul>
+			<li>生日</li>
+			<li>
+				{if $results.birthday == 0}
+					<span class="fill-out">未填写</span>
+				{else /}
+					{:date('Y-m-d',$results.birthday)}
+				{/if}
+			</li>
+		</ul>
+		<ul>
+			<li>所在省</li>
+			<li class="fill-out">未填写</li>
+		</ul>
+		<ul>
+			<li>所在市</li>
+			<li class="fill-out">未填写</li>
+		</ul>
+		<ul>
+			<li>详细地址</li>
+			<li class="fill-out">未填写</li>
+		</ul>
+		<ul>
+			<li>积分</li>
+			<li>{$results.point}</li>
+		</ul>
+		<ul>
+			<li>注册时间</li>
+			<li>{:date('Y-m-d H:i:s',$results.create_time)}</li>
+		</ul>
+		<ul>
+			<li>更新时间</li>
+			<li>
+				{if $results.update_time == 0}
+					<span class="fill-out">未有更新</span>
+				{else /}
+					{:date('Y-m-d H:i:s',$results.update_time)}
+				{/if}
+			</li>
+		</ul>
+		
+	</div>
+	{include file="public/footer" /}
+
+	<!-- <script src="/static/admin/js/authority_control/found_manager.js"></script> -->
+</body>
+</html>

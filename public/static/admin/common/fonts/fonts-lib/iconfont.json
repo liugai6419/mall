@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "17684212",
+      "name": "新增",
+      "font_class": "add",
+      "unicode": "e7a2",
+      "unicode_decimal": 59298
+    },
+    {
+      "icon_id": "17684213",
+      "name": "编辑",
+      "font_class": "edit2",
+      "unicode": "e7a3",
+      "unicode_decimal": 59299
+    },
+    {
+      "icon_id": "17594025",
+      "name": "excel",
+      "font_class": "excel",
+      "unicode": "e7a1",
+      "unicode_decimal": 59297
+    },
+    {
       "icon_id": "17043881",
       "name": "返回",
       "font_class": "return",

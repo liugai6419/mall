@@ -11,8 +11,7 @@ class AgreementMange extends Common
 {
 	public function index()
 	{
-		$user_id = Session::get('admin')["id"];
-		$data = Db::table("agreement_mange")->where("user_id",$user_id)->find();
+		$data = Db::table("agreement_mange")->where("id",1)->find();
 
 		$this->assign('data',$data);
 
@@ -23,21 +22,17 @@ class AgreementMange extends Common
 	{
 		$data = Request::post();
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		$res = Db::table("agreement_mange")->where("user_id",$user_id)->find();
+		$res = Db::table("agreement_mange")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("agreement_mange")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("agreement_mange")->where("user_id",$user_id)->update($data);
+			$res = Db::table("agreement_mange")->where("id",1)->update($data);
 
 		}
 

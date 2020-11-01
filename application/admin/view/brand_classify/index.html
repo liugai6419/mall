@@ -1,0 +1,54 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/common/fonts/fonts-lib/iconfont.css" />
+<link rel="stylesheet" href="/static/admin/css/brand_manage/brand_classify.css" />
+</head>
+<body>
+
+	<!-- 搜索和新增 -->
+	<div class="top">
+		<div></div>
+
+		<button typSe="button" class="layui-btn add"><i class="layui-icon">&#xe608;</i> 新增</button>
+	</div>
+
+	<!-- 数据表格 -->
+	<table>
+		<thead>
+			<tr>
+				<th style="width:5%">序列</th>
+				<th style="width:40%">品牌名称</th>
+				<th style="width:40%">状态</th>
+				<th style="width:15%">操作</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{volist name="$datas" id="data"}
+			<tr>
+				<td>{$num++}</td>
+				<td>{$data.name}</td>
+				<td><span class="{$data.is_start == 1 ? 'start' : 'stop'}">{$data.is_start == 1 ? '启用' : '停用'}</span></td>
+				<td>
+					<button type="button" data-id="{$data.id}" class="layui-btn layui-btn-xs edit">编辑</button>
+					<button type="button" data-id="{$data.id}" class="layui-btn layui-btn-xs layui-btn-danger del">删除</button>
+				</td>
+			</tr>
+			{/volist}
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="8">
+					{$page|raw}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+	{include file="public/footer" /}
+
+	<script src="/static/admin/js/brand_manage/brand_classify.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+.top{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.top .layui-form .layui-form-item .layui-btn{
+	width: 100%;
+}
+
+.top .import-excel{
+	margin-left: -10px;
+}
+
+.top > span button:first-child{
+	margin-right: 20px;
+}
+
+/*数据表格*/
+table{
+	width: 100%;
+}
+
+/*表格头部*/
+table thead th{
+	color: #666;
+	height: 44px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 44px;
+	padding-left: 16px;
+	font-weight: normal;
+	background: #f2f2f2;
+}
+
+/*表格身体*/
+table td{
+	color: #666;
+	font-size: 14px;
+	padding: 10px 0 10px 16px;
+}
+
+.base-msg{
+	display: flex;
+}
+
+.base-msg img{
+	width: 69px;
+	height: 69px;
+	border: 1px solid #eee;
+	padding: 3px;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+
+.base-msg ul{
+	line-height: 20px;
+}
+
+.base-msg ul .fill-in{
+	color: #666;
+}
+
+.fill-out{
+	color: #bbb;
+}
+
+table tbody tr:nth-child(even){
+	background: rgba(0,150,136,0.04);
+}
+
+/*角色状态*/
+table td .normal{
+	width: 65px;
+	color: #009688;
+	padding: 4px 0px;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(0,150,136,0.1);
+	border: 1px dashed rgba(0,150,136,0.2);
+}
+
+table td .check{
+	width: 65px;
+	color: #1e9fff;
+	padding: 4px 0px;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(30,159,255,0.1);
+	border: 1px dashed rgba(30,159,255,0.2);
+}
+
+table td .ban-speak{
+	width: 65px;
+	color: #ffb800;
+	padding: 4px 0px;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(255,184,0,0.1);
+	border: 1px dashed rgba(255,184,0,0.2);
+}
+
+table td .ban-login{
+	width: 65px;
+	color: #ff5722;
+	padding: 4px 0px;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(255,87,34,0.1);
+	border: 1px dashed rgba(255,87,34,0.2);
+}
+
+/*表格页脚*/
+table tfoot td{
+	text-align: center;
+	padding: 12px;
+}
+
+table tfoot td ul{
+	display: flex;
+	 justify-content: center;
+}
+
+table tfoot td ul li a,table tfoot td ul li span{
+	padding: 6px 10px;
+	margin: 0 4px;
+	font-size: 14px;
+	border-radius: 3px;
+	background: #f6f6f6;
+}
+
+table tfoot td ul .active span{
+	color: white;
+	background: #009688;
+}
+
+table tfoot td ul li a:hover{
+	color: #009688;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/*创建和编辑角色  顶部*/
+.found-top{
+	display: flex;
+	margin-bottom: 32px;
+	justify-content: space-between;
+}
+
+.found-top .return-page{
+	color: #009688;
+	cursor: pointer;
+}
+
+.found-top .return-page i{
+	font-size: 14px;
+}
+
+.found-top .return-page span{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.found-top .title{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+
+/*模块容器*/
+.second-container{
+	margin-bottom: 24px;
+	padding-bottom: 9px;
+	border-bottom: 1px dashed #e6e6e6;
+}
+/*创建和编辑角色  角色名称*/
+.layui-form-pane .layui-input-inline{
+	width: calc(100% - 109px);
+	margin-right: 0;
+}
+
+/*调整单选框上下位置*/
+.layer-container .layui-form-pane .layui-form-radio{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+/*保存按钮*/
+.layer-container .layui-btn{
+	width: 100%;
+	margin-top: 10px;
+}
+
+/*去掉number类型input的上下按钮*/
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type="number"]{
+	-moz-appearance: textfield;
+}
+
+
+
+
+
+
+/*查看用户信息弹窗*/
+.layer-container{
+	width: calc(100% - 40px);
+	padding: 0 20px;
+}
+
+.layer-container .top{
+	display: flex;
+}
+
+.layer-container .top .left{
+	width: 65%;
+}
+
+.layer-container .top .right{
+	padding-top: 10px;
+}
+
+.layer-container .top .right img{
+	width: 120px;
+	height: 120px;
+	border: 1px solid #eee;
+	padding: 3px;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+
+.layer-container ul{
+	width: 100%;
+	display: flex;
+	line-height: 44px;
+	border-bottom: 1px solid #efefef;
+}
+
+/*.layer-container ul:last-child{
+	border: none;
+}*/
+
+.layer-container ul li:first-child{
+	width: 84px;
+	padding-right: 20px;
+	text-align: right;
+}

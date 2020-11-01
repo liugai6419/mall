@@ -1,0 +1,46 @@
+{include file="public/header" title="后台信息" /}
+
+<link rel="stylesheet" href="/static/admin/css/brand_manage/brand_classify.css" />
+</head>
+<body>
+	<div class="layer-container">
+		<form class="layui-form layui-form-pane" action="">
+			{if $results !=  null}
+			<input type="hidden" name="id" value="{$results.id}">
+			{/if}
+
+			<div class="layui-form-item">
+		    	<label class="layui-form-label">分类名称</label>
+				<div class="layui-input-inline">
+					<input type="text" name="name" value="{$results.name}" lay-verify="required" placeholder="请填分类名称" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">排列顺序</label>
+				<div class="layui-input-inline">
+					<input type="number" name="order" value="{$results.order}" placeholder="请填排列顺序" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+
+			<div class="layui-form-item" pane>
+				<label class="layui-form-label">是否启用</label>
+				<div class="layui-input-inline">
+					<input type="radio" name="is_start" value="1" title="启用" {$results.is_start == 1 ? 'checked' : ''}>
+					<input type="radio" name="is_start" value="2" title="停用" {$results.is_start == 2||$results.is_start == '' ? 'checked' : ''}>
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button class="layui-btn" lay-submit lay-filter="addClassify">保存</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	{include file="public/footer" /}
+
+	<script src="/static/admin/js/brand_manage/add_classify.js"></script>
+</body>
+</html>

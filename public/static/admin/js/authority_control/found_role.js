@@ -54,6 +54,7 @@ $(function(){
 		form.on('submit(foundRole)', function(data){ 
 
 			var field = data.field;
+			// console.log(field);
 
 			// 限制角色名称的字数
 			var length = field.role_delimiter.length;

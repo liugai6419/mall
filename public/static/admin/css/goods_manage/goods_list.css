@@ -1,0 +1,335 @@
+.top{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.top .layui-form .layui-form-item .layui-btn{
+	width: 100%;
+}
+
+.top .import-excel{
+	margin-left: -10px;
+}
+
+.top > span button:first-child{
+	margin-right: 20px;
+}
+
+/*数据表格*/
+table{
+	width: 100%;
+}
+
+/*表格头部*/
+table thead th{
+	color: #666;
+	height: 44px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 44px;
+	padding-left: 16px;
+	font-weight: normal;
+	background: #f2f2f2;
+}
+
+/*表格身体*/
+table td{
+	color: #666;
+	font-size: 14px;
+	padding: 10px 0 10px 16px;
+}
+
+.base-msg{
+	display: flex;
+}
+
+.base-msg img{
+	width: 69px;
+	height: 69px;
+	border: 1px solid #eee;
+	padding: 3px;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+
+.base-msg div{
+	color: #009688;
+	line-height: 20px;
+	padding-top: 3px;
+}
+
+table tbody tr:nth-child(even){
+	background: rgba(0,150,136,0.04);
+}
+
+/*上下架和首页推荐的状态*/
+table td .start{
+	color: #009688;
+	padding: 4px 8px;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(0,150,136,0.1);
+	border: 1px dashed rgba(0,150,136,0.2);
+}
+
+table td .stop{
+	color: #ff5722;
+	padding: 4px 8px;
+	text-align: center;
+	border-radius: 2px;
+	display: inline-block;
+	background: rgba(255,87,34,0.1);
+	border: 1px dashed rgba(255,87,34,0.2);
+}
+
+/*表格页脚*/
+table tfoot td{
+	text-align: center;
+	padding: 12px;
+}
+
+table tfoot td ul{
+	display: flex;
+	 justify-content: center;
+}
+
+table tfoot td ul li a,table tfoot td ul li span{
+	padding: 6px 10px;
+	margin: 0 4px;
+	font-size: 14px;
+	border-radius: 3px;
+	background: #f6f6f6;
+}
+
+table tfoot td ul .active span{
+	color: white;
+	background: #009688;
+}
+
+table tfoot td ul li a:hover{
+	color: #009688;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/*创建和编辑角色  顶部*/
+.found-top{
+	display: flex;
+	margin-bottom: 32px;
+	justify-content: space-between;
+}
+
+.found-top .return-page{
+	color: #009688;
+	cursor: pointer;
+}
+
+.found-top .return-page i{
+	font-size: 14px;
+}
+
+.found-top .return-page span{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.found-top .title{
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+
+/*标题*/
+.layer-container .title{
+	width: 99%;
+	padding-left: 12px;
+	line-height: 40px;
+	font-size: 14px;
+	background: #f2f2f2;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+/*模块容器*/
+.second-container{
+	margin-bottom: 24px;
+	padding-bottom: 9px;
+	border-bottom: 1px dashed #e6e6e6;
+}
+
+.second-container .radio{
+	display: flex;
+}
+
+.second-container .radio .layui-form-item{
+	width: 33.3%;
+}
+
+/*首页推荐图片*/
+.home-img .layui-form-label{
+	height: 202px;
+	line-height: 192px;
+}
+
+.home-img .layui-upload-drag{
+	width: 200px;
+	height: 200px;
+	padding: 0;
+	border: 1px solid #e2e2e2;
+}
+
+.home-img .layui-upload-drag .icon{
+	margin-top: 54px;
+}
+
+.home-img img{
+	width: 200px;
+	height: 200px;
+}
+
+/*商品规格*/
+.second-container table thead tr th{
+	color: #333;
+	background: none;
+	line-height: 44px;
+	font-weight: bold;
+	border: 1px solid #eee;
+}
+
+.second-container table tbody tr td{
+	padding: 10px 10px 10px 10px;
+	border: 1px solid #eee;
+}
+
+.shop-format{
+	width: 50px;
+	height: 50px;
+	padding: 0px;
+	border: none;
+}
+
+.shop-format .layui-icon{
+	font-size: 30px;
+}
+
+.shop-format img{
+	width: 48px;
+	height: 48px;
+}
+
+.second-container table{
+	margin-bottom: 15px;
+}
+
+.second-container table tfoot tr td{
+	border: 1px solid #eee;
+}
+
+.second-container table tfoot tr td span{
+	color: #009688;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+/*商品相册*/
+.shop-album .layui-inline{
+	margin-bottom: 0px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.shop-album .layui-upload-drag{
+	padding: 0px;
+	width: 238px;
+	height: 238px;
+	border: 1px solid #e2e2e2;
+}
+
+.shop-album .layui-upload-drag .icon{
+	margin-top: 80px;
+}
+
+.shop-album img{
+	width: 236px;
+	height: 236px;
+}
+
+/*商品视频*/
+.shop-video{
+	padding: 0px;
+	width: 238px;
+	height: 238px;
+	margin-bottom: 15px;
+	border: 1px solid #e2e2e2;
+}
+
+.shop-video .icon{
+	margin-top: 80px;
+}
+
+/*商品详情*/
+.shop-detail .edui-default .edui-editor{
+	border: none;
+	border-radius: none;
+}
+
+.shop-detail .edui-default .edui-editor-toolbarboxouter{
+	width: 1328px!important;
+	box-shadow: none;
+	border: 1px solid #e6e6e6;
+	border-bottom: none;
+	border-radius: 0px;
+}
+
+.shop-detail .edui-default .edui-editor-breadcrumb{
+	display: none;
+}
+
+.shop-detail .edui-default .edui-editor-iframeholder{
+	width: 1328px!important;
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+}
+
+/*SEO*/
+.textarea .layui-form-label{
+	height: 100px!important;
+	line-height: 82px!important;
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+}
+
+.textarea .layui-form-mid{
+	margin-top: 62px;
+}
+
+.textarea textarea{
+	resize: none;
+}
+
+/*创建和编辑角色  角色名称*/
+.layui-form-pane .layui-input-inline{
+	width: calc(100% - 109px);
+	margin-right: 0;
+}
+
+/*调整单选框上下位置*/
+.layer-container .layui-form-pane .layui-form-radio{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+/*保存按钮*/
+.layer-container .layui-input-block .layui-btn{
+	width: 100%;
+	margin-top: 10px;
+}

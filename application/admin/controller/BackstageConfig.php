@@ -11,9 +11,7 @@ class BackstageConfig extends Common
 {
 	public function index()
 	{
-		$user_id = Session::get('admin')["id"];
-
-		$data = Db::table("backstage_config")->where("user_id",$user_id)->find();
+		$data = Db::table("backstage_config")->find();
 
 		$this->assign("data",$data);
 
@@ -28,22 +26,18 @@ class BackstageConfig extends Common
 			return ["code"=>0,"msg"=>"分页数量不可小于0"];
 		}
 
-		// 获取用户id
-		$user_id = Session::get('admin')["id"];
-
-		// 查询用户是否存在用户注册
-		$res = Db::table("backstage_config")->where("user_id",$user_id)->find();
+		// 搜索后台配置
+		$res = Db::table("backstage_config")->where("id",1)->find();
 
 		if(!$res){
 
-			$data["user_id"] = $user_id;
 			$data["create_time"] = time();
 			$res = Db::table("backstage_config")->insert($data);
 
 		}else{
 
 			$data["update_time"] = time();
-			$res = Db::table("backstage_config")->where("user_id",$user_id)->update($data);
+			$res = Db::table("backstage_config")->where("id",1)->update($data);
 
 		}
 

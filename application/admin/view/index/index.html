@@ -20,15 +20,28 @@
 	<div class="bottom">
 		<div class="left-nav">
 			<ul class="layui-nav layui-nav-tree layui-nav-side" lay-shrink="all">
+			
 				<li class="layui-nav-item">
 					<a href="javascript:;" data-url="/admin/home/index" class="nav">首页</a>
 				</li>
-				<li class="layui-nav-item">
-			    	<a href="javascript:;">系统设置</a>
-			    	<dl class="layui-nav-child">
-			    		<dd><a href="javascript:;" data-url="/admin/backstage_config/index" class="nav">后台配置</a></dd>
-			    		<dd><a href="javascript:;" data-url="/admin/shop_message/index" class="nav">商店信息</a></dd>
-			    	</dl>
+
+				{volist name="$lists" id="list"}
+					<li class="layui-nav-item">
+						<a href="javascript:;">{$list.authority_name}</a>
+						<dl class="layui-nav-child">
+							{volist name="$list.second_authority" id="vo"}
+							<dd><a href="javascript:;" data-url="/admin/{$vo.controller_name}/{$vo.method_name}" class="nav">{$vo.authority_name}</a></dd>
+							{/volist}
+						</dl>
+					</li>
+				{/volist}
+				
+				<!-- <li class="layui-nav-item">
+					<a href="javascript:;">系统设置</a>
+					<dl class="layui-nav-child">
+						<dd><a href="javascript:;" data-url="/admin/backstage_config/index" class="nav">后台配置</a></dd>
+						<dd><a href="javascript:;" data-url="/admin/shop_message/index" class="nav">商店信息</a></dd>
+					</dl>
 				</li>
 				<li class="layui-nav-item">
 					<a href="javascript:;">站点配置</a>
@@ -47,7 +60,7 @@
 						<dd><a href="javascript:;" data-url="/admin/role_manage/index" class="nav">角色管理</a></dd>
 						<dd><a href="javascript:;" data-url="/admin/authority_allocation/index" class="nav">权限分配</a></dd>
 					</dl>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<div class="content">
