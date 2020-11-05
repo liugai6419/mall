@@ -217,6 +217,10 @@ table tfoot td ul li a:hover{
 	border: none;
 }
 
+table tbody tr:nth-child(even) .shop-format{
+	background: rgba(0,0,0,0);
+}
+
 .shop-format .layui-icon{
 	font-size: 30px;
 }
