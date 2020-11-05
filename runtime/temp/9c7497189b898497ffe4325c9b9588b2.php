@@ -1,4 +1,4 @@
-<?php /*a:3:{s:83:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\goods_list\add_goods.html";i:1603980796;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:83:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\goods_list\add_goods.html";i:1604503067;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,7 +189,7 @@
 					<tbody>
 						<tr>
 							<td>
-								<div class="layui-upload-drag shop-format image" id="shop-format">
+								<div class="layui-upload-drag shop-format image" id="shop-format1">
 									<div class="icon" style="display:">
 										<i class="layui-icon"></i>
 										<p>点击上传</p>
@@ -201,27 +201,27 @@
 							</td>
 
 							<td>
-								<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+								<input type="number" name="price1" required  lay-verify="required" placeholder="请输入价格(元)" autocomplete="off" class="layui-input">
 							</td>
 
 							<td>
-								<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+								<input type="number" name="inventory1" required  lay-verify="required" placeholder="请输入库存" autocomplete="off" class="layui-input">
 							</td>
 
 							<td>
-								<span><input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input"></span>
+								<span><input type="number" name="heft1" placeholder="请输入重量" autocomplete="off" class="layui-input"></span>
 							</td>
 
 							<td>
-								<span><input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input"></span>
+								<span><input type="text" name="sc_code1" placeholder="请输入规格编码" autocomplete="off" class="layui-input"></span>
 							</td>
 
 							<td>
-								<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+								<input type="number" name="bar_code1" placeholder="请输入条形码" autocomplete="off" class="layui-input">
 							</td>
 
 							<td>
-								<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+								<input type="text" name="origin_coset1" placeholder="请输入原价(元)" autocomplete="off" class="layui-input">
 							</td>
 							<td>
 								<button type="button" data-id="" class="layui-btn layui-btn-xs preview">复制</button>
@@ -234,7 +234,7 @@
 					<tfoot>
 						<tr>
 							<td colspan="8">
-								<span>添加一行</span>
+								<span data-num="1" class="add-format">添加一行</span>
 							</td>
 						</tr>
 					</tfoot>
