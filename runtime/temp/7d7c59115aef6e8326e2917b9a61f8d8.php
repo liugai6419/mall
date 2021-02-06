@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\login\index.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\login\index.html";i:1604216266;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\header.html";i:1599108235;s:76:"D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\public\footer.html";i:1599108235;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +25,7 @@
 				<form class="layui-form" action="">
 					<div class="layui-form-item">
 					    <div class="layui-input-block">
-					      <input type="text" name="username" placeholder="请输入用户名称" autocomplete="on" class="layui-input username">
+					      <input type="text" name="account" placeholder="请输入用户名或手机号" autocomplete="on" class="layui-input account">
 					    </div>
 				  	</div>
 				  	<div class="layui-form-item">

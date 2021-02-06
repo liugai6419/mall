@@ -1,0 +1,1194 @@
+---------------------------------------------------------------
+
+[2020-11-01T15:46:10+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.127036s] [吞吐率：7.87req/s] [内存消耗：1,938.70kb] [文件加载：121]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+---------------------------------------------------------------
+
+[2020-11-01T15:46:10+08:00] 127.0.0.1 GET www.mall.io/admin/login/index
+[运行时间：0.073362s] [吞吐率：13.63req/s] [内存消耗：2,173.27kb] [文件加载：125]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index' => '',
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\login\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:13+08:00] 127.0.0.1 POST www.mall.io/admin/login/login
+[运行时间：0.129216s] [吞吐率：7.74req/s] [内存消耗：3,010.47kb] [文件加载：127]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'origin' => 'http://www.mall.io',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '30',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login' => '',
+  'account' => 'liugai',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004355s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.003662s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  ( `username` = 'liugai' OR `telephone` = 'liugai' ) LIMIT 1 [ RunTime:0.000447s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:30+08:00] 127.0.0.1 POST www.mall.io/admin/login/login
+[运行时间：0.116576s] [吞吐率：8.58req/s] [内存消耗：2,992.60kb] [文件加载：129]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'origin' => 'http://www.mall.io',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '42',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login' => '',
+  'account' => '刘盖',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001061s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.002601s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  ( `username` = '刘盖' OR `telephone` = '刘盖' ) LIMIT 1 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `login_total` = `login_total` + 1 , `login_time` = 1604216790  WHERE  `id` = 5 [ RunTime:0.036598s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:30+08:00] 127.0.0.1 GET www.mall.io/admin/index/index
+[运行时间：0.086031s] [吞吐率：11.62req/s] [内存消耗：3,186.68kb] [文件加载：132]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\index\index.html [ array (
+  0 => 'admin',
+  1 => 'lists',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000987s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `authority_allocation` [ RunTime:0.001201s ]
+[ sql ] [ SQL ] SELECT * FROM `authority_allocation` ORDER BY `marshalling_sequence` DESC [ RunTime:0.000537s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:30+08:00] 127.0.0.1 GET www.mall.io/admin/home/index
+[运行时间：0.104201s] [吞吐率：9.60req/s] [内存消耗：2,047.02kb] [文件加载：125]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/index' => '',
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\home\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:34+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.101674s] [吞吐率：9.84req/s] [内存消耗：3,303.79kb] [文件加载：135]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001073s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001165s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001279s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000376s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:34+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/328c376e2aad71a52e845b8f3e33a7f5.png
+[运行时间：0.109300s] [吞吐率：9.15req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:46:35+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/16db2d4f02ce3f6e3e66d95cb3ad700a.png
+[运行时间：0.026619s] [吞吐率：37.57req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:46:39+08:00] 127.0.0.1 GET www.mall.io/admin/brand_classify/index
+[运行时间：0.052993s] [吞吐率：18.87req/s] [内存消耗：3,271.36kb] [文件加载：135]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_classify\index.html [ array (
+  0 => 'datas',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001023s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001105s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_classify` [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_classify` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000386s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:42+08:00] 127.0.0.1 GET www.mall.io/admin/goods_list/index
+[运行时间：0.048627s] [吞吐率：20.56req/s] [内存消耗：2,214.81kb] [文件加载：127]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_list/index' => '',
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\goods_list\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:43+08:00] 127.0.0.1 GET www.mall.io/admin/goods_classify/index
+[运行时间：0.067978s] [吞吐率：14.71req/s] [内存消耗：3,194.44kb] [文件加载：132]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\goods_classify\index.html [ array (
+  0 => 'data',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001074s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods_classify` [ RunTime:0.001318s ]
+[ sql ] [ SQL ] SELECT `id`,`user_id`,`classify`,`name`,`small_icon` FROM `goods_classify` ORDER BY `order` DESC [ RunTime:0.000518s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:44+08:00] 127.0.0.1 GET www.mall.io/admin/goods_comment/index
+[运行时间：0.066697s] [吞吐率：14.99req/s] [内存消耗：1,962.38kb] [文件加载：122]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_comment/index' => '',
+)
+---------------------------------------------------------------
+
+[2020-11-01T15:46:46+08:00] 127.0.0.1 GET www.mall.io/admin/goods_classify/index
+[运行时间：0.056669s] [吞吐率：17.65req/s] [内存消耗：3,053.48kb] [文件加载：130]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\goods_classify\index.html [ array (
+  0 => 'data',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001007s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods_classify` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT `id`,`user_id`,`classify`,`name`,`small_icon` FROM `goods_classify` ORDER BY `order` DESC [ RunTime:0.000648s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:48+08:00] 127.0.0.1 GET www.mall.io/admin/user_list/index
+[运行时间：0.072004s] [吞吐率：13.89req/s] [内存消耗：3,356.93kb] [文件加载：138]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/user_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\user_list\index.html [ array (
+  0 => 'data',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001181s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001246s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001917s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `user` ORDER BY `create_time` DESC LIMIT 0,20 [ RunTime:0.000558s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:54+08:00] 127.0.0.1 GET www.mall.io/admin/user_list/index
+[运行时间：0.047903s] [吞吐率：20.88req/s] [内存消耗：3,211.51kb] [文件加载：136]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/user_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\user_list\index.html [ array (
+  0 => 'data',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001268s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001279s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001199s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT * FROM `user` ORDER BY `create_time` DESC LIMIT 0,20 [ RunTime:0.000648s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:55+08:00] 127.0.0.1 GET www.mall.io/admin/user_list/index
+[运行时间：0.056529s] [吞吐率：17.69req/s] [内存消耗：3,211.51kb] [文件加载：136]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/user_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\user_list\index.html [ array (
+  0 => 'data',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001029s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001073s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001169s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `user` ORDER BY `create_time` DESC LIMIT 0,20 [ RunTime:0.000443s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:58+08:00] 127.0.0.1 GET www.mall.io/admin/goods_list/index
+[运行时间：0.042332s] [吞吐率：23.62req/s] [内存消耗：2,073.77kb] [文件加载：125]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_list/index' => '',
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\goods_list\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:58+08:00] 127.0.0.1 GET www.mall.io/admin/goods_classify/index
+[运行时间：0.066024s] [吞吐率：15.15req/s] [内存消耗：3,053.48kb] [文件加载：130]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\goods_classify\index.html [ array (
+  0 => 'data',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001093s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods_classify` [ RunTime:0.001479s ]
+[ sql ] [ SQL ] SELECT `id`,`user_id`,`classify`,`name`,`small_icon` FROM `goods_classify` ORDER BY `order` DESC [ RunTime:0.000697s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:46:59+08:00] 127.0.0.1 GET www.mall.io/admin/goods_comment/index
+[运行时间：0.054952s] [吞吐率：18.20req/s] [内存消耗：1,962.38kb] [文件加载：122]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_comment/index' => '',
+)
+---------------------------------------------------------------
+
+[2020-11-01T15:47:01+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.054969s] [吞吐率：18.19req/s] [内存消耗：3,162.69kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001084s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000586s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:47:01+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/328c376e2aad71a52e845b8f3e33a7f5.png
+[运行时间：0.043333s] [吞吐率：23.08req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:47:02+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/16db2d4f02ce3f6e3e66d95cb3ad700a.png
+[运行时间：0.045498s] [吞吐率：21.98req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:47:04+08:00] 127.0.0.1 GET www.mall.io/admin/brand_classify/index
+[运行时间：0.062510s] [吞吐率：16.00req/s] [内存消耗：3,135.59kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_classify\index.html [ array (
+  0 => 'datas',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001020s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001020s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_classify` [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_classify` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000912s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:47:05+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.062069s] [吞吐率：16.11req/s] [内存消耗：3,162.69kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001023s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001198s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001814s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000673s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:47:06+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/328c376e2aad71a52e845b8f3e33a7f5.png
+[运行时间：0.048544s] [吞吐率：20.60req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:47:06+08:00] 127.0.0.1 GET www.mall.io/admin/brand_classify/index
+[运行时间：0.049930s] [吞吐率：20.03req/s] [内存消耗：3,135.59kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_classify\index.html [ array (
+  0 => 'datas',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001496s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001287s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001148s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_classify` [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_classify` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000433s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:47:07+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.058005s] [吞吐率：17.24req/s] [内存消耗：3,162.69kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001213s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.002145s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001512s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001347s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000485s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:47:07+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/16db2d4f02ce3f6e3e66d95cb3ad700a.png
+[运行时间：0.051283s] [吞吐率：19.50req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:47:07+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/16db2d4f02ce3f6e3e66d95cb3ad700a.png
+[运行时间：0.078116s] [吞吐率：12.80req/s] [内存消耗：1,595.18kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:47:07+08:00] 127.0.0.1 GET www.mall.io/admin/brand_classify/index
+[运行时间：0.057062s] [吞吐率：17.52req/s] [内存消耗：3,135.59kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_classify\index.html [ array (
+  0 => 'datas',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001761s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001114s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_classify` [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_classify` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000450s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:47:08+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/328c376e2aad71a52e845b8f3e33a7f5.png
+[运行时间：0.030598s] [吞吐率：32.68req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:47:08+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.052998s] [吞吐率：18.87req/s] [内存消耗：3,162.69kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000981s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001062s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001080s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001206s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000513s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:47:08+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/16db2d4f02ce3f6e3e66d95cb3ad700a.png
+[运行时间：0.046528s] [吞吐率：21.49req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:47:08+08:00] 127.0.0.1 GET www.mall.io/static/admin/uploads/20201023/328c376e2aad71a52e845b8f3e33a7f5.png
+[运行时间：0.059302s] [吞吐率：16.86req/s] [内存消耗：1,594.60kb] [文件加载：111]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-01T15:50:45+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.063317s] [吞吐率：15.79req/s] [内存消耗：3,162.69kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001232s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001220s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000390s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:50:46+08:00] 127.0.0.1 GET www.mall.io/admin/brand_classify/index
+[运行时间：0.055523s] [吞吐率：18.01req/s] [内存消耗：3,135.59kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_classify\index.html [ array (
+  0 => 'datas',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001175s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.000903s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_classify` [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_classify` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000457s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:50:47+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.051118s] [吞吐率：19.56req/s] [内存消耗：3,162.69kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001074s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.000843s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.000989s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001481s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000776s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:50:52+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/addBrand?tab=1&id=3
+[运行时间：0.077911s] [吞吐率：12.84req/s] [内存消耗：3,203.20kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/brand_list/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/addBrand' => '',
+  'tab' => '1',
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\add_brand.html [ array (
+  0 => 'datas',
+  1 => 'brandClassify',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001046s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` WHERE  `is_start` = 1 ORDER BY `order` DESC [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001322s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000474s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:50:57+08:00] 127.0.0.1 POST www.mall.io/admin/brand_list/saveBrand
+[运行时间：0.043203s] [吞吐率：23.15req/s] [内存消耗：3,015.35kb] [文件加载：129]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/brand_list/addBrand?tab=1&id=3',
+  'origin' => 'http://www.mall.io',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '271',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/saveBrand' => '',
+  'id' => '3',
+  'name' => '腾讯',
+  'classify' => '4',
+  'website' => 'https://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.com',
+  'logo_img' => '/static/admin/uploads/20201023\\328c376e2aad71a52e845b8f3e33a7f5.png',
+  'order' => '32',
+  'is_start' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001087s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.000958s ]
+[ sql ] [ SQL ] UPDATE `brand_list`  SET `id` = 3 , `name` = '腾讯' , `classify` = 4 , `website` = 'https://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.com' , `logo_img` = '/static/admin/uploads/20201023\\328c376e2aad71a52e845b8f3e33a7f5.png' , `order` = 32 , `is_start` = 2 , `update_time` = 1604217057  WHERE  `id` = 3 [ RunTime:0.001428s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:50:58+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.078203s] [吞吐率：12.79req/s] [内存消耗：3,163.28kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/brand_list/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001046s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.002079s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.002291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.002411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000423s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:51:01+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/addBrand?tab=1&id=3
+[运行时间：0.060798s] [吞吐率：16.45req/s] [内存消耗：3,063.60kb] [文件加载：131]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/brand_list/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/addBrand' => '',
+  'tab' => '1',
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\add_brand.html [ array (
+  0 => 'datas',
+  1 => 'brandClassify',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001243s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.000944s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` WHERE  `is_start` = 1 ORDER BY `order` DESC [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000525s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:51:03+08:00] 127.0.0.1 POST www.mall.io/admin/brand_list/saveBrand
+[运行时间：0.047996s] [吞吐率：20.84req/s] [内存消耗：3,015.29kb] [文件加载：129]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/brand_list/addBrand?tab=1&id=3',
+  'origin' => 'http://www.mall.io',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '271',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/saveBrand' => '',
+  'id' => '3',
+  'name' => '腾讯',
+  'classify' => '4',
+  'website' => 'https://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.com',
+  'logo_img' => '/static/admin/uploads/20201023\\328c376e2aad71a52e845b8f3e33a7f5.png',
+  'order' => '32',
+  'is_start' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000970s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001880s ]
+[ sql ] [ SQL ] UPDATE `brand_list`  SET `id` = 3 , `name` = '腾讯' , `classify` = 4 , `website` = 'https://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.comhttps://www.tengxun.com' , `logo_img` = '/static/admin/uploads/20201023\\328c376e2aad71a52e845b8f3e33a7f5.png' , `order` = 32 , `is_start` = 1 , `update_time` = 1604217063  WHERE  `id` = 3 [ RunTime:0.000619s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:51:04+08:00] 127.0.0.1 GET www.mall.io/admin/brand_list/index
+[运行时间：0.061563s] [吞吐率：16.24req/s] [内存消耗：3,163.28kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/brand_list/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_list/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_list\index.html [ array (
+  0 => 'brandClassify',
+  1 => 'datas',
+  2 => 'page',
+  3 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001004s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.000943s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.001167s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` ORDER BY `order` DESC [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001552s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_list` [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_list` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000408s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:51:06+08:00] 127.0.0.1 GET www.mall.io/admin/brand_classify/index
+[运行时间：0.056067s] [吞吐率：17.84req/s] [内存消耗：3,135.59kb] [文件加载：133]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand_classify/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\brand_classify\index.html [ array (
+  0 => 'datas',
+  1 => 'page',
+  2 => 'num',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000998s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `backstage_config` [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `backstage_config` LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand_classify` [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `brand_classify` ORDER BY `order` DESC LIMIT 0,20 [ RunTime:0.000474s ]
+---------------------------------------------------------------
+
+[2020-11-01T15:51:08+08:00] 127.0.0.1 GET www.mall.io/admin/goods_list/index
+[运行时间：0.033323s] [吞吐率：30.01req/s] [内存消耗：2,073.77kb] [文件加载：125]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_list/index' => '',
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\goods_list\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-11-01T15:51:10+08:00] 127.0.0.1 GET www.mall.io/admin/goods_list/addGoods
+[运行时间：0.075603s] [吞吐率：13.23req/s] [内存消耗：3,286.95kb] [文件加载：132]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\myproject\mall\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=530gppmviitm36blre9rgp70b7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mall.io/admin/goods_list/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mall.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods_list/addGoods' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\myproject\mall\application\admin\view\goods_list\add_goods.html [ array (
+  0 => 'goodsClassify',
+  1 => 'brandClassifys',
+  2 => 'area',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001220s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods_classify` [ RunTime:0.001045s ]
+[ sql ] [ SQL ] SELECT `id`,`user_id`,`classify`,`name`,`small_icon` FROM `goods_classify` ORDER BY `order` DESC [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_classify` [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `brand_classify` WHERE  `is_start` = 1 ORDER BY `order` DESC [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand_list` [ RunTime:0.001194s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`classify` FROM `brand_list` WHERE  `is_start` = 1 ORDER BY `order` DESC [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `area` [ RunTime:0.000807s ]
+[ sql ] [ SQL ] SELECT * FROM `area` WHERE  `parent_code` = 0 [ RunTime:0.000782s ]
