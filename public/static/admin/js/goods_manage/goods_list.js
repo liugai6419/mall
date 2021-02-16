@@ -11,9 +11,8 @@ $(function(){
 		location.href="/admin/user_list/found?tab=1&id="+id;
 	});
 
-	// 新增
+	// 导出
 	$(".import-excel").click(function(){
-		// console.log(2222);
 		location.href="/admin/user_list/importExcel";
 	});
 
@@ -37,7 +36,7 @@ $(function(){
 				type: 2, 
 				title: '查看用户信息',
 				area: ['500px', '500px'],
-				content: '/admin/user_list/preview?id='+id
+				content: '/admin/goods_list/preview?id='+id
 			});
 		});
 
@@ -46,12 +45,13 @@ $(function(){
 			var selfObj = $(this)
 			var parentObj = selfObj.parent().parent();
 
-			layer.alert("确定删除此权限?",{
+			layer.alert("确定删除此商品?",{
 				title:false,
 				yes: function(){
 					var id = selfObj.attr("data-id");
 
-					$.get("/admin/user_list/delUser",{id:id},function(res){
+					$.get("/admin/goods_list/delGoods",{id:id},function(res){
+						// console.log(res);
 						if(res.code === 1){
 							parentObj.remove();
 							layer.msg(res.msg);

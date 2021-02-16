@@ -1,4 +1,4 @@
-<?php /*a:3:{s:83:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\goods_list\add_goods.html";i:1604503067;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
+<?php /*a:3:{s:83:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\goods_list\add_goods.html";i:1613029734;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\header.html";i:1596722374;s:76:"D:\soft\phpstudy_pro\WWW\mall\tp51\application\admin\view\public\footer.html";i:1596723097;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,17 +27,17 @@
 
 	<div class="layer-container">
 		<form class="layui-form layui-form-pane" action="">
-			<!-- 用户id -->
 			
-			<input type="hidden" name="id" value="">
+			
+			<!-- <input type="hidden" name="id" value=""> -->
 			
 			
 			<div class="second-container">
 				<div class="title">基础信息</div>
 				<div class="layui-form-item">
-					<label class="layui-form-label">标题名称</label>
+					<label class="layui-form-label">商品名称</label>
 					<div class="layui-input-inline">
-						<input type="text" name="name" value="" lay-verify="required" placeholder="填写标题名称" autocomplete="off" class="layui-input">
+						<input type="text" name="name" value="" lay-verify="required" placeholder="填写商品名称" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
@@ -51,7 +51,7 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">商品型号</label>
 					<div class="layui-input-inline">
-						<input type="text" name="model" value="" placeholder="填写商品型号" class="layui-input">
+						<input type="text" name="model" value="" placeholder="填写商品型号" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
@@ -186,11 +186,11 @@
 						</tr>
 					</thead>
 
-					<tbody>
+					<tbody class="shop-format-container">
 						<tr>
 							<td>
 								<div class="layui-upload-drag shop-format image" id="shop-format1">
-									<div class="icon" style="display:">
+									<div class="icon" style="display:block">
 										<i class="layui-icon"></i>
 										<p>点击上传</p>
 									</div>
@@ -201,31 +201,31 @@
 							</td>
 
 							<td>
-								<input type="number" name="price1" required  lay-verify="required" placeholder="请输入价格(元)" autocomplete="off" class="layui-input">
+								<input type="number" name="price1" required  lay-verify="required" placeholder="请输入价格(元)" autocomplete="off" class="layui-input price">
 							</td>
 
 							<td>
-								<input type="number" name="inventory1" required  lay-verify="required" placeholder="请输入库存" autocomplete="off" class="layui-input">
+								<input type="number" name="inventory1" required  lay-verify="required" placeholder="请输入库存" autocomplete="off" class="layui-input inventory">
 							</td>
 
 							<td>
-								<span><input type="number" name="heft1" placeholder="请输入重量" autocomplete="off" class="layui-input"></span>
+								<span><input type="number" name="heft1" placeholder="请输入重量" autocomplete="off" class="layui-input heft"></span>
 							</td>
 
 							<td>
-								<span><input type="text" name="sc_code1" placeholder="请输入规格编码" autocomplete="off" class="layui-input"></span>
+								<span><input type="text" name="sc_code1" placeholder="请输入规格编码" autocomplete="off" class="layui-input sc_code"></span>
 							</td>
 
 							<td>
-								<input type="number" name="bar_code1" placeholder="请输入条形码" autocomplete="off" class="layui-input">
+								<input type="text" name="bar_code1" placeholder="请输入条形码" autocomplete="off" class="layui-input bar_code">
 							</td>
 
 							<td>
-								<input type="text" name="origin_coset1" placeholder="请输入原价(元)" autocomplete="off" class="layui-input">
+								<input type="number" name="origin_coset1" placeholder="请输入原价(元)" autocomplete="off" class="layui-input origin_coset">
 							</td>
 							<td>
 								<button type="button" data-id="" class="layui-btn layui-btn-xs preview">复制</button>
-								<button type="button" data-id="" class="layui-btn layui-btn-xs layui-bg-red edit" style="margin:0">移除</button>
+								<button type="button" data-id="" class="layui-btn layui-btn-xs layui-bg-red delete" style="margin:0">移除</button>
 							</td>
 						</tr>
 
@@ -324,8 +324,11 @@
 						<i class="layui-icon"></i>
 						<p>点击上传</p>
 					</div>
-					<div class="layui-hide" id="uploadDemoView">
-						<img src="" alt="上传成功后渲染" >
+					<div class="layui-hide" id="uploadDemoView" style="padding-top:80px;">
+						<i class="iconfont iconupload-success" style="color:#009688;font-size:56px;"></i>
+					</div>
+					<div class="layui-hide" id="video">
+						<img src="">
 					</div>
 				</div>
 			</div>
@@ -340,14 +343,14 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">SEO标题</label>
 					<div class="layui-input-inline">
-						<input type="text" name="name" value="" lay-verify="required" placeholder="填写SEO标题" autocomplete="off" class="layui-input">
+						<input type="text" name="seo_name" value="" placeholder="填写SEO标题" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
 				<div class="layui-form-item">
 					<label class="layui-form-label">SEO关键字</label>
 					<div class="layui-input-inline">
-						<input type="text" name="summary" value="" lay-verify="required" placeholder="填写SEO关键字" autocomplete="off" class="layui-input">
+						<input type="text" name="seo_key" value="" placeholder="填写SEO关键字" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 
@@ -361,7 +364,7 @@
 
 			<div class="layui-form-item">
 				<div class="layui-input-block">
-					<button class="layui-btn" lay-submit lay-filter="foundUser">保存</button>
+					<button class="layui-btn" lay-submit lay-filter="addGoods">保存</button>
 				</div>
 			</div>
 		</form>
@@ -378,7 +381,7 @@
 	<script type="text/javascript" charset="gbk" src="/static/admin/lib/ueditor/ueditor.config.js"></script>
 	<script type="text/javascript" charset="gbk" src="/static/admin/lib/ueditor/ueditor.all.min.js"></script>
 	<script type="text/javascript" charset="gbk" src="/static/admin/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
-	<script src="/static/admin/js/goods_manage/add_goods.js"></script>
+	
 
 	<script type="text/javascript">
 
@@ -434,5 +437,6 @@
 		});
 
 	</script>
+	<script src="/static/admin/js/goods_manage/add_goods.js"></script>
 </body>
 </html>
